@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B197F82E210A6C5C004805D8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F82D210A6C5B004805D8 /* SWRevealViewController.m */; };
 		B197F831210A6E10004805D8 /* SideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F830210A6E10004805D8 /* SideTableViewController.m */; };
+		B197F839210A727E004805D8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F838210A727E004805D8 /* SWRevealViewController.m */; };
 		CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9B95210A4E3C001D2032 /* AppDelegate.m */; };
 		CECB9B99210A4E3C001D2032 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9B98210A4E3C001D2032 /* ViewController.m */; };
 		CECB9B9C210A4E3C001D2032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECB9B9A210A4E3C001D2032 /* Main.storyboard */; };
@@ -37,12 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B197F82C210A6C5B004805D8 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
-		B197F82D210A6C5B004805D8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		B197F82F210A6E10004805D8 /* SideTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SideTableViewController.h; sourceTree = "<group>"; };
 		B197F830210A6E10004805D8 /* SideTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SideTableViewController.m; sourceTree = "<group>"; };
-		B197F833210A6E8D004805D8 /* SWRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		B197F834210A6E8D004805D8 /* SWRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		B197F837210A727E004805D8 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/SWRevealViewController-master 3/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		B197F838210A727E004805D8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../Downloads/SWRevealViewController-master 3/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		CECB9B91210A4E3C001D2032 /* Shelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECB9B94210A4E3C001D2032 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CECB9B95210A4E3C001D2032 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -89,8 +87,8 @@
 		B197F832210A6E82004805D8 /* SWRevealViewController */ = {
 			isa = PBXGroup;
 			children = (
-				B197F834210A6E8D004805D8 /* SWRevealViewController.h */,
-				B197F833210A6E8D004805D8 /* SWRevealViewController.m */,
+				B197F837210A727E004805D8 /* SWRevealViewController.h */,
+				B197F838210A727E004805D8 /* SWRevealViewController.m */,
 			);
 			path = SWRevealViewController;
 			sourceTree = "<group>";
@@ -119,8 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				B197F832210A6E82004805D8 /* SWRevealViewController */,
-				B197F82C210A6C5B004805D8 /* SWRevealViewController.h */,
-				B197F82D210A6C5B004805D8 /* SWRevealViewController.m */,
 				CECB9B94210A4E3C001D2032 /* AppDelegate.h */,
 				CECB9B95210A4E3C001D2032 /* AppDelegate.m */,
 				CECB9B97210A4E3C001D2032 /* ViewController.h */,
@@ -286,9 +282,9 @@
 			files = (
 				B197F831210A6E10004805D8 /* SideTableViewController.m in Sources */,
 				CECB9B99210A4E3C001D2032 /* ViewController.m in Sources */,
+				B197F839210A727E004805D8 /* SWRevealViewController.m in Sources */,
 				CECB9BA4210A4E3D001D2032 /* main.m in Sources */,
 				CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */,
-				B197F82E210A6C5C004805D8 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
