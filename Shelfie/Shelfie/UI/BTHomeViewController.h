@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BTHomeViewController.h
 //  Shelfie
 //
 //  Created by Connor Clancy on 7/26/18.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface BTHomeViewController : UIViewController
 
 
 @end

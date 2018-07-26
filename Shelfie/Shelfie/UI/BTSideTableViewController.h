@@ -1,5 +1,5 @@
 //
-//  SideTableViewController.h
+//  BTSideTableViewController.h
 //  Shelfie
 //
 //  Created by Claudia Haddad on 7/26/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SideTableViewController : UITableViewController
+@interface BTSideTableViewController : UITableViewController
 
 @end

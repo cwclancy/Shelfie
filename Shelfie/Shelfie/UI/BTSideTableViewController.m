@@ -6,20 +6,20 @@
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
-#import "SideTableViewController.h"
+#import "BTSideTableViewController.h"
 
-@interface SideTableViewController ()
+@interface BTSideTableViewController ()
 
 
 @end
 
-@implementation SideTableViewController
+@implementation BTSideTableViewController
 
 NSArray *menuItems;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     menuItems = @[@"profile", @"home", @"addbook", @"messages", @"notifications",@"requestbook", @"logout"];
+     menuItems = @[@"profile", @"home", @"addbook", @"requestbook", @"notifications", @"logout"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
