@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTRevealHeadViewController.h"
 
-@interface BTProfileViewController : UIViewController
+@interface BTProfileViewController : BTRevealHeadViewController
 
 @end
