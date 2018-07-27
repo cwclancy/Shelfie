@@ -28,7 +28,7 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     // Do any additional setup after loading the view.
 }
-}cdcvuufibuvfcdhdehvecrinitltnbkk
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
