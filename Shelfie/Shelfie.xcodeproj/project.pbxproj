@@ -163,20 +163,6 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		B197F844210A82E8004805D8 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		B197F845210A82F5004805D8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		B197F846210A8306004805D8 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,11 +196,9 @@
 			isa = PBXGroup;
 			children = (
 				B197F843210A82E3004805D8 /* UI */,
-				B197F844210A82E8004805D8 /* Services */,
 				CECB9B95210A4E3C001D2032 /* AppDelegate.m */,
 				CECB9B94210A4E3C001D2032 /* AppDelegate.h */,
 				B197F846210A8306004805D8 /* Cache */,
-				B197F845210A82F5004805D8 /* Models */,
 				CECB9B9A210A4E3C001D2032 /* Main.storyboard */,
 				CECB9B9D210A4E3D001D2032 /* Assets.xcassets */,
 				CECB9B9F210A4E3D001D2032 /* LaunchScreen.storyboard */,
