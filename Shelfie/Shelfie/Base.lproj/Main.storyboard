@@ -207,12 +207,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lc3-Fp-mcX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="crn-eZ-HSO">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="lAo-sF-tEe"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="barButton" destination="lAo-sF-tEe" id="DgI-kn-Jae"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="crn-eZ-HSO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zz-cR-lSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

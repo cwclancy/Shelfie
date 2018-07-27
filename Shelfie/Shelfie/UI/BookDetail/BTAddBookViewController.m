@@ -18,15 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    SWRevealViewController *revealViewController = self.revealViewController;
-    
-    if (revealViewController)
-    {
-        [self.barButton setTarget: self.revealViewController];
-        [self.barButton setAction: @selector( revealToggle: )];
-        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-   
-}
+
 }
 
 - (void)didReceiveMemoryWarning {
