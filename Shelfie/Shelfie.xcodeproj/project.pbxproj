@@ -14,7 +14,6 @@
 		B197F83C210A7D40004805D8 /* BTAddBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F83B210A7D40004805D8 /* BTAddBookViewController.m */; };
 		B197F83F210A8113004805D8 /* BTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F83E210A8113004805D8 /* BTLoginViewController.m */; };
 		B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F841210A8254004805D8 /* BTProfileViewController.m */; };
-		B197F849210A841D004805D8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F848210A841D004805D8 /* SWRevealViewController.m */; };
 		B197F84D210A9C48004805D8 /* Screen Shot 2018-07-26 at 5.13.22 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = B197F84C210A9C47004805D8 /* Screen Shot 2018-07-26 at 5.13.22 PM.png */; };
 		CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9B95210A4E3C001D2032 /* AppDelegate.m */; };
 		CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9B98210A4E3C001D2032 /* BTHomeViewController.m */; };
@@ -24,6 +23,8 @@
 		CECB9BA4210A4E3D001D2032 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BA3210A4E3D001D2032 /* main.m */; };
 		CECB9BAE210A4E3D001D2032 /* ShelfieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BAD210A4E3D001D2032 /* ShelfieTests.m */; };
 		CECB9BB9210A4E3D001D2032 /* ShelfieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BB8210A4E3D001D2032 /* ShelfieUITests.m */; };
+		CECFB54C210A9F3B00D5C220 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECFB54B210A9F3B00D5C220 /* MapKit.framework */; };
+		CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECFB551210B99B000D5C220 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +57,6 @@
 		B197F83E210A8113004805D8 /* BTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTLoginViewController.m; sourceTree = "<group>"; };
 		B197F840210A8254004805D8 /* BTProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTProfileViewController.h; sourceTree = "<group>"; };
 		B197F841210A8254004805D8 /* BTProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTProfileViewController.m; sourceTree = "<group>"; };
-		B197F847210A841D004805D8 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../../../../../SWRevealViewController.h; sourceTree = "<group>"; };
-		B197F848210A841D004805D8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../../../../../SWRevealViewController.m; sourceTree = "<group>"; };
 		B197F84C210A9C47004805D8 /* Screen Shot 2018-07-26 at 5.13.22 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-07-26 at 5.13.22 PM.png"; sourceTree = "<group>"; };
 		B736291ADBF925B02B3946E1 /* Pods-ShelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92B7D26D69A1813814CB93A /* libPods-ShelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +77,9 @@
 		CECB9BB4210A4E3D001D2032 /* ShelfieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelfieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECB9BB8210A4E3D001D2032 /* ShelfieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShelfieUITests.m; sourceTree = "<group>"; };
 		CECB9BBA210A4E3D001D2032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECFB54B210A9F3B00D5C220 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CECFB550210B99B000D5C220 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		CECFB551210B99B000D5C220 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		D812159C2E6EFFD51D08D5D8 /* Pods-ShelfieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieUITests/Pods-ShelfieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EF91916D5EC8BB09BF43594A /* libPods-Shelfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shelfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECFB54C210A9F3B00D5C220 /* MapKit.framework in Frameworks */,
 				71D688D6EDFCE2C170FC9AB9 /* libPods-Shelfie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +116,7 @@
 		7C72E0BAE06B35A0C6CED750 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CECFB54B210A9F3B00D5C220 /* MapKit.framework */,
 				EF91916D5EC8BB09BF43594A /* libPods-Shelfie.a */,
 				B92B7D26D69A1813814CB93A /* libPods-ShelfieTests.a */,
 				0F719773C09E2D8DE0D6E7A7 /* libPods-ShelfieUITests.a */,
@@ -133,24 +137,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B197F832210A6E82004805D8 /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B197F847210A841D004805D8 /* SWRevealViewController.h */,
-				B197F848210A841D004805D8 /* SWRevealViewController.m */,
-			);
-			path = SWRevealViewController;
-			sourceTree = "<group>";
-		};
 		B197F843210A82E3004805D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CECFB54F210B99B000D5C220 /* SWRevealViewController */,
+				CECFB54E210A9FAA00D5C220 /* BookDetail */,
+				CECFB54D210A9F8D00D5C220 /* Login */,
 				CECB9B97210A4E3C001D2032 /* BTHomeViewController.h */,
-				B197F832210A6E82004805D8 /* SWRevealViewController */,
-				B197F83A210A7D40004805D8 /* BTAddBookViewController.h */,
-				B197F83B210A7D40004805D8 /* BTAddBookViewController.m */,
-				B197F83D210A8113004805D8 /* BTLoginViewController.h */,
-				B197F83E210A8113004805D8 /* BTLoginViewController.m */,
 				CECB9B98210A4E3C001D2032 /* BTHomeViewController.m */,
 				B197F840210A8254004805D8 /* BTProfileViewController.h */,
 				B197F841210A8254004805D8 /* BTProfileViewController.m */,
@@ -158,27 +151,6 @@
 				B197F830210A6E10004805D8 /* BTSideTableViewController.m */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		B197F844210A82E8004805D8 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		B197F845210A82F5004805D8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B197F846210A8306004805D8 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cache;
 			sourceTree = "<group>";
 		};
 		CECB9B88210A4E3C001D2032 = {
@@ -207,11 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				B197F843210A82E3004805D8 /* UI */,
-				B197F844210A82E8004805D8 /* Services */,
 				CECB9B95210A4E3C001D2032 /* AppDelegate.m */,
 				CECB9B94210A4E3C001D2032 /* AppDelegate.h */,
-				B197F846210A8306004805D8 /* Cache */,
-				B197F845210A82F5004805D8 /* Models */,
 				CECB9B9A210A4E3C001D2032 /* Main.storyboard */,
 				CECB9B9D210A4E3D001D2032 /* Assets.xcassets */,
 				B197F84C210A9C47004805D8 /* Screen Shot 2018-07-26 at 5.13.22 PM.png */,
@@ -238,6 +207,33 @@
 				CECB9BBA210A4E3D001D2032 /* Info.plist */,
 			);
 			path = ShelfieUITests;
+			sourceTree = "<group>";
+		};
+		CECFB54D210A9F8D00D5C220 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B197F83D210A8113004805D8 /* BTLoginViewController.h */,
+				B197F83E210A8113004805D8 /* BTLoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CECFB54E210A9FAA00D5C220 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B197F83A210A7D40004805D8 /* BTAddBookViewController.h */,
+				B197F83B210A7D40004805D8 /* BTAddBookViewController.m */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		CECFB54F210B99B000D5C220 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CECFB550210B99B000D5C220 /* SWRevealViewController.h */,
+				CECFB551210B99B000D5C220 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,7 +451,7 @@
 				B197F831210A6E10004805D8 /* BTSideTableViewController.m in Sources */,
 				CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */,
 				B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */,
-				B197F849210A841D004805D8 /* SWRevealViewController.m in Sources */,
+				CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */,
 				B197F83F210A8113004805D8 /* BTLoginViewController.m in Sources */,
 				CECB9BA4210A4E3D001D2032 /* main.m in Sources */,
 				CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */,
@@ -631,7 +627,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PH9LZZN4D9;
+				DEVELOPMENT_TEAM = A5TQ98F5H4;
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,7 +647,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PH9LZZN4D9;
+				DEVELOPMENT_TEAM = A5TQ98F5H4;
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
