@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +19,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Facebook API
+    [FBSDKLoginButton class];
+    [[FBSDKApplicationDelegate sharedInstance] application:application
+                             didFinishLaunchingWithOptions:launchOptions];
+    
     ParseClientConfiguration *config = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
         configuration.applicationId = @"bookTrader";
         configuration.clientKey = @"bookTraderKey";
@@ -27,6 +34,18 @@
     
     return YES;
 }
+
+- ( BOOL ) application :( UIApplication *) application
+               openURL :( NSURL *) url
+               options :( NSDictionary < UIApplicationOpenURLOptionsKey , id > *) options {
+    
+    BOOL handled = [[ FBSDKApplicationDelegate sharedInstance ] application : application
+                                                                    openURL : url
+                                                          sourceApplication : options [ UIApplicationOpenURLOptionsSourceApplicationKey ]
+                                                                 annotation : options [ UIApplicationOpenURLOptionsAnnotationKey ] ];
+    // Add any custom logic here.
+    
+    return handled ; }
 
 -(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
