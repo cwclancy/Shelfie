@@ -7,6 +7,7 @@
 //
 
 #import "BTLoginViewController.h"
+#import "BTFbAPIManager.h"
 
 @interface BTLoginViewController ()
 
@@ -16,16 +17,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //Handle clicks on the login/logout button
+    [self.loginButton addTarget : self action : @selector (onLoginClicked) forControlEvents : UIControlEventTouchUpInside ];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)onClick:(id)sender {
-    [self performSegueWithIdentifier:@
-     "loginToHome" sender:self];
+
+- (void) onLoginClicked {
+    [[BTFbAPIManager shared] login:self];
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    // If there is a current session going
+    if([FBSDKAccessToken currentAccessToken]) {
+        [self performSegueWithIdentifier:@"loginToHome" sender:self];
+    }
+    
 }
 
 /*
