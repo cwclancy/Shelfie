@@ -7,6 +7,8 @@
 //
 
 #import "BTBarcodeViewController.h"
+#import "BTBookAPIManager.h"
+#import "BTAddBookViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface BTBarcodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
@@ -54,14 +56,21 @@
 -(void)stopReading {
     [self.captureSession stopRunning];
     self.captureSession = nil;
-    //[self.videoPreviewLayer removeFromSuperlayer];
-    [self.previewView removeFromSuperview];
+    [[BTBookAPIManager shared] fetchBookWithIsbn:self.isbn completion:^(id book, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            [self.delegate makeBook:book];
+            [self.previewView removeFromSuperview];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

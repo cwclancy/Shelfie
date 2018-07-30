@@ -7,25 +7,33 @@
 //
 
 #import "BTAddBookViewController.h"
+#import "BTBarcodeViewController.h"
 #import "SWRevealViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface BTAddBookViewController ()
-@property (strong, nonatomic) UIView *previewView;
-@property (strong, nonatomic) AVCaptureSession *caputreSession;
-@property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
+@interface BTAddBookViewController () <BarcodeViewControllerDelegate>
+@property (strong, nonatomic) NSDictionary *book;
 @end
 
 @implementation BTAddBookViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [super setDelegate:self];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 /*
 #pragma mark - Navigation
@@ -36,5 +44,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)makeBook:(NSDictionary *)book {
+    self.book = book;
+}
+
+
 
 @end

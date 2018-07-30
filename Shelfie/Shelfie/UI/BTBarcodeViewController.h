@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "BTRevealHeadViewController.h"
 
+@protocol BarcodeViewControllerDelegate
+-(void)makeBook:(NSDictionary *)book;
+@end
 
 @interface BTBarcodeViewController : BTRevealHeadViewController
-
+@property (nonatomic, weak) id<BarcodeViewControllerDelegate> delegate;
 @end
