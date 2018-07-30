@@ -1,23 +1,24 @@
 //
-//  BTProfileViewController.m
+//  CustomNavController.m
 //  Shelfie
 //
-//  Created by Claudia Haddad on 7/26/18.
+//  Created by Claudia Haddad on 7/27/18.
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
-#import "BTProfileViewController.h"
-#import "SWRevealViewController.h"
+#import "CustomNavController.h"
 
-@interface BTProfileViewController ()
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *barButton;
+@interface CustomNavController ()
 
 @end
 
-@implementation BTProfileViewController
+@implementation CustomNavController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationBar.shadowImage = [UIImage new];
+    self.navigationBar.translucent = YES;    
 }
 
 - (void)didReceiveMemoryWarning {

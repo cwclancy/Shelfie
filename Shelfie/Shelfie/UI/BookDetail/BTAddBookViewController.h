@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTRevealHeadViewController.h"
 
-@interface BTAddBookViewController : UIViewController
+@interface BTAddBookViewController : BTRevealHeadViewController
 
 @end
