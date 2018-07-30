@@ -216,26 +216,10 @@
                     <view key="view" contentMode="scaleToFill" id="uhm-HG-kn6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ADD BOOK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYV-nk-dCu">
-                                <rect key="frame" x="109" y="163" width="87" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lc3-Fp-mcX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="crn-eZ-HSO">
-                        <barButtonItem key="leftBarButtonItem" image="iconmonstr-menu-1-32" id="lAo-sF-tEe">
-                            <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="barButton" destination="lAo-sF-tEe" id="DgI-kn-Jae"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="crn-eZ-HSO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zz-cR-lSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,14 +244,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YnZ-zY-LaZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TtW-7p-w0u">
-                        <barButtonItem key="leftBarButtonItem" image="iconmonstr-menu-1-32" style="plain" id="1Ah-hr-gqV">
-                            <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="barButton" destination="1Ah-hr-gqV" id="QIP-eQ-XTI"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="TtW-7p-w0u"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPm-oF-yZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,14 +294,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qvk-Vn-N4k"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pno-if-iyD">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="iconmonstr-menu-1-32" style="plain" id="O1I-q5-xnw">
-                            <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="barButton" destination="O1I-q5-xnw" id="rdk-wr-FFS"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="Pno-if-iyD"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B9-3w-mYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

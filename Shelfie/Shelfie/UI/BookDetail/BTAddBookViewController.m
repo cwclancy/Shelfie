@@ -8,25 +8,20 @@
 
 #import "BTAddBookViewController.h"
 #import "SWRevealViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface BTAddBookViewController ()
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *barButton;
-
+@property (strong, nonatomic) UIView *previewView;
+@property (strong, nonatomic) AVCaptureSession *caputreSession;
+@property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 @end
 
 @implementation BTAddBookViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    SWRevealViewController *revealViewController = self.revealViewController;
-    
-    if (revealViewController)
-    {
-        [self.barButton setTarget: self.revealViewController];
-        [self.barButton setAction: @selector( revealToggle: )];
-        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-   
-}
+
+
 }
 
 - (void)didReceiveMemoryWarning {
