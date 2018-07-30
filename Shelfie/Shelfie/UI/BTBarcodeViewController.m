@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UIView *previewView;
 @property (strong, nonatomic) AVCaptureSession *captureSession;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
+@property (strong, nonatomic) NSString *isbn;
 @end
 
 @implementation BTBarcodeViewController
@@ -44,6 +45,7 @@
     if (metadataObjects != nil && [metadataObjects count] > 0) {
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects objectAtIndex:0];
         if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeEAN13Code]) {
+            self.isbn = [metadataObj stringValue];
             [self performSelectorOnMainThread:@selector(stopReading) withObject:[metadataObj stringValue] waitUntilDone:NO];
         }
     }
@@ -52,7 +54,8 @@
 -(void)stopReading {
     [self.captureSession stopRunning];
     self.captureSession = nil;
-    [self.videoPreviewLayer removeFromSuperlayer];
+    //[self.videoPreviewLayer removeFromSuperlayer];
+    [self.previewView removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning {
