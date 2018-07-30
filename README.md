@@ -1,4 +1,4 @@
-# BookTrader
+# Shelfie
 
 **Required:**
 

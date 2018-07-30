@@ -1,27 +1,24 @@
 //
-//  BTAddBookViewController.m
+//  CustomNavController.m
 //  Shelfie
 //
-//  Created by Claudia Haddad on 7/26/18.
+//  Created by Claudia Haddad on 7/27/18.
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
-#import "BTAddBookViewController.h"
-#import "SWRevealViewController.h"
-#import <AVFoundation/AVFoundation.h>
+#import "CustomNavController.h"
 
-@interface BTAddBookViewController ()
-@property (strong, nonatomic) UIView *previewView;
-@property (strong, nonatomic) AVCaptureSession *caputreSession;
-@property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
+@interface CustomNavController ()
+
 @end
 
-@implementation BTAddBookViewController
+@implementation CustomNavController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
+    [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    self.navigationBar.shadowImage = [UIImage new];
+    self.navigationBar.translucent = YES;    
 }
 
 - (void)didReceiveMemoryWarning {

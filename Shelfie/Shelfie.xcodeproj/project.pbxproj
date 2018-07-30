@@ -14,7 +14,6 @@
 		B197F83C210A7D40004805D8 /* BTAddBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F83B210A7D40004805D8 /* BTAddBookViewController.m */; };
 		B197F83F210A8113004805D8 /* BTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F83E210A8113004805D8 /* BTLoginViewController.m */; };
 		B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F841210A8254004805D8 /* BTProfileViewController.m */; };
-		B197F84D210A9C48004805D8 /* Screen Shot 2018-07-26 at 5.13.22 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = B197F84C210A9C47004805D8 /* Screen Shot 2018-07-26 at 5.13.22 PM.png */; };
 		CEA6B274210B9E4C009860C4 /* BTBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B273210B9E4C009860C4 /* BTBook.m */; };
 		CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B278210BCBC7009860C4 /* BTBookAPIManager.m */; };
 		CEA6B280210BD256009860C4 /* BTPostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B27F210BD256009860C4 /* BTPostManager.m */; };
@@ -62,7 +61,6 @@
 		B197F83E210A8113004805D8 /* BTLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTLoginViewController.m; sourceTree = "<group>"; };
 		B197F840210A8254004805D8 /* BTProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTProfileViewController.h; sourceTree = "<group>"; };
 		B197F841210A8254004805D8 /* BTProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTProfileViewController.m; sourceTree = "<group>"; };
-		B197F84C210A9C47004805D8 /* Screen Shot 2018-07-26 at 5.13.22 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2018-07-26 at 5.13.22 PM.png"; sourceTree = "<group>"; };
 		B736291ADBF925B02B3946E1 /* Pods-ShelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92B7D26D69A1813814CB93A /* libPods-ShelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC44DE9E9A4AAE0149BBFBD3 /* Pods-Shelfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shelfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,7 +242,6 @@
 				CECB9B94210A4E3C001D2032 /* AppDelegate.h */,
 				CECB9B9A210A4E3C001D2032 /* Main.storyboard */,
 				CECB9B9D210A4E3D001D2032 /* Assets.xcassets */,
-				B197F84C210A9C47004805D8 /* Screen Shot 2018-07-26 at 5.13.22 PM.png */,
 				CECB9B9F210A4E3D001D2032 /* LaunchScreen.storyboard */,
 				CECB9BA2210A4E3D001D2032 /* Info.plist */,
 				CECB9BA3210A4E3D001D2032 /* main.m */,
@@ -408,7 +405,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B197F84D210A9C48004805D8 /* Screen Shot 2018-07-26 at 5.13.22 PM.png in Resources */,
 				CECB9BA1210A4E3D001D2032 /* LaunchScreen.storyboard in Resources */,
 				CECB9B9E210A4E3D001D2032 /* Assets.xcassets in Resources */,
 				CECB9B9C210A4E3C001D2032 /* Main.storyboard in Resources */,
