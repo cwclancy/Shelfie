@@ -8,16 +8,30 @@
 
 #import "BTAddBookViewController.h"
 #import "SWRevealViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface BTAddBookViewController ()
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *barButton;
-
+@property (strong, nonatomic) UIView *previewView;
+@property (strong, nonatomic) AVCaptureSession *caputreSession;
+@property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 @end
 
 @implementation BTAddBookViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    /* barcode */
+    self.caputreSession = nil;
+    AVCaptureDevice *caputreDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    NSError *error;
+    AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:caputreDevice error:&error];
+    self.caputreSession = [AVCaptureSession new];
+    [self.caputreSession addInput:input];
+    AVCaptureMetadataOutput *caputreMetadataOutput = [AVCaptureMetadataOutput new];
+    
+    
+    
+    
 
 }
 
