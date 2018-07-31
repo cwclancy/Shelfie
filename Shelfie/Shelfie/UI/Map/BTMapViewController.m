@@ -6,20 +6,20 @@
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
-#import "MapViewController.h"
+#import "BTMapViewController.h"
 #import "BTUserDefaults.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
 
-@interface MapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
+@interface BTMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) MKCoordinateRegion currentLocation;
 @property BOOL locationFlag;
 @end
 
-@implementation MapViewController
+@implementation BTMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
