@@ -13,5 +13,6 @@
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSArray *authors;
 @property (strong, nonatomic) NSDictionary *imageLinks;
+@property (strong, nonatomic) NSString *publishedDate;
 @property (strong, nonatomic) NSString *description;
 @end

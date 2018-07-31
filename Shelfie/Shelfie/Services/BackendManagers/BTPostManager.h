@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 #import "BTBook.h"
 
 @interface BTPostManager : NSObject
+
 + (instancetype) shared;
-+ (void) addBookToDatabaseWithUserId:(NSString *)userId title:(NSString *)title author:(NSString *)author
-                                isbn:(NSString *)isbn date:(NSDate *)date coverURL:(NSURL *)url
+- (void) addBookToDatabaseWithUserId:(NSString *)userId title:(NSString *)title author:(NSString *)author
+                                isbn:(NSString *)isbn date:(NSString *)date coverURL:(NSURL *)url
                             latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude
                           completion:(PFBooleanResultBlock)completion;
 @end

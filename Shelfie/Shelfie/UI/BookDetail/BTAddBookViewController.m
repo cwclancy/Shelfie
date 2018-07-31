@@ -10,11 +10,16 @@
 #import "BTBarcodeViewController.h"
 #import "SWRevealViewController.h"
 #import "GOBook.h"
+#import "BTPostManager.h"
 #import <AVFoundation/AVFoundation.h>
 #import <JSONModel/JSONModel.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import "BTUserDefaults.h"
 
 @interface BTAddBookViewController () <BarcodeViewControllerDelegate>
 @property (strong, nonatomic) GOBook *book;
+@property (strong, nonatomic) NSString *isbn;
 @end
 
 @implementation BTAddBookViewController
@@ -49,9 +54,28 @@
 
 - (void)makeBook:(NSDictionary *)book {
     NSDictionary *bookDictionary = book[@"items"][0][@"volumeInfo"];
+    self.isbn = bookDictionary[@"industryIdentifiers"][1][@"identifier"];
     NSError *error;
     self.book = [[GOBook alloc] initWithDictionary:bookDictionary error:&error];
+    [self postBook];
     // set up all of the views etc in the rest of this function
+}
+
+- (void)postBook {
+    CLLocationCoordinate2D currentLocation = [BTUserDefaults getCurrentLocation];
+    NSNumber *longitude = @(currentLocation.longitude);
+    NSNumber *latitide = @(currentLocation.latitude);
+    
+    [[BTPostManager shared] addBookToDatabaseWithUserId:[FBSDKAccessToken currentAccessToken].userID title:@"title" author:self.book.authors[0] isbn:self.isbn date:self.book.publishedDate coverURL:self.book.imageLinks[@"thumbnail"] latitude:latitide longitude:longitude completion:^(BOOL succeeded, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"error");
+        } else {
+            NSLog(@"posted");
+            //TODO: segue to home view controller or profile
+        }
+    }];
+    
+
 }
 
 
