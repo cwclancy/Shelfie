@@ -13,6 +13,7 @@
 		A488EEA0210FD1910074B42A /* BTFbAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EE9F210FD1910074B42A /* BTFbAPIManager.m */; };
 		A488EEA3210FD71C0074B42A /* BTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA2210FD71C0074B42A /* BTUser.m */; };
 		A488EEA6211100C70074B42A /* FBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA5211100C70074B42A /* FBUser.m */; };
+		A488EEA92111083F0074B42A /* BTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA82111083F0074B42A /* BTUserManager.m */; };
 		B163B48B2110D478007C5ADB /* BTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163B4892110D478007C5ADB /* BTLoginViewController.m */; };
 		B163B48E2110D48B007C5ADB /* BTAddBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163B48C2110D48B007C5ADB /* BTAddBookViewController.m */; };
 		B197F831210A6E10004805D8 /* BTSideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F830210A6E10004805D8 /* BTSideTableViewController.m */; };
@@ -64,6 +65,8 @@
 		A488EEA2210FD71C0074B42A /* BTUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUser.m; sourceTree = "<group>"; };
 		A488EEA4211100C70074B42A /* FBUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBUser.h; sourceTree = "<group>"; };
 		A488EEA5211100C70074B42A /* FBUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBUser.m; sourceTree = "<group>"; };
+		A488EEA72111083F0074B42A /* BTUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUserManager.h; sourceTree = "<group>"; };
+		A488EEA82111083F0074B42A /* BTUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUserManager.m; sourceTree = "<group>"; };
 		B163B4892110D478007C5ADB /* BTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLoginViewController.m; sourceTree = "<group>"; };
 		B163B48A2110D478007C5ADB /* BTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLoginViewController.h; sourceTree = "<group>"; };
 		B163B48C2110D48B007C5ADB /* BTAddBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAddBookViewController.m; sourceTree = "<group>"; };
@@ -230,6 +233,8 @@
 			children = (
 				CEA6B27E210BD256009860C4 /* BTPostManager.h */,
 				CEA6B27F210BD256009860C4 /* BTPostManager.m */,
+				A488EEA72111083F0074B42A /* BTUserManager.h */,
+				A488EEA82111083F0074B42A /* BTUserManager.m */,
 			);
 			path = BackendManagers;
 			sourceTree = "<group>";
@@ -551,6 +556,7 @@
 				CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */,
 				CEA6B286210BDC83009860C4 /* BTRevealHeadViewController.m in Sources */,
 				A488EEA6211100C70074B42A /* FBUser.m in Sources */,
+				A488EEA92111083F0074B42A /* BTUserManager.m in Sources */,
 				CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
