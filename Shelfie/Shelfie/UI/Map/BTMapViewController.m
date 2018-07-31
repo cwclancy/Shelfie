@@ -36,9 +36,6 @@
     [self.locationManager requestWhenInUseAuthorization];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager startUpdatingLocation];
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,9 +56,6 @@
         [self.mapView setRegion:currentLocation animated:true];
         self.locationFlag = false;
         [BTUserDefaults setCurrentLocation:currentLocation];
-        
-    } else {
-        
     }
 }
 

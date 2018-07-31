@@ -51,7 +51,7 @@
     NSDictionary *bookDictionary = book[@"items"][0][@"volumeInfo"];
     NSError *error;
     self.book = [[GOBook alloc] initWithDictionary:bookDictionary error:&error];
-    // set up all of the views etc in the rest of this function
+    //TODO: set up all of the views etc in the rest of this function
 }
 
 
