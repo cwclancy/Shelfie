@@ -29,6 +29,7 @@
 		CECB9BAE210A4E3D001D2032 /* ShelfieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BAD210A4E3D001D2032 /* ShelfieTests.m */; };
 		CECB9BB9210A4E3D001D2032 /* ShelfieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BB8210A4E3D001D2032 /* ShelfieUITests.m */; };
 		CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECC3384210F83600073A8BE /* BTBarcodeViewController.m */; };
+		CECC3388210FC9B50073A8BE /* GOBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CECC3387210FC9B50073A8BE /* GOBook.m */; };
 		CECFB54C210A9F3B00D5C220 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECFB54B210A9F3B00D5C220 /* MapKit.framework */; };
 		CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECFB551210B99B000D5C220 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
@@ -96,6 +97,8 @@
 		CECB9BBA210A4E3D001D2032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECC3383210F83600073A8BE /* BTBarcodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTBarcodeViewController.h; sourceTree = "<group>"; };
 		CECC3384210F83600073A8BE /* BTBarcodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTBarcodeViewController.m; sourceTree = "<group>"; };
+		CECC3386210FC9B50073A8BE /* GOBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOBook.h; sourceTree = "<group>"; };
+		CECC3387210FC9B50073A8BE /* GOBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOBook.m; sourceTree = "<group>"; };
 		CECFB54B210A9F3B00D5C220 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CECFB550210B99B000D5C220 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		CECFB551210B99B000D5C220 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 			children = (
 				CEA6B272210B9E4C009860C4 /* BTBook.h */,
 				CEA6B273210B9E4C009860C4 /* BTBook.m */,
+				CECC3386210FC9B50073A8BE /* GOBook.h */,
+				CECC3387210FC9B50073A8BE /* GOBook.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 				B197F831210A6E10004805D8 /* BTSideTableViewController.m in Sources */,
 				CEA6B274210B9E4C009860C4 /* BTBook.m in Sources */,
 				CEA6B280210BD256009860C4 /* BTPostManager.m in Sources */,
+				CECC3388210FC9B50073A8BE /* GOBook.m in Sources */,
 				CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */,
 				CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */,
 				B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */,

@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import <JSONModel/JSONModel.h>
 
-@interface BTBook : PFObject <NSCoding, PFSubclassing>
+@interface BTBook : PFObject <NSCoding, PFSubclassing, AbstractJSONModelProtocol>
 
 @property (strong, nonatomic) NSString *userId;
 @property (strong, nonatomic) NSString *title;
