@@ -9,10 +9,12 @@
 #import "BTAddBookViewController.h"
 #import "BTBarcodeViewController.h"
 #import "SWRevealViewController.h"
+#import "GOBook.h"
 #import <AVFoundation/AVFoundation.h>
+#import <JSONModel/JSONModel.h>
 
 @interface BTAddBookViewController () <BarcodeViewControllerDelegate>
-@property (strong, nonatomic) NSDictionary *book;
+@property (strong, nonatomic) GOBook *book;
 @end
 
 @implementation BTAddBookViewController
@@ -46,7 +48,9 @@
 */
 
 - (void)makeBook:(NSDictionary *)book {
-    self.book = book;
+    NSDictionary *bookDictionary = book[@"items"][0][@"volumeInfo"];
+    NSError *error;
+    self.book = [[GOBook alloc] initWithDictionary:bookDictionary error:&error];
 }
 
 
