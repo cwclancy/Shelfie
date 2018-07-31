@@ -30,7 +30,7 @@
     book.author = author;
     book.isbn = isbn;
     book.date = date;
-    //book.coverURL = coverURL;
+    book.coverURL = coverURL;
     book.latitude = latitude;
     book.longitude = longitude;
     [book saveInBackgroundWithBlock:completion];
