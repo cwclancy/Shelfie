@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 #import "FBUser.h"
+#import "BTUser.h"
 
 @interface BTUserManager : NSObject
 
 + (instancetype) shared;
+
 - (void) setFBUser: (FBUser *) user;
+
 
 @end

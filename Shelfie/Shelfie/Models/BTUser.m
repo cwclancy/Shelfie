@@ -10,26 +10,26 @@
 
 @implementation BTUser
 
-@synthesize userId;
-@synthesize name;
-@synthesize picture;
-@synthesize booksHave;
-@synthesize booksSell;
-@synthesize booksWant;
-@synthesize booksTrade;
+@dynamic userId;
+@dynamic name;
+@dynamic picture;
+@dynamic booksHave;
+@dynamic booksSell;
+@dynamic booksWant;
+@dynamic booksTrade;
 
 + (nonnull NSString *) parseClassName {
     return @"User";
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
-    [aCoder encodeObject:userId forKey:@"userId"];
-    [aCoder encodeObject:name forKey:@"name"];
-    [aCoder encodeObject:picture forKey:@"picture"];
-    [aCoder encodeObject:booksTrade forKey:@"booksTrade"];
-    [aCoder encodeObject:booksHave forKey:@"booksHave"];
-    [aCoder encodeObject:booksWant forKey:@"booksWant"];
-    [aCoder encodeObject:booksSell forKey:@"booksSell"];
+    [aCoder encodeObject:self.userId forKey:@"userId"];
+    [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.picture forKey:@"picture"];
+    [aCoder encodeObject:self.booksTrade forKey:@"booksTrade"];
+    [aCoder encodeObject:self.booksHave forKey:@"booksHave"];
+    [aCoder encodeObject:self.booksWant forKey:@"booksWant"];
+    [aCoder encodeObject:self.booksSell forKey:@"booksSell"];
 }
 
 - (instancetype) initWithCoder:(NSCoder *)aDecoder {
