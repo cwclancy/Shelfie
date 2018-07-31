@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BTRevealHeadViewController.h"
+#import "MapViewController.h"
 
-@interface BTHomeViewController : BTRevealHeadViewController
+@interface BTHomeViewController : MapViewController
 
 
 @end

@@ -32,6 +32,8 @@
 		CECC3388210FC9B50073A8BE /* GOBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CECC3387210FC9B50073A8BE /* GOBook.m */; };
 		CECFB54C210A9F3B00D5C220 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECFB54B210A9F3B00D5C220 /* MapKit.framework */; };
 		CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECFB551210B99B000D5C220 /* SWRevealViewController.m */; };
+		CEF5C3722110FDC100A33453 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3712110FDC100A33453 /* MapViewController.m */; };
+		CEF5C3762110FF3700A33453 /* BTUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3752110FF3700A33453 /* BTUserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,10 @@
 		CECFB54B210A9F3B00D5C220 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CECFB550210B99B000D5C220 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		CECFB551210B99B000D5C220 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		CEF5C3702110FDC100A33453 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		CEF5C3712110FDC100A33453 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		CEF5C3742110FF3700A33453 /* BTUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUserDefaults.h; sourceTree = "<group>"; };
+		CEF5C3752110FF3700A33453 /* BTUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUserDefaults.m; sourceTree = "<group>"; };
 		D812159C2E6EFFD51D08D5D8 /* Pods-ShelfieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieUITests/Pods-ShelfieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EF91916D5EC8BB09BF43594A /* libPods-Shelfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shelfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,6 +168,7 @@
 		B197F843210A82E3004805D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CEF5C36F2110FDA100A33453 /* Map */,
 				CECFB54F210B99B000D5C220 /* SWRevealViewController */,
 				CECFB54E210A9FAA00D5C220 /* BookDetail */,
 				CECFB54D210A9F8D00D5C220 /* Login */,
@@ -191,6 +198,7 @@
 		CEA6B270210B9E35009860C4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CEF5C3732110FF1000A33453 /* UserDefaults */,
 				CEA6B27A210BD028009860C4 /* BackendManagers */,
 				CEA6B275210BA287009860C4 /* APIManagers */,
 			);
@@ -311,6 +319,24 @@
 				CEA6B285210BDC83009860C4 /* BTRevealHeadViewController.m */,
 			);
 			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		CEF5C36F2110FDA100A33453 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5C3702110FDC100A33453 /* MapViewController.h */,
+				CEF5C3712110FDC100A33453 /* MapViewController.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		CEF5C3732110FF1000A33453 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5C3742110FF3700A33453 /* BTUserDefaults.h */,
+				CEF5C3752110FF3700A33453 /* BTUserDefaults.m */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,6 +552,7 @@
 			files = (
 				B197F831210A6E10004805D8 /* BTSideTableViewController.m in Sources */,
 				CEA6B274210B9E4C009860C4 /* BTBook.m in Sources */,
+				CEF5C3762110FF3700A33453 /* BTUserDefaults.m in Sources */,
 				CEA6B280210BD256009860C4 /* BTPostManager.m in Sources */,
 				CECC3388210FC9B50073A8BE /* GOBook.m in Sources */,
 				CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */,
@@ -539,6 +566,7 @@
 				B163B48B2110D478007C5ADB /* BTLoginViewController.m in Sources */,
 				CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */,
 				CEA6B286210BDC83009860C4 /* BTRevealHeadViewController.m in Sources */,
+				CEF5C3722110FDC100A33453 /* MapViewController.m in Sources */,
 				CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
