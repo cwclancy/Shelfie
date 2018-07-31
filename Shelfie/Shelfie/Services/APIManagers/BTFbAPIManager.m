@@ -53,7 +53,9 @@
          startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
              if (!error) {
                  NSLog(@"User dictionary after log in:%@", result);
-                 // Initiate user
+                 // Initiate FBUser using JSONModel
+                 FBUser *testUser = [[FBUser alloc] initWithDictionary:result error:nil];
+                 NSLog(@"FBUser model: %@", testUser);
              }
          }];
         

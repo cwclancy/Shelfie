@@ -8,6 +8,7 @@
 
 #import "PFObject.h"
 #import <Parse/Parse.h>
+#import <JSONModel/JSONModel.h>
 
 @interface BTUser : PFObject <NSCoding, PFSubclassing>
 
@@ -21,5 +22,9 @@
 @property (strong, nonatomic) NSMutableArray *booksTrade;
 
 // USER METHODS
+- (void) addToBooksHave;
+- (void) addToBooksWant;
+- (void) removeFromBooksHave;
+- (void) removeFromBooksWant;
 
 @end
