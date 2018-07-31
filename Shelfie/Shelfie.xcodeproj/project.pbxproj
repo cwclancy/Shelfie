@@ -34,6 +34,7 @@
 		CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECFB551210B99B000D5C220 /* SWRevealViewController.m */; };
 		CEF5C3722110FDC100A33453 /* BTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3712110FDC100A33453 /* BTMapViewController.m */; };
 		CEF5C3762110FF3700A33453 /* BTUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3752110FF3700A33453 /* BTUserDefaults.m */; };
+		CEF5C37A2111059E00A33453 /* BTUIServices.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3792111059E00A33453 /* BTUIServices.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		CEF5C3712110FDC100A33453 /* BTMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTMapViewController.m; sourceTree = "<group>"; };
 		CEF5C3742110FF3700A33453 /* BTUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUserDefaults.h; sourceTree = "<group>"; };
 		CEF5C3752110FF3700A33453 /* BTUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUserDefaults.m; sourceTree = "<group>"; };
+		CEF5C3782111059E00A33453 /* BTUIServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIServices.h; sourceTree = "<group>"; };
+		CEF5C3792111059E00A33453 /* BTUIServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIServices.m; sourceTree = "<group>"; };
 		D812159C2E6EFFD51D08D5D8 /* Pods-ShelfieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieUITests/Pods-ShelfieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EF91916D5EC8BB09BF43594A /* libPods-Shelfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shelfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -196,6 +199,7 @@
 		CEA6B270210B9E35009860C4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CEF5C3772111058700A33453 /* UIServices */,
 				CEF5C3732110FF1000A33453 /* UserDefaults */,
 				CEA6B27A210BD028009860C4 /* BackendManagers */,
 				CEA6B275210BA287009860C4 /* APIManagers */,
@@ -337,6 +341,15 @@
 				CEF5C3752110FF3700A33453 /* BTUserDefaults.m */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		CEF5C3772111058700A33453 /* UIServices */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5C3782111059E00A33453 /* BTUIServices.h */,
+				CEF5C3792111059E00A33453 /* BTUIServices.m */,
+			);
+			path = UIServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,6 +575,7 @@
 				A488EEA0210FD1910074B42A /* BTFbAPIManager.m in Sources */,
 				B163B48E2110D48B007C5ADB /* BTAddBookViewController.m in Sources */,
 				CECB9BA4210A4E3D001D2032 /* main.m in Sources */,
+				CEF5C37A2111059E00A33453 /* BTUIServices.m in Sources */,
 				CEA6B283210BD461009860C4 /* BTBookBaseViewController.m in Sources */,
 				B163B48B2110D478007C5ADB /* BTLoginViewController.m in Sources */,
 				CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */,
