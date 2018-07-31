@@ -18,7 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     SWRevealViewController *revealViewController = self.revealViewController;
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:@"item" style:UIBarButtonItemStylePlain target:nil action:nil];
+    UIImage *image = [[UIImage imageNamed:@"iconmonstr-menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithImage:image  style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.leftBarButtonItem = barButton;
     if (revealViewController)
     {
