@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
+    self.mapView = [[MKMapView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:self.mapView];
     CLLocationCoordinate2D myLocation = [BTUserDefaults getCurrentLocation];
     self.mapView.delegate = self;
@@ -36,7 +36,7 @@
     [self.locationManager requestWhenInUseAuthorization];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager startUpdatingLocation];
-
+    
     
     
 }

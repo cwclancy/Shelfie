@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.searchBar = [BTUIServices createSearchBarWithDimensions:CGRectMake(28, 70, 320, 44)];
+    self.searchBar = [BTUIServices createSearchBarWithDimensions:CGRectMake(30, 70, 320, 44)];
     self.searchBar.delegate = self;
     [self.view addSubview:self.searchBar];
     

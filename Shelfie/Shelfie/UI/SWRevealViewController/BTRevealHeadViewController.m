@@ -37,6 +37,7 @@
     self.navigationController.view.backgroundColor = [UIColor clearColor];
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
     
+    
 }
 
 - (void)didReceiveMemoryWarning {
