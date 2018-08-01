@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <Parse/Parse.h>
 #import "FBUser.h"
-#import "BTUser.h"
+#import "BTPostManager.h"
 
 @interface BTUserManager : NSObject
 
 + (instancetype) shared;
 
-- (void) setFBUser: (FBUser *) user;
-
+- (void) FBUserExists: (FBUser *) user;
+- (BTUser *) getCurrentUser;
 
 @end

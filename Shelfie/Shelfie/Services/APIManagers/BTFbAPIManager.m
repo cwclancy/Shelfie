@@ -56,7 +56,7 @@
                  NSLog(@"User dictionary after log in:%@", result);
                  // getFBUser pass on FBUser to User manager
                  FBUser *fbUser = [[FBUser alloc] initWithDictionary:result error:nil];
-                 [[BTUserManager shared] setFBUser:fbUser];
+                 [[BTUserManager shared] FBUserExists:fbUser];
              }
          }];
         

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BTBook.h"
+#import "BTUser.h"
 
 @interface BTPostManager : NSObject
 + (instancetype) shared;
@@ -15,4 +16,7 @@
                                 isbn:(NSString *)isbn date:(NSDate *)date coverURL:(NSURL *)url
                             latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude
                           completion:(PFBooleanResultBlock)completion;
+
++ (void)addUserToDatabase:(NSString *) userId withName:(NSString *) name withProfilePicture:(NSString *) profilePicture withBooks:(NSMutableArray *) booksHave withWantBooks:(NSMutableArray *) booksWant withSellBooks:(NSMutableArray *) booksSell withTradeBooks:(NSMutableArray *) booksTrade withCompletion:(PFBooleanResultBlock)completion;
+
 @end
