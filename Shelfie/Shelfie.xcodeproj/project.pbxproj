@@ -35,6 +35,8 @@
 		CEF5C3722110FDC100A33453 /* BTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3712110FDC100A33453 /* BTMapViewController.m */; };
 		CEF5C3762110FF3700A33453 /* BTUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3752110FF3700A33453 /* BTUserDefaults.m */; };
 		CEF5C37A2111059E00A33453 /* BTUIServices.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3792111059E00A33453 /* BTUIServices.m */; };
+		CEF5C37F2111234E00A33453 /* BTGetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C37E2111234E00A33453 /* BTGetManager.m */; };
+		CEF5C387211126E100A33453 /* PinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C386211126E100A33453 /* PinAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,10 @@
 		CEF5C3752110FF3700A33453 /* BTUserDefaults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUserDefaults.m; sourceTree = "<group>"; };
 		CEF5C3782111059E00A33453 /* BTUIServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUIServices.h; sourceTree = "<group>"; };
 		CEF5C3792111059E00A33453 /* BTUIServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUIServices.m; sourceTree = "<group>"; };
+		CEF5C37D2111234E00A33453 /* BTGetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTGetManager.h; sourceTree = "<group>"; };
+		CEF5C37E2111234E00A33453 /* BTGetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTGetManager.m; sourceTree = "<group>"; };
+		CEF5C385211126E100A33453 /* PinAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinAnnotation.h; sourceTree = "<group>"; };
+		CEF5C386211126E100A33453 /* PinAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinAnnotation.m; sourceTree = "<group>"; };
 		D812159C2E6EFFD51D08D5D8 /* Pods-ShelfieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieUITests/Pods-ShelfieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EF91916D5EC8BB09BF43594A /* libPods-Shelfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shelfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -230,6 +236,8 @@
 			children = (
 				CEA6B27E210BD256009860C4 /* BTPostManager.h */,
 				CEA6B27F210BD256009860C4 /* BTPostManager.m */,
+				CEF5C37D2111234E00A33453 /* BTGetManager.h */,
+				CEF5C37E2111234E00A33453 /* BTGetManager.m */,
 			);
 			path = BackendManagers;
 			sourceTree = "<group>";
@@ -326,10 +334,8 @@
 		CEF5C36F2110FDA100A33453 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				CECB9B97210A4E3C001D2032 /* BTHomeViewController.h */,
-				CECB9B98210A4E3C001D2032 /* BTHomeViewController.m */,
-				CEF5C3702110FDC100A33453 /* BTMapViewController.h */,
-				CEF5C3712110FDC100A33453 /* BTMapViewController.m */,
+				CEF5C37C2111230B00A33453 /* Controllers */,
+				CEF5C37B2111230200A33453 /* Views */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -350,6 +356,26 @@
 				CEF5C3792111059E00A33453 /* BTUIServices.m */,
 			);
 			path = UIServices;
+			sourceTree = "<group>";
+		};
+		CEF5C37B2111230200A33453 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEF5C385211126E100A33453 /* PinAnnotation.h */,
+				CEF5C386211126E100A33453 /* PinAnnotation.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF5C37C2111230B00A33453 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CECB9B97210A4E3C001D2032 /* BTHomeViewController.h */,
+				CECB9B98210A4E3C001D2032 /* BTHomeViewController.m */,
+				CEF5C3702110FDC100A33453 /* BTMapViewController.h */,
+				CEF5C3712110FDC100A33453 /* BTMapViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,6 +600,7 @@
 				CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */,
 				A488EEA0210FD1910074B42A /* BTFbAPIManager.m in Sources */,
 				B163B48E2110D48B007C5ADB /* BTAddBookViewController.m in Sources */,
+				CEF5C387211126E100A33453 /* PinAnnotation.m in Sources */,
 				CECB9BA4210A4E3D001D2032 /* main.m in Sources */,
 				CEF5C37A2111059E00A33453 /* BTUIServices.m in Sources */,
 				CEA6B283210BD461009860C4 /* BTBookBaseViewController.m in Sources */,
@@ -581,6 +608,7 @@
 				CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */,
 				CEA6B286210BDC83009860C4 /* BTRevealHeadViewController.m in Sources */,
 				CEF5C3722110FDC100A33453 /* BTMapViewController.m in Sources */,
+				CEF5C37F2111234E00A33453 /* BTGetManager.m in Sources */,
 				CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,7 +781,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A5TQ98F5H4;
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -773,7 +801,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A5TQ98F5H4;
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

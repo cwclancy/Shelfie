@@ -9,12 +9,16 @@
 #import "BTMapViewController.h"
 #import "BTUserDefaults.h"
 #import <CoreLocation/CoreLocation.h>
+#import "BTGetManager.h"
+#import "BTBook.h"
+#import "PinAnnotation.h"
 #import <MapKit/MapKit.h>
 
 
 @interface BTMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 @property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
+@property (strong, nonatomic) NSArray *mapBooks;
 @property (nonatomic) MKCoordinateRegion currentLocation;
 @property BOOL locationFlag;
 @end
@@ -36,12 +40,18 @@
     [self.locationManager requestWhenInUseAuthorization];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [self.locationManager startUpdatingLocation];
+    
+    [[BTGetManager shared] fetchBooksWithCompletion:^(NSArray *books, NSError *error) {
+        if (error) {
+            NSLog(@"error");
+        } else {
+            self.mapBooks = books;
+            [self updateBookLocations:books];
+        }
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(nonnull NSError *)error {
     NSLog(@"I failed");
@@ -59,6 +69,36 @@
     }
 }
 
+- (void)updateBookLocations:(NSArray *)books {
+    for (int i = 0; i < books.count; i++) {
+        BTBook *book = books[i];
+        if (book.latitude && book.longitude) {
+            CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake([book.latitude doubleValue], [book.longitude doubleValue]);
+            PinAnnotation *annotation = [[PinAnnotation alloc] initWithBook:book coordinate:centerCoordinate title:book.title];
+            [self.mapView addAnnotation:annotation];
+        }
+    }
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    NSString *identifier = @"identity";
+    if ([annotation isKindOfClass:[MKUserLocation class]])
+        return nil;
+    MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+    annotationView.canShowCallout = YES;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    return annotationView;
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    PinAnnotation *pinAnnotation = view.annotation;
+    NSLog(@"%@", pinAnnotation);
+}
+
+
+
 /*
 #pragma mark - Navigation
 
@@ -68,5 +108,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end
