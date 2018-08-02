@@ -445,15 +445,18 @@
                         <viewLayoutGuide key="safeArea" id="YnZ-zY-LaZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="TtW-7p-w0u"/>
+                    <connections>
+                        <segue destination="kVl-o9-5IU" kind="show" identifier="mapToBookSegue" id="1OK-8g-udt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPm-oF-yZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3015.1999999999998" y="798.35082458770626"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Book View Controller-->
         <scene sceneID="i01-0C-0Rm">
             <objects>
-                <viewController id="kVl-o9-5IU" sceneMemberID="viewController">
+                <viewController id="kVl-o9-5IU" customClass="BTMapBookViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qoh-0f-Dyi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -518,6 +521,9 @@
                                         <rect key="frame" x="124" y="528" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button" image="facebook-messenger-1"/>
+                                        <connections>
+                                            <action selector="pressedMessage:" destination="kVl-o9-5IU" eventType="touchUpInside" id="gnG-it-tpR"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fg4-Fh-8aK">
                                         <rect key="frame" x="180" y="536" width="75" height="25"/>
@@ -579,6 +585,15 @@
                         <viewLayoutGuide key="safeArea" id="VBT-TG-HRo"/>
                     </view>
                     <navigationItem key="navigationItem" id="znC-UR-Mhk"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="Yrv-fw-527" id="WHk-Sf-tCZ"/>
+                        <outlet property="bookAddedLabel" destination="clm-KN-2Gt" id="eq7-J4-Nij"/>
+                        <outlet property="coverImageView" destination="WUN-iC-rqs" id="W34-cd-q8u"/>
+                        <outlet property="dateLabel" destination="axR-4k-48b" id="Onw-LY-2Ur"/>
+                        <outlet property="ownerNameLabel" destination="S8B-Uq-qkq" id="KQe-UI-OVV"/>
+                        <outlet property="profileImageView" destination="Xtg-3n-O37" id="YWJ-OC-kQe"/>
+                        <outlet property="titleLabel" destination="GPB-mX-Q7n" id="yqc-6a-Dsr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDu-KN-ZAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -893,24 +908,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Pz-Ta-BAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2034" y="1689"/>
-        </scene>
-        <!--Custom Nav Controller-->
-        <scene sceneID="jvO-qD-hf0">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5mm-Xi-GUM" customClass="CustomNavController" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tJU-2a-kdZ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="kVl-o9-5IU" kind="relationship" relationship="rootViewController" id="zty-2R-cCd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2d0-MX-gG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4141.6000000000004" y="797.45127436281871"/>
         </scene>
     </scenes>
     <resources>

@@ -35,7 +35,7 @@
 - (void) viewDidAppear:(BOOL)animated {
     // If there is a current session going
     if([FBSDKAccessToken currentAccessToken]) {
-        //[self performSegueWithIdentifier:@"loginToHome" sender:self];
+        [self performSegueWithIdentifier:@"loginToHome" sender:self];
     }
     
 }
