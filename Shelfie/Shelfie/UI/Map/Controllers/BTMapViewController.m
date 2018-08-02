@@ -12,6 +12,7 @@
 #import "BTGetManager.h"
 #import "BTBook.h"
 #import "PinAnnotation.h"
+#import "BTMapBookDetailsViewController.h"
 #import <MapKit/MapKit.h>
 
 
@@ -93,21 +94,20 @@
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    PinAnnotation *pinAnnotation = view.annotation;
-    NSLog(@"%@", pinAnnotation);
+    [self performSegueWithIdentifier:@"mapToBookSegue" sender:view.annotation];
 }
 
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"mapToBookSegue"]) {
+        PinAnnotation *pinAnnotation = sender;
+        BTMapBookDetailsViewController *mapBookViewController = [segue destinationViewController];
+        mapBookViewController.book = pinAnnotation.book;
+    }
 }
-*/
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

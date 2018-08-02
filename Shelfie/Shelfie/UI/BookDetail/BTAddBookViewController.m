@@ -10,10 +10,12 @@
 #import "BTBarcodeViewController.h"
 #import "SWRevealViewController.h"
 #import "GOBook.h"
+#import "UIImageView+AFNetworking.h"
 #import <AVFoundation/AVFoundation.h>
 #import <JSONModel/JSONModel.h>
 
 @interface BTAddBookViewController () <BarcodeViewControllerDelegate>
+
 @property (strong, nonatomic) GOBook *book;
 @property (strong, nonatomic) NSString *coverURL;
 
@@ -32,12 +34,6 @@
 @property (nonatomic, assign) BOOL gift;
 @property (nonatomic, assign) BOOL location;
 @property (nonatomic, assign) BOOL own;
-
-//@property (nonatomic) CLLocationDegrees bookLat;
-//@property (nonatomic) CLLocationDegrees bookLon;
-@property (nonatomic) NSNumber *p_bookLat;
-@property (nonatomic) NSNumber *p_bookLon;
-
 @end
 
 @implementation BTAddBookViewController
@@ -45,7 +41,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [super setDelegate:self];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -69,15 +64,17 @@
 
 - (void)makeBook:(NSDictionary *)book {
     NSDictionary *bookDictionary = book[@"items"][0][@"volumeInfo"];
-    NSError *error;
-    self.book = [[GOBook alloc] initWithDictionary:bookDictionary error:&error];
-    self.coverURL = self.book.imageLinks[@"small"];
-    NSURL *url = [NSURL URLWithString: self.coverURL];
-    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    self.book = [GOBook new];
+    self.book.title = bookDictionary[@"title"];
+    self.book.imageLinks = bookDictionary[@"imageLinks"];
+    self.book.authors = bookDictionary[@"authors"];
+    self.coverURL = self.book.imageLinks[@"thumbnail"];
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.authors[0];
     self.dateLabel.text = self.book.date;
-    self.bookCover.image = [UIImage imageWithData:imageData];
+    [self.bookCover setImageWithURL:[NSURL URLWithString:self.coverURL]];
+    [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
+    [self.bookCover.layer setBorderWidth: 2.0];
 }
 
 - (IBAction)useCurrentLocation:(id)sender {
@@ -122,6 +119,9 @@ if (!self.gift) {
     }
 }
 
+- (IBAction)publishedClicked:(id)sender {
+    
+}
 
 
 
