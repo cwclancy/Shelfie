@@ -2,19 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>fb1032479996925483</string>
-            </array>
-        </dict>
-    </array>
-    <key>FacebookAppID</key>
-    <string>1032479996925483</string>
-    <key>FacebookDisplayName</key>
-    <string>Shelfie</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -29,14 +16,33 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1032479996925483</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>1032479996925483</string>
+	<key>FacebookDisplayName</key>
+	<string>Shelfie</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiY2xhdWRpYTY0OTkiLCJhIjoiY2prNDllM3JiMWJmYjN4bnR6M21mMHhlayJ9.cykqMlQ7HIofGdNodx6YuA</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Need camera access to get isbn</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Shows your location on the map and helps improve OpenStreetMap.
+Shows your location on the map and helps improve OpenStreetMap.
+</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-    <key>NSCameraUsageDescription</key>
-    <string>Need camera access to get isbn</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -56,11 +62,20 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>MGLMapboxAccessToken</key>
-	<string>pk.eyJ1IjoiY2xhdWRpYTY0OTkiLCJhIjoiY2prNDllM3JiMWJmYjN4bnR6M21mMHhlayJ9.cykqMlQ7HIofGdNodx6YuA</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Shows your location on the map and helps improve OpenStreetMap.
-Shows your location on the map and helps improve OpenStreetMap.
-</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>yourdomain.com</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

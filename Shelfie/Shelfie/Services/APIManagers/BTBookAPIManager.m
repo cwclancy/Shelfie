@@ -20,29 +20,7 @@
     return sharedManager;
 }
 
-+ (void)fetchUsersBooksWithUserId:(NSString *)userId completion:(void(^)(NSArray *books, NSError *error))completion {
-    PFQuery *query = [PFQuery queryWithClassName:@"Book"];
-    [query includeKey:@"userId"];
-    [query whereKey:@"userId" equalTo:userId];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        if (error) {
-            completion(nil, error);
-        } else {
-            completion(objects, nil);
-        }
-    }];
-}
 
-+ (void)fetchUsersBooksWithCompletion:(void(^)(NSArray *books, NSError *error))completion {
-    PFQuery *query = [PFQuery queryWithClassName:@"Book"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        if (error) {
-            completion(nil, error);
-        } else {
-            completion(objects, nil);
-        }
-    }];
-}
 
 - (void)fetchBookWithIsbn:(NSString *)isbn completion:(void(^)(id book, NSError *error))completion {
     NSString *url_body = @"https://www.googleapis.com/books/v1/volumes?q=isbn:";
