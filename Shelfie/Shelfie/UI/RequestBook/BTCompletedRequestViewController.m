@@ -1,24 +1,18 @@
 //
-//  BTRequestBookViewController.m
+//  BTCompletedRequestViewController.m
 //  Shelfie
 //
 //  Created by Claudia Haddad on 8/2/18.
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
-#import "BTRequestBookViewController.h"
-#import "BTBookAPIManager.h"
+#import "BTCompletedRequestViewController.h"
 
-
-@interface BTRequestBookViewController ()
-
-@property (strong, nonatomic) NSString *isbn;
-@property (strong, nonatomic) IBOutlet UITextField *isbnField;
-
+@interface BTCompletedRequestViewController ()
 
 @end
 
-@implementation BTRequestBookViewController
+@implementation BTCompletedRequestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,18 +24,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (void) textEntered {
-//[[BTBookAPIManager shared] fetchBookWithIsbn:self.isbn completion:^(id book, NSError *error) {
- //   if (error) {
-  //      NSLog(@"%@", error);
-  //  } else {
-   //     [self makeBook:book];
-  //  }
-//}
-//
-
-//}
- 
 /*
 #pragma mark - Navigation
 
