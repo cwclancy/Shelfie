@@ -20,6 +20,26 @@
 @interface BTAddBookViewController () <BarcodeViewControllerDelegate>
 @property (strong, nonatomic) GOBook *book;
 @property (strong, nonatomic) NSString *isbn;
+@property (strong, nonatomic) NSString *coverURL;
+
+@property (strong, nonatomic) IBOutlet UIButton *sellButton;
+@property (strong, nonatomic) IBOutlet UIButton *tradeButton;
+@property (strong, nonatomic) IBOutlet UIButton *giftButton;
+@property (strong, nonatomic) IBOutlet UIButton *currentLocation;
+
+@property (strong, nonatomic) IBOutlet UILabel *authorLabel;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *bookCover;
+
+@property (nonatomic, assign) BOOL sell;
+@property (nonatomic, assign) BOOL trade;
+@property (nonatomic, assign) BOOL gift;
+@property (nonatomic, assign) BOOL location;
+@property (nonatomic, assign) BOOL own;
+
+@property (nonatomic) NSNumber *p_bookLat;
+@property (nonatomic) NSNumber *p_bookLon;
 @end
 
 @implementation BTAddBookViewController
@@ -31,16 +51,12 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 /*
 #pragma mark - Navigation
@@ -74,9 +90,57 @@
             //TODO: segue to home view controller or profile
         }
     }];
-    
-
+    self.coverURL = self.book.imageLinks[@"small"];
+    NSURL *url = [NSURL URLWithString: self.coverURL];
+    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    self.titleLabel.text = self.book.title;
+    self.authorLabel.text = self.book.authors[0];
+    self.dateLabel.text = self.book.date;
+    self.bookCover.image = [UIImage imageWithData:imageData];
 }
+
+- (IBAction)useCurrentLocation:(id)sender {
+    if (!self.location) {
+        self.location = true;
+        [self.currentLocation setImage:[UIImage imageNamed:@"iconmonstr-circle-1-240.png"] forState:UIControlStateNormal];
+    } else if (self.location) {
+        self.location = false;
+        [self.currentLocation setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
+        //TODO:set book location with defaults (if we do defaults)
+    }
+}
+
+- (IBAction)sellClicked:(id)sender {
+    if (!self.sell) {
+        self.sell = true;
+        [self.sellButton setImage:[UIImage imageNamed:@"iconmonstr-circle-1-240.png"] forState:UIControlStateNormal];
+    } else if (self.sell) {
+        self.sell = false;
+        [self.sellButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
+    }
+}
+
+
+- (IBAction)tradeClicked:(id)sender {
+    if (!self.trade) {
+        self.trade = true;
+        [self.tradeButton setImage:[UIImage imageNamed:@"iconmonstr-circle-1-240.png"] forState:UIControlStateNormal];
+    } else if (self.trade) {
+        self.trade = false;
+        [self.tradeButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
+    }
+}
+
+- (IBAction)giftClicked:(id)sender {
+if (!self.gift) {
+        self.gift = true;
+        [self.giftButton setImage:[UIImage imageNamed:@"iconmonstr-circle-1-240.png"] forState:UIControlStateNormal];
+    } else if (self.gift) {
+        self.gift = false;
+        [self.giftButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
+    }
+}
+
 
 
 
