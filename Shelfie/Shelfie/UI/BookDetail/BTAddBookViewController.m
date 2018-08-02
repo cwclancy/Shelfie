@@ -71,16 +71,13 @@
     NSDictionary *bookDictionary = book[@"items"][0][@"volumeInfo"];
     NSError *error;
     self.book = [[GOBook alloc] initWithDictionary:bookDictionary error:&error];
-
     self.coverURL = self.book.imageLinks[@"small"];
     NSURL *url = [NSURL URLWithString: self.coverURL];
     NSData *imageData = [NSData dataWithContentsOfURL:url];
-    
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.authors[0];
     self.dateLabel.text = self.book.date;
     self.bookCover.image = [UIImage imageWithData:imageData];
-
 }
 
 - (IBAction)useCurrentLocation:(id)sender {
@@ -94,6 +91,7 @@
         //TODO:set book location with defaults (if we do defaults)
     }
 }
+
 - (IBAction)sellClicked:(id)sender {
     if (!self.sell) {
         self.sell = true;
@@ -103,6 +101,7 @@
         [self.sellButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
     }
 }
+
 - (IBAction)tradeClicked:(id)sender {
     if (!self.trade) {
         self.trade = true;
