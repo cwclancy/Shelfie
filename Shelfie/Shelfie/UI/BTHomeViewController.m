@@ -8,6 +8,7 @@
 
 #import "BTHomeViewController.h"
 #import "SWRevealViewController.h"
+#import "BTUserManager.h"
 
 @interface BTHomeViewController ()
 @end
@@ -16,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"HOME VIEW : %@", [[BTUserManager shared] getCurrentUser]);
 }
 
 

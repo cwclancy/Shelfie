@@ -7,7 +7,6 @@
 //
 
 #import "BTFbAPIManager.h"
-#import "BTUserManager.h"
 
 @implementation BTFbAPIManager
 
@@ -41,13 +40,13 @@
                 NSLog (@ "Canceled" );
             } else {
                 NSLog (@"Logged in" );
-                [self fetchFBSDKUserData];
+                [self fetchFBSDKUserData: loginController];
             }
         }];
     }
 }
 
-- (void) fetchFBSDKUserData {
+- (void) fetchFBSDKUserData: (BTLoginViewController *) loginController {
     // If user logged in successfully, fetch data from facebook
     if ([FBSDKAccessToken currentAccessToken ]) {
         [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"name, picture"}]
@@ -56,7 +55,7 @@
                  NSLog(@"User dictionary after log in:%@", result);
                  // getFBUser pass on FBUser to User manager
                  FBUser *fbUser = [[FBUser alloc] initWithDictionary:result error:nil];
-                 [[BTUserManager shared] FBUserExists:fbUser];
+                 [[BTUserManager sharedWithUser:fbUser] FBUserExists: fbUser loginController:loginController];
              }
          }];
         

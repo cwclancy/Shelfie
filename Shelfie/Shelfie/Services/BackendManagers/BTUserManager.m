@@ -7,6 +7,7 @@
 //
 
 #import "BTUserManager.h"
+#import "BTLoginViewController.h"
 
 @interface BTUserManager()
 
@@ -16,28 +17,31 @@
 
 @implementation BTUserManager
 
-+ (instancetype) shared {
++ (instancetype) sharedWithUser:(FBUser *)user {
     static BTUserManager *sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedManager = [[self alloc] init];
+        [sharedManager init:user];
     });
     return sharedManager;
 }
 
-- (instancetype) init {
-    // Initiate User
-    [[self fetchUserQueryFromParse] findObjectsInBackgroundWithBlock:^(NSArray *user, NSError *error) {
-        self.currentUser = (BTUser *) user[0];
-    }];
-    return self;
+- (void) init: (FBUser *) user {
+    // Initialize user
+    self.currentUser.userId = user.userId;
+    self.currentUser.picture = user.picture;
+    self.currentUser.booksTrade = [NSMutableArray new];
+    self.currentUser.booksSell = [NSMutableArray new];
+    self.currentUser.booksWant = [NSMutableArray new];
+    self.currentUser.booksHave = [NSMutableArray new];
 }
 
 - (BTUser *) getCurrentUser {
     return  self.currentUser;
 }
 
-- (void) FBUserExists: (FBUser *)user {
+- (void) FBUserExists: (FBUser *)user loginController: (BTLoginViewController *) loginVC {
     
     // fetch data asynchronously
     [[self fetchUserQueryFromParse] findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
@@ -49,6 +53,7 @@
                 [BTPostManager addUserToDatabase: user.userId withName: user.name withProfilePicture: user.picture withBooks: [NSMutableArray new] withWantBooks: [NSMutableArray new] withSellBooks: [NSMutableArray new] withTradeBooks: [NSMutableArray new] withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
                     if (succeeded) {
                         NSLog(@"User added to parse");
+                        //[loginVC performSegueWithIdentifier:@"loginToHome" sender:nil];
                     }
                 }];
             }
