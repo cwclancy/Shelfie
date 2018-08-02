@@ -10,7 +10,6 @@
 
 @interface BTSideTableViewController ()
 
-
 @end
 
 @implementation BTSideTableViewController
