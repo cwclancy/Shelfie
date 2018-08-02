@@ -291,6 +291,7 @@
                                 <rect key="frame" x="0.0" y="423" width="375" height="244"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvm-4E-whW">
                                         <rect key="frame" x="83" y="30" width="28" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -458,28 +459,22 @@
                     <view key="view" contentMode="scaleToFill" id="2dc-gH-SLM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM4-fl-qgA">
-                                <rect key="frame" x="166" y="149" width="86" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YnZ-zY-LaZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="TtW-7p-w0u"/>
+                    <connections>
+                        <segue destination="kVl-o9-5IU" kind="show" identifier="mapToBookSegue" id="vS7-Sb-czk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPm-oF-yZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3196" y="32"/>
         </scene>
-        <!--View Controller-->
+        <!--Map Book Details View Controller-->
         <scene sceneID="i01-0C-0Rm">
             <objects>
-                <viewController id="kVl-o9-5IU" sceneMemberID="viewController">
+                <viewController id="kVl-o9-5IU" customClass="BTMapBookDetailsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qoh-0f-Dyi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -493,7 +488,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUN-iC-rqs">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WUN-iC-rqs">
                                         <rect key="frame" x="99" y="138" width="176" height="189"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -549,7 +544,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gH-5f-6Ra" userLabel="user view">
-                                        <rect key="frame" x="5" y="521" width="375" height="77"/>
+                                        <rect key="frame" x="0.0" y="521" width="380" height="77"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xtg-3n-O37">
@@ -578,6 +573,9 @@
                                                 <rect key="frame" x="308" y="17" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button" image="facebook-messenger-1"/>
+                                                <connections>
+                                                    <action selector="messengerPressed:" destination="kVl-o9-5IU" eventType="touchUpInside" id="2xf-J9-jqd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.078431372550000003" green="0.46274509800000002" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -641,6 +639,15 @@
                         <viewLayoutGuide key="safeArea" id="VBT-TG-HRo"/>
                     </view>
                     <navigationItem key="navigationItem" id="znC-UR-Mhk"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="axR-4k-48b" id="v4P-PN-Rpn"/>
+                        <outlet property="coverImageView" destination="WUN-iC-rqs" id="wK1-kI-WOm"/>
+                        <outlet property="dateLabel" destination="axR-4k-48b" id="HK7-YZ-bao"/>
+                        <outlet property="ownerImageView" destination="Xtg-3n-O37" id="hXX-va-Qhg"/>
+                        <outlet property="ownerNameLabel" destination="S8B-Uq-qkq" id="cJD-JG-zow"/>
+                        <outlet property="postedDateLabel" destination="clm-KN-2Gt" id="aJx-Je-opN"/>
+                        <outlet property="titleLabel" destination="GPB-mX-Q7n" id="MRO-E6-plj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDu-KN-ZAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
