@@ -1,24 +1,22 @@
 //
-//  CustomNavController.m
+//  BTCompletedRequestViewController.m
 //  Shelfie
 //
-//  Created by Claudia Haddad on 7/27/18.
+//  Created by Claudia Haddad on 8/2/18.
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
-#import "CustomNavController.h"
+#import "BTCompletedRequestViewController.h"
 
-@interface CustomNavController ()
+@interface BTCompletedRequestViewController ()
 
 @end
 
-@implementation CustomNavController
+@implementation BTCompletedRequestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    self.navigationBar.shadowImage = [UIImage new];
-    self.navigationBar.translucent = YES;    
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
