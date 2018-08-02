@@ -73,6 +73,8 @@
     self.authorLabel.text = self.book.authors[0];
     self.dateLabel.text = self.book.date;
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.coverURL]];
+    [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
+    [self.bookCover.layer setBorderWidth: 2.0];
 }
 
 - (IBAction)useCurrentLocation:(id)sender {
@@ -117,6 +119,9 @@ if (!self.gift) {
     }
 }
 
+- (IBAction)publishedClicked:(id)sender {
+    
+}
 
 
 
