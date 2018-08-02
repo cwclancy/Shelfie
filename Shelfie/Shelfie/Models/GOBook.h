@@ -14,5 +14,4 @@
 @property (strong, nonatomic) NSArray *authors;
 @property (strong, nonatomic) NSString *date;
 @property (strong, nonatomic) NSDictionary *imageLinks;
-@property (strong, nonatomic) NSString *description;
 @end
