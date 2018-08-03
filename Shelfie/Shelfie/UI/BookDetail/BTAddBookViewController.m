@@ -68,6 +68,7 @@
     self.book.title = bookDictionary[@"title"];
     self.book.imageLinks = bookDictionary[@"imageLinks"];
     self.book.authors = bookDictionary[@"authors"];
+    self.book.date = bookDictionary[@"publishedDate"];
     self.coverURL = self.book.imageLinks[@"thumbnail"];
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.authors[0];
@@ -118,9 +119,7 @@ if (!self.gift) {
         [self.giftButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
     }
 }
-
-- (IBAction)publishedClicked:(id)sender {
-    
+- (IBAction)submitClicked:(id)sender {
 }
 
 
