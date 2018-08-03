@@ -326,6 +326,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitClicked:" destination="eWt-aP-7LS" eventType="touchUpInside" id="t4u-1e-jfX"/>
+                                    <segue destination="WSW-h5-dVI" kind="presentation" id="qa5-ZM-w0b"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ede-Fq-lEY">
