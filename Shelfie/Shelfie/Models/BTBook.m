@@ -18,6 +18,11 @@
 @dynamic coverURL;
 @dynamic latitude;
 @dynamic longitude;
+@dynamic sell;
+@dynamic trade;
+@dynamic gift;
+@dynamic location;
+@dynamic own;
 
 + (nonnull NSString *)parseClassName {
     return @"Book";
