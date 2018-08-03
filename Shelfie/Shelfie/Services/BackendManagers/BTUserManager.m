@@ -7,6 +7,7 @@
 //
 
 #import "BTUserManager.h"
+#import <Parse/Parse.h>
 #import "BTLoginViewController.h"
 
 @interface BTUserManager()
@@ -77,6 +78,28 @@
     
     return query;
     
+}
+
+- (void)addToBooksHave:(NSString *)bookISBN {
+    [self.currentUser addObject:bookISBN forKey:@"booksHave"];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"updated!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+- (void)removeFromBooksHave:(NSString *)bookISBN {
+    [self.currentUser removeObject:bookISBN forKey:@"booksHave"];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"updated!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
 }
 
 @end

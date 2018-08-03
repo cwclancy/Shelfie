@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BTBook.h"
+#import "BTBookBaseViewController.h"
 
-@interface BTMapBookDetailsViewController : UIViewController
+@interface BTMapBookDetailsViewController : BTBookBaseViewController
 @property (strong, nonatomic) BTBook *book;
 @end
