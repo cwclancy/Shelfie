@@ -21,7 +21,7 @@
 
 
 + (void) addBookToDatabaseWithUserId:(NSString *)userId title:(NSString *)title author:(NSString *)author
-                                isbn:(NSString *)isbn date:(NSDate *)date coverURL:(NSURL *)coverURL
+                                isbn:(NSString *)isbn date:(NSString *)date coverURL:(NSString *)coverURL
                             latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude
                           completion:(PFBooleanResultBlock)completion {
     BTBook *book = [BTBook new];
