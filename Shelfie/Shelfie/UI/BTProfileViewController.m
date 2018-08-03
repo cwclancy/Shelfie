@@ -8,17 +8,27 @@
 
 #import "BTProfileViewController.h"
 #import "SWRevealViewController.h"
+#import "BTUser.h"
+#import "UIImageView+AFNetworking.h"
+
 
 @interface BTProfileViewController ()
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *barButton;
-
+@property (strong, nonatomic) BTUser *currentUser;
+@property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *numberBooksLabel;
 @end
 
 @implementation BTProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"PROFILE: %@", [[BTUserManager shared] getCurrentUser]);
+    self.currentUser = [[BTUserManager shared] getCurrentUser];
+    [self.profileImageView setImageWithURL:[NSURL URLWithString:self.currentUser.picture]];
+    self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2;
+    self.profileImageView.clipsToBounds = YES;
+    self.nameLabel.text = self.currentUser.name;
+    self.numberBooksLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.currentUser.booksHave.count];
     
 }
 
