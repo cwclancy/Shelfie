@@ -36,7 +36,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *bookCover;
 
-@property (strong, nonatomic) NSValue *bookDistance;
+//@property (strong, nonatomic) NSInteger *bookDistance;
 @property (nonatomic, assign) BOOL buySell;
 @property (nonatomic, assign) BOOL trade;
 @property (nonatomic, assign) BOOL gift;
@@ -113,7 +113,8 @@ if (!self.gift) {
     }
 }
 - (IBAction)sliderValueChanged:(id)sender {
-    self.sliderLabel.text = [NSString stringWithFormat:@"%f", self.slider.value];
+    //self.slider.value = round(self.slider.value);
+    self.sliderLabel.text = [NSString stringWithFormat:@"%.0f miles", self.slider.value];
 }
 
 
