@@ -122,7 +122,17 @@
     [self.searchBar resignFirstResponder];
 }
 
-
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if (searchText.length != 0) {
+        self.filteredBooks = [self.mapBooks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(title contains[c] %@)", searchText]];
+        NSLog(@"%@", self.filteredBooks);
+        
+    } else {
+        self.filteredBooks = self.mapBooks;
+    }
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self updateBookLocations:self.filteredBooks];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
