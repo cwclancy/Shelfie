@@ -13,19 +13,11 @@
 #import "BTPostManager.h"
 #import "BTLoginViewController.h"
 
-@class BTUserManager;
-
-@protocol BTUserManagerInitUser
-
-- (void) initializeBTUser: (FBUser *) user;
-
-@end
-
 @interface BTUserManager : NSObject
 
-@property (weak, nonatomic) id<BTUserManagerInitUser> delegate;
++ (instancetype) shared;
 
-+ (instancetype) sharedWithUser: (FBUser *) user;
+- (void) initUser: (BTLoginViewController *) loginControllr;
 
 - (void) FBUserExists: (FBUser *) user loginController: (BTLoginViewController *) loginVC;
 

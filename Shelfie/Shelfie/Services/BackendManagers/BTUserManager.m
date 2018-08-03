@@ -17,24 +17,23 @@
 
 @implementation BTUserManager
 
-+ (instancetype) sharedWithUser:(FBUser *)user {
++ (instancetype) shared {
     static BTUserManager *sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedManager = [[self alloc] init];
-        [sharedManager init:user];
     });
     return sharedManager;
 }
 
-- (void) init: (FBUser *) user {
-    // Initialize user
-    self.currentUser.userId = user.userId;
-    self.currentUser.picture = user.picture;
-    self.currentUser.booksTrade = [NSMutableArray new];
-    self.currentUser.booksSell = [NSMutableArray new];
-    self.currentUser.booksWant = [NSMutableArray new];
-    self.currentUser.booksHave = [NSMutableArray new];
+- (void) initUser: (BTLoginViewController *) loginController {
+    // Initiate User (ONLY WORKS IF USER EXISTS ON PARSE)
+    [[self fetchUserQueryFromParse] findObjectsInBackgroundWithBlock:^(NSArray *user, NSError *error) {
+        if (user.count == 1) {
+            self.currentUser = (BTUser *) user[0];
+            [loginController performSegueWithIdentifier:@"loginToHome" sender:loginController];
+        }
+    }];
 }
 
 - (BTUser *) getCurrentUser {
@@ -42,7 +41,6 @@
 }
 
 - (void) FBUserExists: (FBUser *)user loginController: (BTLoginViewController *) loginVC {
-    
     // fetch data asynchronously
     [[self fetchUserQueryFromParse] findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
         if (users != nil) {
@@ -53,9 +51,13 @@
                 [BTPostManager addUserToDatabase: user.userId withName: user.name withProfilePicture: user.picture withBooks: [NSMutableArray new] withWantBooks: [NSMutableArray new] withSellBooks: [NSMutableArray new] withTradeBooks: [NSMutableArray new] withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
                     if (succeeded) {
                         NSLog(@"User added to parse");
-                        //[loginVC performSegueWithIdentifier:@"loginToHome" sender:nil];
+                        self.currentUser = [BTUser new];
+                        self.currentUser.name = user.name;
+                        [loginVC performSegueWithIdentifier:@"loginToHome" sender:loginVC];
                     }
                 }];
+            } else {
+                [self initUser:loginVC];
             }
         } else {
             NSLog(@"%@", error.localizedDescription);

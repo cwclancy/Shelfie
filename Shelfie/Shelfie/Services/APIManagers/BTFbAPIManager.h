@@ -15,4 +15,6 @@
 
 - (void) login: (BTLoginViewController *) loginController;
 
++ (void) logout;
+
 @end

@@ -20,8 +20,13 @@
 }
 
 - (instancetype) init {
-    
     return self;
+}
+
++ (void) logout {
+     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+     [login logOut];
+    NSLog(@"Logout");
 }
 
 // Login or Logout the current user respectively
@@ -55,7 +60,7 @@
                  NSLog(@"User dictionary after log in:%@", result);
                  // getFBUser pass on FBUser to User manager
                  FBUser *fbUser = [[FBUser alloc] initWithDictionary:result error:nil];
-                 [[BTUserManager sharedWithUser:fbUser] FBUserExists: fbUser loginController:loginController];
+                 [[BTUserManager shared] FBUserExists: fbUser loginController:loginController];
              }
          }];
         

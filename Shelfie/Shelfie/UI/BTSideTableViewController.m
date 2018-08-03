@@ -7,6 +7,7 @@
 //
 
 #import "BTSideTableViewController.h"
+#import "BTFbAPIManager.h"
 
 @interface BTSideTableViewController ()
 
@@ -41,6 +42,13 @@ NSArray *menuItems;
     return menuItems.count;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
+    if ([CellIdentifier isEqualToString:@"logout"]) {
+        [BTFbAPIManager logout];
+    }
+    
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
