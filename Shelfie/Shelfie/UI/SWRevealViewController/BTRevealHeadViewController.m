@@ -29,6 +29,15 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
         
     }
+
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

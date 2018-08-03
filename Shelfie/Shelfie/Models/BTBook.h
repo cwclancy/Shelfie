@@ -10,14 +10,14 @@
 #import <Parse/Parse.h>
 #import <JSONModel/JSONModel.h>
 
-@interface BTBook : PFObject <NSCoding, PFSubclassing, AbstractJSONModelProtocol>
+@interface BTBook : PFObject <PFSubclassing>
 
 @property (strong, nonatomic) NSString *userId;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *author;
 @property (strong, nonatomic) NSString *isbn;
-@property (strong, nonatomic) NSDate *date;
-@property (strong, nonatomic) NSURL *coverURL;
+@property (strong, nonatomic) NSString *date;
+@property (strong, nonatomic) NSString *coverURL;
 @property (strong, nonatomic) NSNumber *latitude;
 @property (strong, nonatomic) NSNumber *longitude;
 
