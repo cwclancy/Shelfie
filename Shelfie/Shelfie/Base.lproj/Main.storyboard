@@ -428,7 +428,6 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                   
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -656,7 +655,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                 
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gzs-CP-niO">
                                 <rect key="frame" x="0.0" y="8" width="375" height="659"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -683,11 +681,6 @@
                         <viewLayoutGuide key="safeArea" id="qvk-Vn-N4k"/>
                     </view>
                     <navigationItem key="navigationItem" id="Pno-if-iyD"/>
-                    <connections>
-                        <outlet property="nameLabel" destination="Diu-pF-Zpk" id="ICF-av-fr8"/>
-                        <outlet property="numberBooksLabel" destination="wOz-t1-iQM" id="Mn2-f5-9b1"/>
-                        <outlet property="profileImageView" destination="bCY-M9-nE5" id="cnf-7f-Oax"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B9-3w-mYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

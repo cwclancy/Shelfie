@@ -9,6 +9,7 @@
 #import "BTBarcodeViewController.h"
 #import "BTBookAPIManager.h"
 #import "BTAddBookViewController.h"
+#import "BTUIServices.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface BTBarcodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
@@ -76,6 +77,9 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 375, 125)];
     headerView.backgroundColor = [UIColor colorWithRed:200.0/256.0 green:1.0/256.0 blue:43.0/256.0 alpha:1];
     [self.view addSubview:headerView];
+    UILabel *titleLabel = [BTUIServices BTCreateLabel:@"scan book" withFont:@"Avenir Next" withSize:65 withColor:[UIColor whiteColor]];
+    titleLabel.frame = CGRectMake(30, 30, 350, 100);
+    [self.view addSubview:titleLabel];
 }
 
 
