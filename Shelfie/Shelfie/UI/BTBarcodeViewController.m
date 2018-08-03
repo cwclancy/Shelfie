@@ -41,6 +41,7 @@
     [self.videoPreviewLayer setFrame:self.previewView.layer.bounds];
     [self.previewView.layer addSublayer:self.videoPreviewLayer];
     [self.captureSession startRunning];
+    [self drawBarcodeHeader];
 }
 
 -(void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
@@ -69,6 +70,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)drawBarcodeHeader {
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 375, 125)];
+    headerView.backgroundColor = [UIColor colorWithRed:200.0/256.0 green:1.0/256.0 blue:43.0/256.0 alpha:1];
+    [self.view addSubview:headerView];
 }
 
 
