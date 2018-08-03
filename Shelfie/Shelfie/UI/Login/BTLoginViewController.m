@@ -10,14 +10,12 @@
 #import "BTLoginViewController.h"
 
 @interface BTLoginViewController ()
-
 @end
 
 @implementation BTLoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     //Handle clicks on the login/logout button
     [self.loginButton addTarget : self action : @selector (onLoginClicked) forControlEvents : UIControlEventTouchUpInside ];
 
