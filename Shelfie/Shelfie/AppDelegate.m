@@ -17,12 +17,12 @@
 
 @implementation AppDelegate
 
+- (void) applicationDidBecomeActive:(UIApplication *)application {
+    [FBSDKAppEvents activateApp];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Facebook API
-    [FBSDKLoginButton class];
-    [[FBSDKApplicationDelegate sharedInstance] application:application
-                             didFinishLaunchingWithOptions:launchOptions];
     
     ParseClientConfiguration *config = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration>  _Nonnull configuration) {
         configuration.applicationId = @"bookTrader";
@@ -32,23 +32,23 @@
     
     [Parse initializeWithConfiguration:config];
     
-    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                    didFinishLaunchingWithOptions:launchOptions];
 }
+
 
 - ( BOOL ) application :( UIApplication *) application
                openURL :( NSURL *) url
                options :( NSDictionary < UIApplicationOpenURLOptionsKey , id > *) options {
     
-    BOOL handled = [[ FBSDKApplicationDelegate sharedInstance ] application : application
+    return [[ FBSDKApplicationDelegate sharedInstance ] application : application
                                                                     openURL : url
                                                           sourceApplication : options [ UIApplicationOpenURLOptionsSourceApplicationKey ]
-                                                                 annotation : options [ UIApplicationOpenURLOptionsAnnotationKey ] ];
-    // Add any custom logic here.
-    
-    return handled ; }
+                                                                 annotation : options [ UIApplicationOpenURLOptionsAnnotationKey ] ]; // Add any custom logic here.
+}
 
--(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
-{
+
+-(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
         return UIInterfaceOrientationMaskPortrait;
 }
 
@@ -68,12 +68,6 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
 }
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
