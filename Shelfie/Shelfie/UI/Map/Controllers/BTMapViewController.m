@@ -8,18 +8,22 @@
 
 #import "BTMapViewController.h"
 #import "BTUserDefaults.h"
-#import <CoreLocation/CoreLocation.h>
 #import "BTGetManager.h"
 #import "BTBook.h"
 #import "PinAnnotation.h"
 #import "BTMapBookDetailsViewController.h"
+#import "BTUIServices.h"
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 
-@interface BTMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
+
+@interface BTMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate>
 @property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) NSArray *mapBooks;
+@property (strong, nonatomic) NSArray *filteredBooks;
+@property (strong, nonatomic) UISearchBar *searchBar;
 @property (nonatomic) MKCoordinateRegion currentLocation;
 @property BOOL locationFlag;
 @end
@@ -34,6 +38,8 @@
     self.mapView.delegate = self;
     self.currentLocation = MKCoordinateRegionMake(myLocation, MKCoordinateSpanMake(0.1, 0.1));
     [self.mapView setRegion:self.currentLocation animated:false];
+    UITapGestureRecognizer *screenTapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resetSearchBar)];
+    [self.mapView addGestureRecognizer:screenTapped];
     
     self.locationFlag = true;
     self.locationManager = [CLLocationManager new];
@@ -50,6 +56,9 @@
             [self updateBookLocations:books];
         }
     }];
+    
+    self.searchBar = [BTUIServices createSearchBarWithDimensions:CGRectMake(30, 70, 320, 44)];
+    self.searchBar.delegate = self;
 }
 
 
@@ -107,6 +116,12 @@
         mapBookViewController.book = pinAnnotation.book;
     }
 }
+
+- (void)resetSearchBar {
+    self.searchBar.text = @"";
+    [self.searchBar resignFirstResponder];
+}
+
 
 
 - (void)didReceiveMemoryWarning {
