@@ -13,6 +13,7 @@
 
 @interface BTHomeViewController () <UISearchBarDelegate>
 @property (strong, nonatomic) UISearchBar *searchBar;
+@property (strong, nonatomic) IBOutlet UIView *tapCheckView;
 @end
 
 @implementation BTHomeViewController
@@ -22,6 +23,7 @@
     NSLog(@"HOME VIEW : %@", [[BTUserManager shared] getCurrentUser]);
     self.searchBar = [BTUIServices createSearchBarWithDimensions:CGRectMake(30, 70, 320, 44)];
     self.searchBar.delegate = self;
+    [self.view addSubview:self.tapCheckView];
     [self.view addSubview:self.searchBar];
 }
 
@@ -32,6 +34,10 @@
 }
 
 
+- (IBAction)tappedScreen:(id)sender {
+    self.searchBar.text = @"";
+    [self.searchBar resignFirstResponder];
+}
 
 
 @end

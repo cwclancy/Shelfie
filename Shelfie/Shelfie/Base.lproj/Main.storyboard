@@ -461,17 +461,33 @@
                     <view key="view" contentMode="scaleToFill" id="2dc-gH-SLM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="93w-g0-TJZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="395"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="xbO-4k-dPe" appends="YES" id="fUu-nu-BVS"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="YnZ-zY-LaZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="TtW-7p-w0u"/>
                     <connections>
+                        <outlet property="tapCheckView" destination="93w-g0-TJZ" id="97T-uj-onE"/>
                         <segue destination="kVl-o9-5IU" kind="show" identifier="mapToBookSegue" id="vS7-Sb-czk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPm-oF-yZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="xbO-4k-dPe">
+                    <connections>
+                        <action selector="tappedScreen:" destination="Dey-PD-vBu" id="bzx-jU-4Rh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3196" y="32"/>
+            <point key="canvasLocation" x="3196" y="31.934032983508249"/>
         </scene>
         <!--Map Book Details View Controller-->
         <scene sceneID="i01-0C-0Rm">
