@@ -14,6 +14,8 @@
 
 @interface BTBarcodeViewController () <AVCaptureMetadataOutputObjectsDelegate>
 @property (strong, nonatomic) UIView *previewView;
+@property (strong, nonatomic) UIView *guideBorderView;
+@property (strong, nonatomic) UIView *barcodeHeaderView;
 @property (strong, nonatomic) AVCaptureSession *captureSession;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 @property (strong, nonatomic) NSString *isbn;
@@ -43,6 +45,7 @@
     [self.previewView.layer addSublayer:self.videoPreviewLayer];
     [self.captureSession startRunning];
     [self drawBarcodeHeader];
+    [self drawGuideBox];
 }
 
 -(void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
@@ -64,6 +67,8 @@
         } else {
             [self.delegate makeBook:book];
             [self.previewView removeFromSuperview];
+            [self.barcodeHeaderView removeFromSuperview];
+            [self.guideBorderView removeFromSuperview];
         }
     }];
 }
@@ -74,12 +79,20 @@
 }
 
 - (void)drawBarcodeHeader {
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 375, 125)];
-    headerView.backgroundColor = [UIColor colorWithRed:200.0/256.0 green:1.0/256.0 blue:43.0/256.0 alpha:1];
-    [self.view addSubview:headerView];
+    self.barcodeHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 375, 125)];
+    self.barcodeHeaderView.backgroundColor = [UIColor colorWithRed:200.0/256.0 green:1.0/256.0 blue:43.0/256.0 alpha:1];
+    [self.view addSubview:self.barcodeHeaderView];
     UILabel *titleLabel = [BTUIServices BTCreateLabel:@"scan book" withFont:@"Avenir Next" withSize:65 withColor:[UIColor whiteColor]];
     titleLabel.frame = CGRectMake(30, 30, 350, 100);
-    [self.view addSubview:titleLabel];
+    [self.barcodeHeaderView addSubview:titleLabel];
+}
+
+- (void)drawGuideBox {
+    self.guideBorderView = [[UIView alloc] initWithFrame:CGRectMake(100, 370, 300, 100)];
+    self.guideBorderView.layer.borderColor = [UIColor colorWithRed:200.0/256.0 green:1.0/256.0 blue:43.0/256.0 alpha:1].CGColor;
+    self.guideBorderView.layer.borderWidth = 5.0;
+    self.guideBorderView.layer.cornerRadius = 5.0;
+    [self.view addSubview:self.guideBorderView];
 }
 
 
