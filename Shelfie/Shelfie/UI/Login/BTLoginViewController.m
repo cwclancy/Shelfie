@@ -6,8 +6,8 @@
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
-#import "BTLoginViewController.h"
 #import "BTFbAPIManager.h"
+#import "BTLoginViewController.h"
 
 @interface BTLoginViewController ()
 
@@ -34,10 +34,9 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     // If there is a current session going
-    if([FBSDKAccessToken currentAccessToken]) {
-        [self performSegueWithIdentifier:@"loginToHome" sender:self];
+    if ([FBSDKAccessToken currentAccessToken]) {
+        [[BTUserManager shared] initUser:self];
     }
-    
 }
 
 /*

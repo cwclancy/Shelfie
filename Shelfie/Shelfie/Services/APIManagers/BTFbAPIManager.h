@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BTLoginViewController.h"
+#import "BTUserManager.h"
 
 @interface BTFbAPIManager : NSObject
 
 + (instancetype) shared;
 
 - (void) login: (BTLoginViewController *) loginController;
+
++ (void) logout;
 
 @end

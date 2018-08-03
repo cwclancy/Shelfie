@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"PROFILE: %@", [[BTUserManager shared] getCurrentUser]);
+    
 }
 
 - (void)didReceiveMemoryWarning {
