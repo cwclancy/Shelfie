@@ -14,7 +14,6 @@
 		A488EEA3210FD71C0074B42A /* BTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA2210FD71C0074B42A /* BTUser.m */; };
 		A488EEA6211100C70074B42A /* FBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA5211100C70074B42A /* FBUser.m */; };
 		A488EEA92111083F0074B42A /* BTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA82111083F0074B42A /* BTUserManager.m */; };
-		B12E1EEA21138D68003084DB /* BTRequestBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E1EE921138D68003084DB /* BTRequestBookViewController.m */; };
 		B12E1EF52113B8AE003084DB /* BTCompletedRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */; };
 		B163B48B2110D478007C5ADB /* BTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163B4892110D478007C5ADB /* BTLoginViewController.m */; };
 		B163B48E2110D48B007C5ADB /* BTAddBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163B48C2110D48B007C5ADB /* BTAddBookViewController.m */; };
@@ -75,8 +74,6 @@
 		A488EEA5211100C70074B42A /* FBUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBUser.m; sourceTree = "<group>"; };
 		A488EEA72111083F0074B42A /* BTUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUserManager.h; sourceTree = "<group>"; };
 		A488EEA82111083F0074B42A /* BTUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUserManager.m; sourceTree = "<group>"; };
-		B12E1EE821138D68003084DB /* BTRequestBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTRequestBookViewController.h; sourceTree = "<group>"; };
-		B12E1EE921138D68003084DB /* BTRequestBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTRequestBookViewController.m; sourceTree = "<group>"; };
 		B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTCompletedRequestViewController.h; sourceTree = "<group>"; };
 		B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTCompletedRequestViewController.m; sourceTree = "<group>"; };
 		B163B4892110D478007C5ADB /* BTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLoginViewController.m; sourceTree = "<group>"; };
@@ -195,8 +192,6 @@
 		B12E1EEB21138D79003084DB /* RequestBook */ = {
 			isa = PBXGroup;
 			children = (
-				B12E1EE821138D68003084DB /* BTRequestBookViewController.h */,
-				B12E1EE921138D68003084DB /* BTRequestBookViewController.m */,
 				B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */,
 				B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */,
 			);
@@ -653,7 +648,6 @@
 				CEF5C37F2111234E00A33453 /* BTGetManager.m in Sources */,
 				CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */,
 				B12E1EF52113B8AE003084DB /* BTCompletedRequestViewController.m in Sources */,
-				B12E1EEA21138D68003084DB /* BTRequestBookViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,7 +825,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shelfie;
+				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.shel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -851,7 +845,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shelfie;
+				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.shel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
