@@ -17,7 +17,7 @@
 
 + (instancetype) shared;
 
-- (void) initUser: (BTLoginViewController *) loginControllr;
+- (void) initUser: (BTLoginViewController *) loginController;
 
 - (void) FBUserExists: (FBUser *) user loginController: (BTLoginViewController *) loginVC;
 

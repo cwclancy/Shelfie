@@ -53,6 +53,11 @@
                         NSLog(@"User added to parse");
                         self.currentUser = [BTUser new];
                         self.currentUser.name = user.name;
+                        self.currentUser.picture = user.picture;
+                        self.currentUser.booksHave = [NSMutableArray new];
+                        self.currentUser.booksTrade = [NSMutableArray new];
+                        self.currentUser.booksSell = [NSMutableArray new];
+                        self.currentUser.booksWant = [NSMutableArray new];
                         [loginVC performSegueWithIdentifier:@"loginToHome" sender:loginVC];
                     }
                 }];
@@ -63,7 +68,6 @@
             NSLog(@"%@", error.localizedDescription);
         }
     }];
-    
 }
 
 - (PFQuery *) fetchUserQueryFromParse {
