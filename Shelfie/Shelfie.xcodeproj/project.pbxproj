@@ -11,6 +11,9 @@
 		1DBB1563D08D47B1F56AF237 /* libPods-ShelfieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B92B7D26D69A1813814CB93A /* libPods-ShelfieTests.a */; };
 		71D688D6EDFCE2C170FC9AB9 /* libPods-Shelfie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91916D5EC8BB09BF43594A /* libPods-Shelfie.a */; };
 		A488EEA0210FD1910074B42A /* BTFbAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EE9F210FD1910074B42A /* BTFbAPIManager.m */; };
+		A488EEA3210FD71C0074B42A /* BTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA2210FD71C0074B42A /* BTUser.m */; };
+		A488EEA6211100C70074B42A /* FBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA5211100C70074B42A /* FBUser.m */; };
+		A488EEA92111083F0074B42A /* BTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA82111083F0074B42A /* BTUserManager.m */; };
 		B12E1EEA21138D68003084DB /* BTRequestBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E1EE921138D68003084DB /* BTRequestBookViewController.m */; };
 		B12E1EF52113B8AE003084DB /* BTCompletedRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */; };
 		B163B48B2110D478007C5ADB /* BTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163B4892110D478007C5ADB /* BTLoginViewController.m */; };
@@ -66,6 +69,12 @@
 		597273F60C3FFCE4839282BC /* Pods-ShelfieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieUITests/Pods-ShelfieUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A488EE9E210FD1910074B42A /* BTFbAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTFbAPIManager.h; sourceTree = "<group>"; };
 		A488EE9F210FD1910074B42A /* BTFbAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTFbAPIManager.m; sourceTree = "<group>"; };
+		A488EEA1210FD71C0074B42A /* BTUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUser.h; sourceTree = "<group>"; };
+		A488EEA2210FD71C0074B42A /* BTUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUser.m; sourceTree = "<group>"; };
+		A488EEA4211100C70074B42A /* FBUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBUser.h; sourceTree = "<group>"; };
+		A488EEA5211100C70074B42A /* FBUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBUser.m; sourceTree = "<group>"; };
+		A488EEA72111083F0074B42A /* BTUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUserManager.h; sourceTree = "<group>"; };
+		A488EEA82111083F0074B42A /* BTUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUserManager.m; sourceTree = "<group>"; };
 		B12E1EE821138D68003084DB /* BTRequestBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTRequestBookViewController.h; sourceTree = "<group>"; };
 		B12E1EE921138D68003084DB /* BTRequestBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTRequestBookViewController.m; sourceTree = "<group>"; };
 		B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTCompletedRequestViewController.h; sourceTree = "<group>"; };
@@ -217,8 +226,12 @@
 			children = (
 				CEA6B272210B9E4C009860C4 /* BTBook.h */,
 				CEA6B273210B9E4C009860C4 /* BTBook.m */,
+				A488EEA1210FD71C0074B42A /* BTUser.h */,
+				A488EEA2210FD71C0074B42A /* BTUser.m */,
 				CECC3386210FC9B50073A8BE /* GOBook.h */,
 				CECC3387210FC9B50073A8BE /* GOBook.m */,
+				A488EEA4211100C70074B42A /* FBUser.h */,
+				A488EEA5211100C70074B42A /* FBUser.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -257,6 +270,8 @@
 			children = (
 				CEA6B27E210BD256009860C4 /* BTPostManager.h */,
 				CEA6B27F210BD256009860C4 /* BTPostManager.m */,
+				A488EEA72111083F0074B42A /* BTUserManager.h */,
+				A488EEA82111083F0074B42A /* BTUserManager.m */,
 				CEF5C37D2111234E00A33453 /* BTGetManager.h */,
 				CEF5C37E2111234E00A33453 /* BTGetManager.m */,
 			);
@@ -621,6 +636,7 @@
 				CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */,
 				B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */,
 				CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */,
+				A488EEA3210FD71C0074B42A /* BTUser.m in Sources */,
 				A488EEA0210FD1910074B42A /* BTFbAPIManager.m in Sources */,
 				B163B48E2110D48B007C5ADB /* BTAddBookViewController.m in Sources */,
 				CEF5C387211126E100A33453 /* PinAnnotation.m in Sources */,
@@ -631,6 +647,8 @@
 				B163B48B2110D478007C5ADB /* BTLoginViewController.m in Sources */,
 				CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */,
 				CEA6B286210BDC83009860C4 /* BTRevealHeadViewController.m in Sources */,
+				A488EEA6211100C70074B42A /* FBUser.m in Sources */,
+				A488EEA92111083F0074B42A /* BTUserManager.m in Sources */,
 				CEF5C3722110FDC100A33453 /* BTMapViewController.m in Sources */,
 				CEF5C37F2111234E00A33453 /* BTGetManager.m in Sources */,
 				CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */,

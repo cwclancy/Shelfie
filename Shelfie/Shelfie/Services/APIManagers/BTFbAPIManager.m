@@ -20,8 +20,13 @@
 }
 
 - (instancetype) init {
-    
     return self;
+}
+
++ (void) logout {
+     FBSDKLoginManager *login = [[FBSDKLoginManager alloc] init];
+     [login logOut];
+    NSLog(@"Logout");
 }
 
 // Login or Logout the current user respectively
@@ -40,27 +45,28 @@
                 NSLog (@ "Canceled" );
             } else {
                 NSLog (@"Logged in" );
-                [self fetchFBSDKUserData];
+                [self fetchFBSDKUserData: loginController];
             }
         }];
     }
 }
 
-- (void) fetchFBSDKUserData {
+- (void) fetchFBSDKUserData: (BTLoginViewController *) loginController {
     // If user logged in successfully, fetch data from facebook
     if ([FBSDKAccessToken currentAccessToken ]) {
         [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"name, picture"}]
          startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
-             if (!error) {
+             if (!error) { // Initiate FBUser using JSONModel
                  NSLog(@"User dictionary after log in:%@", result);
-                 // Initiate user
+                 // getFBUser pass on FBUser to User manager
+                 FBUser *fbUser = [[FBUser alloc] initWithDictionary:result error:nil];
+                 [[BTUserManager shared] FBUserExists: fbUser loginController:loginController];
              }
          }];
         
     }
     
 }
-
 
 
 @end
