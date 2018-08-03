@@ -23,4 +23,6 @@
 
 - (BTUser *) getCurrentUser;
 
+- (void)addToBooksHave:(NSString *)bookISBN;
+- (void)removeFromBooksHave:(NSString *)bookISBN;
 @end

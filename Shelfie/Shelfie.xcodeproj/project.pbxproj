@@ -25,6 +25,7 @@
 		CEA6B280210BD256009860C4 /* BTPostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B27F210BD256009860C4 /* BTPostManager.m */; };
 		CEA6B283210BD461009860C4 /* BTBookBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B282210BD461009860C4 /* BTBookBaseViewController.m */; };
 		CEA6B286210BDC83009860C4 /* BTRevealHeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B285210BDC83009860C4 /* BTRevealHeadViewController.m */; };
+		CEB3E70621150C09004589AB /* BTWhiteRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3E70521150C09004589AB /* BTWhiteRevealViewController.m */; };
 		CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9B95210A4E3C001D2032 /* AppDelegate.m */; };
 		CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9B98210A4E3C001D2032 /* BTHomeViewController.m */; };
 		CECB9B9C210A4E3C001D2032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECB9B9A210A4E3C001D2032 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		CECC3388210FC9B50073A8BE /* GOBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CECC3387210FC9B50073A8BE /* GOBook.m */; };
 		CECFB54C210A9F3B00D5C220 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECFB54B210A9F3B00D5C220 /* MapKit.framework */; };
 		CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECFB551210B99B000D5C220 /* SWRevealViewController.m */; };
+		CEED796A211515EF0051168A /* ProfileCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEED7969211515EF0051168A /* ProfileCell.m */; };
 		CEF5C3722110FDC100A33453 /* BTMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3712110FDC100A33453 /* BTMapViewController.m */; };
 		CEF5C3762110FF3700A33453 /* BTUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3752110FF3700A33453 /* BTUserDefaults.m */; };
 		CEF5C37A2111059E00A33453 /* BTUIServices.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3792111059E00A33453 /* BTUIServices.m */; };
@@ -99,6 +101,8 @@
 		CEA6B282210BD461009860C4 /* BTBookBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTBookBaseViewController.m; sourceTree = "<group>"; };
 		CEA6B284210BDC83009860C4 /* BTRevealHeadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTRevealHeadViewController.h; sourceTree = "<group>"; };
 		CEA6B285210BDC83009860C4 /* BTRevealHeadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTRevealHeadViewController.m; sourceTree = "<group>"; };
+		CEB3E70421150C09004589AB /* BTWhiteRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTWhiteRevealViewController.h; sourceTree = "<group>"; };
+		CEB3E70521150C09004589AB /* BTWhiteRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTWhiteRevealViewController.m; sourceTree = "<group>"; };
 		CECB9B91210A4E3C001D2032 /* Shelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECB9B94210A4E3C001D2032 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CECB9B95210A4E3C001D2032 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 		CECFB54B210A9F3B00D5C220 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CECFB550210B99B000D5C220 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		CECFB551210B99B000D5C220 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		CEED7968211515EF0051168A /* ProfileCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileCell.h; sourceTree = "<group>"; };
+		CEED7969211515EF0051168A /* ProfileCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileCell.m; sourceTree = "<group>"; };
 		CEF5C3702110FDC100A33453 /* BTMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTMapViewController.h; sourceTree = "<group>"; };
 		CEF5C3712110FDC100A33453 /* BTMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTMapViewController.m; sourceTree = "<group>"; };
 		CEF5C3742110FF3700A33453 /* BTUserDefaults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUserDefaults.h; sourceTree = "<group>"; };
@@ -189,19 +195,9 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B12E1EEB21138D79003084DB /* RequestBook */ = {
-			isa = PBXGroup;
-			children = (
-				B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */,
-				B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */,
-			);
-			path = RequestBook;
-			sourceTree = "<group>";
-		};
 		B197F843210A82E3004805D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B12E1EEB21138D79003084DB /* RequestBook */,
 				CEF5C36F2110FDA100A33453 /* Map */,
 				CECFB54F210B99B000D5C220 /* SWRevealViewController */,
 				CECFB54E210A9FAA00D5C220 /* BookDetail */,
@@ -212,6 +208,8 @@
 				B197F830210A6E10004805D8 /* BTSideTableViewController.m */,
 				CECC3383210F83600073A8BE /* BTBarcodeViewController.h */,
 				CECC3384210F83600073A8BE /* BTBarcodeViewController.m */,
+				CEED7968211515EF0051168A /* ProfileCell.h */,
+				CEED7969211515EF0051168A /* ProfileCell.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -344,6 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				CEA6B281210BD461009860C4 /* BTBookBaseViewController.h */,
+				B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */,
+				B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */,
 				CEA6B282210BD461009860C4 /* BTBookBaseViewController.m */,
 				B163B48D2110D48B007C5ADB /* BTAddBookViewController.h */,
 				B163B48C2110D48B007C5ADB /* BTAddBookViewController.m */,
@@ -360,6 +360,8 @@
 				CECFB551210B99B000D5C220 /* SWRevealViewController.m */,
 				CEA6B284210BDC83009860C4 /* BTRevealHeadViewController.h */,
 				CEA6B285210BDC83009860C4 /* BTRevealHeadViewController.m */,
+				CEB3E70421150C09004589AB /* BTWhiteRevealViewController.h */,
+				CEB3E70521150C09004589AB /* BTWhiteRevealViewController.m */,
 			);
 			path = SWRevealViewController;
 			sourceTree = "<group>";
@@ -628,8 +630,10 @@
 				CEA6B280210BD256009860C4 /* BTPostManager.m in Sources */,
 				CECC3388210FC9B50073A8BE /* GOBook.m in Sources */,
 				CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */,
+				CEB3E70621150C09004589AB /* BTWhiteRevealViewController.m in Sources */,
 				CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */,
 				B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */,
+				CEED796A211515EF0051168A /* ProfileCell.m in Sources */,
 				CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */,
 				A488EEA3210FD71C0074B42A /* BTUser.m in Sources */,
 				A488EEA0210FD1910074B42A /* BTFbAPIManager.m in Sources */,
@@ -825,7 +829,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.shel;
+				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.cl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -845,7 +849,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.shel;
+				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.cl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
