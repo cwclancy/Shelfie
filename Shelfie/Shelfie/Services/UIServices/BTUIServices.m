@@ -17,4 +17,12 @@
     return searchBar;
 }
 
++ (UILabel *)BTCreateLabel:(NSString *)text withFont:(NSString *)font withSize:(CGFloat)size withColor:(UIColor *)color {
+    UILabel *result = [UILabel new];
+    result.text = text;
+    result.font = [UIFont fontWithName:font size:size];
+    result.textColor = color;
+    return result;
+}
+
 @end

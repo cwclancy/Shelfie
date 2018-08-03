@@ -20,5 +20,10 @@
 @property (strong, nonatomic) NSString *coverURL;
 @property (strong, nonatomic) NSNumber *latitude;
 @property (strong, nonatomic) NSNumber *longitude;
+@property (nonatomic, assign) BOOL sell;
+@property (nonatomic, assign) BOOL trade;
+@property (nonatomic, assign) BOOL gift;
+@property (nonatomic, assign) BOOL location;
+@property (nonatomic, assign) BOOL own;
 
 @end
