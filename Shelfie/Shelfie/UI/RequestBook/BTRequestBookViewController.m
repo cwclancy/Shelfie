@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) NSString *isbn;
 @property (strong, nonatomic) IBOutlet UITextField *isbnField;
+@property (strong, nonatomic) IBOutlet UISlider *slider;
+@property (strong, nonatomic) IBOutlet UILabel *sliderLabel;
 
 
 @end

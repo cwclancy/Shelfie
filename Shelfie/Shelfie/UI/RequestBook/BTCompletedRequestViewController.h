@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import"BTRevealHeadViewController.h"
 
-@interface BTCompletedRequestViewController : UIViewController
+@interface BTCompletedRequestViewController : BTRevealHeadViewController
 
 @end
