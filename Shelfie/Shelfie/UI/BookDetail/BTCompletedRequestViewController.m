@@ -7,6 +7,7 @@
 //
 
 #import "BTCompletedRequestViewController.h"
+#import "BTHomeViewController.h"
 
 @interface BTCompletedRequestViewController ()
 
@@ -22,6 +23,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)keepExploring:(id)sender {
+    BTHomeViewController * vc = [[BTHomeViewController alloc] init];
+    UINavigationController *navigationController =
+    [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 /*
