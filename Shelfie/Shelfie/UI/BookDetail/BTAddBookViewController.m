@@ -11,13 +11,20 @@
 #import "SWRevealViewController.h"
 #import "GOBook.h"
 #import "UIImageView+AFNetworking.h"
+#import "BTPostManager.h"
+#import "BTUserDefaults.h"
 #import <AVFoundation/AVFoundation.h>
 #import <JSONModel/JSONModel.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
 @interface BTAddBookViewController () <BarcodeViewControllerDelegate>
 
 @property (strong, nonatomic) GOBook *book;
 @property (strong, nonatomic) NSString *coverURL;
+@property (strong, nonatomic) NSString *isbn;
 
 @property (strong, nonatomic) IBOutlet UIButton *sellButton;
 @property (strong, nonatomic) IBOutlet UIButton *tradeButton;
@@ -120,8 +127,17 @@ if (!self.gift) {
     }
 }
 - (IBAction)submitClicked:(id)sender {
+    CLLocationCoordinate2D currentLocation = [BTUserDefaults getCurrentLocation];
+    [BTPostManager addBookToDatabaseWithUserId:[FBSDKAccessToken currentAccessToken].userID title:self.book.title author:self.book.authors[0] isbn:self.isbn date:self.book.date coverURL:self.coverURL latitude:@(currentLocation.latitude) longitude:@(currentLocation.longitude) completion:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            [self dismissViewControllerAnimated:YES completion:^{
+            }];
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
 }
-
+}
 
 
 @end
