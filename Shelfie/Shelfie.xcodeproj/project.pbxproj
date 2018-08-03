@@ -195,19 +195,9 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B12E1EEB21138D79003084DB /* RequestBook */ = {
-			isa = PBXGroup;
-			children = (
-				B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */,
-				B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */,
-			);
-			path = RequestBook;
-			sourceTree = "<group>";
-		};
 		B197F843210A82E3004805D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				B12E1EEB21138D79003084DB /* RequestBook */,
 				CEF5C36F2110FDA100A33453 /* Map */,
 				CECFB54F210B99B000D5C220 /* SWRevealViewController */,
 				CECFB54E210A9FAA00D5C220 /* BookDetail */,
@@ -352,6 +342,8 @@
 			isa = PBXGroup;
 			children = (
 				CEA6B281210BD461009860C4 /* BTBookBaseViewController.h */,
+				B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */,
+				B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */,
 				CEA6B282210BD461009860C4 /* BTBookBaseViewController.m */,
 				B163B48D2110D48B007C5ADB /* BTAddBookViewController.h */,
 				B163B48C2110D48B007C5ADB /* BTAddBookViewController.m */,
@@ -837,7 +829,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.shel;
+				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.cl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -857,7 +849,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.shel;
+				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.cl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
