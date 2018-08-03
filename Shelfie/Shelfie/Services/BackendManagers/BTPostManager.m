@@ -19,10 +19,16 @@
     return sharedManager;
 }
 
+//@property (nonatomic, assign) BOOL sell;
+//@property (nonatomic, assign) BOOL trade;
+//@property (nonatomic, assign) BOOL gift;
+//@property (nonatomic, assign) BOOL location;
+//@property (nonatomic, assign) BOOL own;
 
 + (void) addBookToDatabaseWithUserId:(NSString *)userId title:(NSString *)title author:(NSString *)author
                                 isbn:(NSString *)isbn date:(NSString *)date coverURL:(NSString *)coverURL
                             latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude
+                                 own:(BOOL)own gift:(BOOL)gift trade:(BOOL)trade sell:(BOOL)sell
                           completion:(PFBooleanResultBlock)completion {
     BTBook *book = [BTBook new];
     book.userId = userId;
@@ -33,6 +39,10 @@
     book.coverURL = coverURL;
     book.latitude = latitude;
     book.longitude = longitude;
+    book.own = own;
+    book.gift = gift;
+    book.trade = trade;
+    book.sell = sell;
     [book saveInBackgroundWithBlock:completion];
 };
 

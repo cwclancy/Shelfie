@@ -12,4 +12,6 @@
 @interface BTUIServices : NSObject
 
 + (UISearchBar *)createSearchBarWithDimensions:(CGRect)dimensions;
++ (UILabel *)BTCreateLabel:(NSString *)text withFont:(NSString *)font withSize:(CGFloat)size withColor:(UIColor *)color;
+
 @end
