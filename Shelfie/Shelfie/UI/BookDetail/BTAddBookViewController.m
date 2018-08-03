@@ -13,6 +13,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "BTPostManager.h"
 #import "BTUserDefaults.h"
+#import "BTUserManager.h"
 #import <AVFoundation/AVFoundation.h>
 #import <JSONModel/JSONModel.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -136,6 +137,10 @@ if (!self.gift) {
             NSLog(@"%@", error);
         }
     }];
+    if (self.own) {
+        [[BTUserManager shared] addToBooksHave:self.isbn];
+    }
+    
 }
 
 
