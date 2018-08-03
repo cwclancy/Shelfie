@@ -362,6 +362,9 @@
                                         <rect key="frame" x="24" y="50" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="iconmonstr-circle-thin-32"/>
+                                        <connections>
+                                            <action selector="sellClicked:" destination="eWt-aP-7LS" eventType="touchUpInside" id="ZaQ-y8-jH3"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBw-Xu-htn">
                                         <rect key="frame" x="168" y="55" width="50" height="24"/>
@@ -379,11 +382,17 @@
                                         <rect key="frame" x="128" y="50" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="iconmonstr-circle-thin-32"/>
+                                        <connections>
+                                            <action selector="tradeClicked:" destination="eWt-aP-7LS" eventType="touchUpInside" id="bSt-VI-Tnt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6T9-Za-20R">
                                         <rect key="frame" x="239" y="50" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="iconmonstr-circle-thin-32"/>
+                                        <connections>
+                                            <action selector="giftClicked:" destination="eWt-aP-7LS" eventType="touchUpInside" id="dYT-ch-3Hd"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8m-4Z-ZtC">
                                         <rect key="frame" x="279" y="55" width="79" height="24"/>
@@ -402,6 +411,9 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="thumbTintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="eWt-aP-7LS" eventType="valueChanged" id="VcB-VT-gRz"/>
+                                        </connections>
                                     </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itJ-zf-dSL">
                                         <rect key="frame" x="302" y="138" width="33" height="18"/>
@@ -439,9 +451,13 @@
                     <connections>
                         <outlet property="authorLabel" destination="41i-ao-WiB" id="mXh-bK-Vea"/>
                         <outlet property="bookCover" destination="LSf-oL-Oyo" id="APa-yp-yN4"/>
+                        <outlet property="buySellButton" destination="DFk-jy-Ypc" id="azr-LU-Uwb"/>
                         <outlet property="dateLabel" destination="BqT-rG-KCj" id="JLS-zq-1NI"/>
+                        <outlet property="giftButton" destination="6T9-Za-20R" id="PjZ-NX-1RV"/>
                         <outlet property="slider" destination="yfR-HL-YSw" id="JNg-cX-hSG"/>
+                        <outlet property="sliderLabel" destination="itJ-zf-dSL" id="tB3-EV-PUS"/>
                         <outlet property="titleLabel" destination="KDz-AF-TC7" id="k9B-xY-X70"/>
+                        <outlet property="tradeButton" destination="O2t-dY-g9F" id="4TN-Ff-qbt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zz-cR-lSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
