@@ -1,5 +1,5 @@
 //
-//  ProfileBookViewController.h
+//  BTProfileBookViewController.h
 //  Shelfie
 //
 //  Created by Claudia Haddad on 8/3/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProfileBookViewController : UIViewController
+@interface BTProfileBookViewController : UIViewController
 
 @end

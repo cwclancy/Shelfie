@@ -1,18 +1,18 @@
 //
-//  ProfileBookViewController.m
+//  BTProfileBookViewController.m
 //  Shelfie
 //
 //  Created by Claudia Haddad on 8/3/18.
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
-#import "ProfileBookViewController.h"
+#import "BTProfileBookViewController.h"
 
-@interface ProfileBookViewController ()
+@interface BTProfileBookViewController ()
 
 @end
 
-@implementation ProfileBookViewController
+@implementation BTProfileBookViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

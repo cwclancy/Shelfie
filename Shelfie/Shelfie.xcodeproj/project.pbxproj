@@ -14,6 +14,7 @@
 		A488EEA3210FD71C0074B42A /* BTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA2210FD71C0074B42A /* BTUser.m */; };
 		A488EEA6211100C70074B42A /* FBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA5211100C70074B42A /* FBUser.m */; };
 		A488EEA92111083F0074B42A /* BTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA82111083F0074B42A /* BTUserManager.m */; };
+		B12BC27221152ABF0060DF0E /* BTProfileBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12BC27121152ABF0060DF0E /* BTProfileBookViewController.m */; };
 		B12E1EF52113B8AE003084DB /* BTCompletedRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */; };
 		B163B48B2110D478007C5ADB /* BTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163B4892110D478007C5ADB /* BTLoginViewController.m */; };
 		B163B48E2110D48B007C5ADB /* BTAddBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B163B48C2110D48B007C5ADB /* BTAddBookViewController.m */; };
@@ -76,6 +77,8 @@
 		A488EEA5211100C70074B42A /* FBUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBUser.m; sourceTree = "<group>"; };
 		A488EEA72111083F0074B42A /* BTUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUserManager.h; sourceTree = "<group>"; };
 		A488EEA82111083F0074B42A /* BTUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTUserManager.m; sourceTree = "<group>"; };
+		B12BC27021152ABF0060DF0E /* BTProfileBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTProfileBookViewController.h; sourceTree = "<group>"; };
+		B12BC27121152ABF0060DF0E /* BTProfileBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTProfileBookViewController.m; sourceTree = "<group>"; };
 		B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTCompletedRequestViewController.h; sourceTree = "<group>"; };
 		B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTCompletedRequestViewController.m; sourceTree = "<group>"; };
 		B163B4892110D478007C5ADB /* BTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLoginViewController.m; sourceTree = "<group>"; };
@@ -345,6 +348,8 @@
 				B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */,
 				B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */,
 				CEA6B282210BD461009860C4 /* BTBookBaseViewController.m */,
+				B12BC27021152ABF0060DF0E /* BTProfileBookViewController.h */,
+				B12BC27121152ABF0060DF0E /* BTProfileBookViewController.m */,
 				B163B48D2110D48B007C5ADB /* BTAddBookViewController.h */,
 				B163B48C2110D48B007C5ADB /* BTAddBookViewController.m */,
 				CE2A04D5211393E200762D2F /* BTMapBookDetailsViewController.h */,
@@ -632,6 +637,7 @@
 				CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */,
 				CEB3E70621150C09004589AB /* BTWhiteRevealViewController.m in Sources */,
 				CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */,
+				B12BC27221152ABF0060DF0E /* BTProfileBookViewController.m in Sources */,
 				B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */,
 				CEED796A211515EF0051168A /* ProfileCell.m in Sources */,
 				CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */,
@@ -823,7 +829,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PH9LZZN4D9;
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -843,7 +849,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PH9LZZN4D9;
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

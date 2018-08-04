@@ -14,9 +14,8 @@
 
 @interface BTProfileViewController ()
 @property (strong, nonatomic) BTUser *currentUser;
-@property (strong, nonatomic) IBOutlet UIImageView *profileImageView;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *numberBooksLabel;
+
+
 @end
 
 @implementation BTProfileViewController
