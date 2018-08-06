@@ -95,9 +95,11 @@
     NSString *identifier = @"identity";
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
-    MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+    PinAnnotation *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+    
     annotationView.canShowCallout = YES;
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    annotationView.image = [UIImage imageNamed:@"bookmap.png"];
     return annotationView;
 }
 

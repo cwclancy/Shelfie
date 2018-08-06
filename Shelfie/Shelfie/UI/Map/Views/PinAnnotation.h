@@ -9,7 +9,7 @@
 #import <MapKit/MapKit.h>
 #import "BTBook.h"
 
-@interface PinAnnotation : NSObject <MKAnnotation>
+@interface PinAnnotation : MKAnnotationView
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) BTBook *book;
 @property (nonatomic) CLLocationCoordinate2D coordinate;
