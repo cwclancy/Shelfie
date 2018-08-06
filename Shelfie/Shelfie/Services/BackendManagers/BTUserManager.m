@@ -41,6 +41,10 @@
     return  self.currentUser;
 }
 
+- (void) setUser: (BTUser *) user {
+    self.currentUser = user;
+}
+
 - (void) FBUserExists: (FBUser *)user loginController: (BTLoginViewController *) loginVC {
     // fetch data asynchronously
     [[self fetchUserQueryFromParse] findObjectsInBackgroundWithBlock:^(NSArray *users, NSError *error) {
@@ -52,14 +56,7 @@
                 [BTPostManager addUserToDatabase: user.userId withName: user.name withProfilePicture: user.picture withBooks: [NSMutableArray new] withWantBooks: [NSMutableArray new] withSellBooks: [NSMutableArray new] withTradeBooks: [NSMutableArray new] withCompletion:^(BOOL succeeded, NSError * _Nullable error) {
                     if (succeeded) {
                         NSLog(@"User added to parse");
-                        self.currentUser = [BTUser new];
-                        self.currentUser.name = user.name;
-                        self.currentUser.picture = user.picture;
-                        self.currentUser.booksHave = [NSMutableArray new];
-                        self.currentUser.booksTrade = [NSMutableArray new];
-                        self.currentUser.booksSell = [NSMutableArray new];
-                        self.currentUser.booksWant = [NSMutableArray new];
-                        [loginVC performSegueWithIdentifier:@"loginToHome" sender:loginVC];
+                        [self initUser:loginVC];
                     }
                 }];
             } else {

@@ -22,7 +22,11 @@
 - (void) FBUserExists: (FBUser *) user loginController: (BTLoginViewController *) loginVC;
 
 - (BTUser *) getCurrentUser;
+- (void) setUser: (BTUser *) user;
 
 - (void)addToBooksHave:(NSString *)bookISBN;
+- (void)getBooksHave;
+- (void)getBooksRequested;
+
 - (void)removeFromBooksHave:(NSString *)bookISBN;
 @end
