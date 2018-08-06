@@ -56,6 +56,9 @@
             [self makeBook:book];
         }
     }];
+    if (self.have) {
+        self.own = true;
+    }
     
 }
 
@@ -139,6 +142,8 @@ if (!self.gift) {
     }];
     if (self.own) {
         [[BTUserManager shared] addToBooksHave:self.isbn];
+    } else {
+        [[BTUserManager shared] addToBooksWant:self.isbn];
     }
     
 }

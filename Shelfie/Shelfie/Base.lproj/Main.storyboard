@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zcF-D9-Q2v">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -920,7 +920,7 @@
                                 </state>
                                 <connections>
                                     <action selector="keepExploring:" destination="OCU-lf-lpK" eventType="touchUpInside" id="Etc-eG-zGV"/>
-                                    <segue destination="i0O-eH-rXS" kind="presentation" id="UwN-7p-BPf"/>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="0Ns-CJ-oKx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk7-4W-rai">
@@ -1103,7 +1103,8 @@
         <image name="requestButton" width="297" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UwN-7p-BPf"/>
+        <segue reference="9OS-DA-nng"/>
         <segue reference="vS7-Sb-czk"/>
+        <segue reference="0Ns-CJ-oKx"/>
     </inferredMetricsTieBreakers>
 </document>
