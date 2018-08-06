@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zcF-D9-Q2v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Login View Controller-->
         <scene sceneID="jR4-R8-VlB">
             <objects>
-                <viewController id="zcF-D9-Q2v" customClass="BTLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zcF-D9-Q2v" customClass="BTLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="db9-pS-mW7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fb-2" translatesAutoresizingMaskIntoConstraints="NO" id="0FL-Sn-DMW">
                                 <rect key="frame" x="62" y="242" width="250" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-go-8aj">
                                 <rect key="frame" x="62" y="292" width="250" height="42"/>
@@ -80,7 +83,7 @@
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RevealViewController" id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -464,7 +467,7 @@
         <!--Home View Controller-->
         <scene sceneID="Tob-5C-3jn">
             <objects>
-                <viewController id="Dey-PD-vBu" customClass="BTHomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Dey-PD-vBu" customClass="BTHomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2dc-gH-SLM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -474,6 +477,7 @@
                     <navigationItem key="navigationItem" id="TtW-7p-w0u"/>
                     <connections>
                         <segue destination="kVl-o9-5IU" kind="show" identifier="mapToBookSegue" id="vS7-Sb-czk"/>
+                        <segue destination="zcF-D9-Q2v" kind="presentation" identifier="HomeToLogin" id="b1Y-yH-eeN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPm-oF-yZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1058,6 +1062,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UwN-7p-BPf"/>
-        <segue reference="zty-2R-cCd"/>
+        <segue reference="vS7-Sb-czk"/>
+        <segue reference="b1Y-yH-eeN"/>
     </inferredMetricsTieBreakers>
 </document>
