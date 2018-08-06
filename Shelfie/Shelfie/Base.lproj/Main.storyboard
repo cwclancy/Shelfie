@@ -997,7 +997,7 @@
                                 </state>
                                 <connections>
                                     <action selector="keepExploring:" destination="OCU-lf-lpK" eventType="touchUpInside" id="Etc-eG-zGV"/>
-                                    <segue destination="i0O-eH-rXS" kind="presentation" id="UwN-7p-BPf"/>
+                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="0Ns-CJ-oKx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk7-4W-rai">
@@ -1034,12 +1034,56 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eWt-aP-7LS" kind="relationship" relationship="rootViewController" id="XLg-vs-E0t"/>
+                        <segue destination="2UQ-7X-oU4" kind="relationship" relationship="rootViewController" id="G4a-ZN-fXC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS1-gy-beQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4034" y="32"/>
+        </scene>
+        <!--Barcode View Controller-->
+        <scene sceneID="RrO-qU-ySz">
+            <objects>
+                <viewController id="2UQ-7X-oU4" customClass="BTSBarcodeViewController" customModule="Shelfie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jhG-4N-hUF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW2-Qn-r2y">
+                                <rect key="frame" x="40" y="431" width="297" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="requestButton"/>
+                                <connections>
+                                    <action selector="handleRequestPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="Yhy-8j-SsT"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-Km-6VZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="341"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-tO-MGZ">
+                                        <rect key="frame" x="39" y="125" width="297" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="addButton"/>
+                                        <connections>
+                                            <action selector="handleAddPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="5LI-oy-i7Y"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.0" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DPs-Wp-eCh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nuv-jn-nMo"/>
+                    <connections>
+                        <segue destination="eWt-aP-7LS" kind="show" identifier="addRequestToPublishSegue" id="VTs-GE-CyN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqA-qB-BlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5048.8000000000002" y="31.934032983508249"/>
         </scene>
         <!--Custom Nav Controller-->
         <scene sceneID="6fy-lx-P1o">
@@ -1120,6 +1164,7 @@
     <resources>
         <image name="Back" width="16" height="16"/>
         <image name="Group" width="394" height="130"/>
+        <image name="addButton" width="297" height="125"/>
         <image name="custom signin button" width="750" height="132"/>
         <image name="delete button" width="120" height="47"/>
         <image name="explore button" width="120" height="47"/>
@@ -1133,10 +1178,13 @@
         <image name="message-2" width="320" height="88"/>
         <image name="post button" width="240" height="94"/>
         <image name="profile lines" width="1131" height="18"/>
+        <image name="requestButton" width="297" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UwN-7p-BPf"/>
+        <segue reference="9OS-DA-nng"/>
         <segue reference="vS7-Sb-czk"/>
+        <segue reference="0Ns-CJ-oKx"/>
+        <segue reference="UwN-7p-BPf"/>
         <segue reference="b1Y-yH-eeN"/>
     </inferredMetricsTieBreakers>
 </document>
