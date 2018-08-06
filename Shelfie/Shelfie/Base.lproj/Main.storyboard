@@ -83,7 +83,7 @@
         <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RevealViewController" id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,7 +467,7 @@
         <!--Home View Controller-->
         <scene sceneID="Tob-5C-3jn">
             <objects>
-                <viewController id="Dey-PD-vBu" customClass="BTHomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="Dey-PD-vBu" customClass="BTHomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2dc-gH-SLM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -477,6 +477,7 @@
                     <navigationItem key="navigationItem" id="TtW-7p-w0u"/>
                     <connections>
                         <segue destination="kVl-o9-5IU" kind="show" identifier="mapToBookSegue" id="vS7-Sb-czk"/>
+                        <segue destination="zcF-D9-Q2v" kind="presentation" identifier="HomeToLogin" id="b1Y-yH-eeN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPm-oF-yZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1061,6 +1062,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="UwN-7p-BPf"/>
-        <segue reference="zty-2R-cCd"/>
+        <segue reference="vS7-Sb-czk"/>
+        <segue reference="b1Y-yH-eeN"/>
     </inferredMetricsTieBreakers>
 </document>
