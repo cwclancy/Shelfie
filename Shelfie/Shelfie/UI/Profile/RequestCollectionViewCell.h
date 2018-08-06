@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTBook.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface RequestCollectionViewCell : UICollectionViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *requestBook;
+@property (strong, nonatomic) BTBook *book;
 
+-(void) setContents;
 @end

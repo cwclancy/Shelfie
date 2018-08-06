@@ -1,18 +1,18 @@
 //
-//  ProfileCollectionViewCell.m
+//  OwnCollectionViewCell.m
 //  Shelfie
 //
 //  Created by Claudia Haddad on 8/6/18.
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
-#import "ProfileCollectionViewCell.h"
+#import "OwnCollectionViewCell.h"
 
-@implementation ProfileCollectionViewCell
+@implementation OwnCollectionViewCell
 
 - (void)setContents {
     
-  [self.bookCover setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
+  [self.ownBook setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
   //  [self.bookCover loadInBackground];
     
 }

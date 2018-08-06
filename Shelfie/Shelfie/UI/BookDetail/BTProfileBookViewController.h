@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BTBook.h"
 
 @interface BTProfileBookViewController : UIViewController
+
+@property (strong, nonatomic) BTBook *book;
 
 @end

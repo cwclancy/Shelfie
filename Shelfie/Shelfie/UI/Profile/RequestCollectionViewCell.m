@@ -10,4 +10,9 @@
 
 @implementation RequestCollectionViewCell
 
+- (void)setContents {
+    
+    [self.requestBook setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
+    
+}
 @end

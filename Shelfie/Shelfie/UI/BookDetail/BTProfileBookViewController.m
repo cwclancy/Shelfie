@@ -10,19 +10,41 @@
 
 @interface BTProfileBookViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *createdAtLabel;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *authorLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *bookCover;
+
 @end
 
 @implementation BTProfileBookViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  //  [self createPage];
+    //TO DO:
+   // self.dateLabel =
+}
+
+- (IBAction)deleteButton:(id)sender {
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*-(void) createPage {
+    [self.bookCover setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
+    [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
+    [self.bookCover.layer setBorderWidth: 2.0];
+    self.titleLabel.text = self.book.title;
+    self.authorLabel.text = self.book.author;
+    self.dateLabel.text = self.book.date;
+    //TODO: GET owner of book from parse and fill out rest of field (call this funciton in completion of that)
+}
+*/
 
 /*
 #pragma mark - Navigation
