@@ -22,6 +22,7 @@
 		B197F831210A6E10004805D8 /* BTSideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F830210A6E10004805D8 /* BTSideTableViewController.m */; };
 		B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F841210A8254004805D8 /* BTProfileViewController.m */; };
 		B1C521012118F99E00E73B10 /* RequestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C521002118F99E00E73B10 /* RequestCollectionViewCell.m */; };
+		B1C5210421190E5000E73B10 /* BTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C5210321190E5000E73B10 /* BTSettingsViewController.m */; };
 		CE2A04D7211393E200762D2F /* BTMapBookDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A04D6211393E200762D2F /* BTMapBookDetailsViewController.m */; };
 		CEA6B274210B9E4C009860C4 /* BTBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B273210B9E4C009860C4 /* BTBook.m */; };
 		CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B278210BCBC7009860C4 /* BTBookAPIManager.m */; };
@@ -95,6 +96,8 @@
 		B197F841210A8254004805D8 /* BTProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTProfileViewController.m; sourceTree = "<group>"; };
 		B1C520FF2118F99E00E73B10 /* RequestCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestCollectionViewCell.h; sourceTree = "<group>"; };
 		B1C521002118F99E00E73B10 /* RequestCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestCollectionViewCell.m; sourceTree = "<group>"; };
+		B1C5210221190E5000E73B10 /* BTSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTSettingsViewController.h; sourceTree = "<group>"; };
+		B1C5210321190E5000E73B10 /* BTSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTSettingsViewController.m; sourceTree = "<group>"; };
 		B736291ADBF925B02B3946E1 /* Pods-ShelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B92B7D26D69A1813814CB93A /* libPods-ShelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC44DE9E9A4AAE0149BBFBD3 /* Pods-Shelfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shelfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie.release.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +334,8 @@
 				B197F843210A82E3004805D8 /* UI */,
 				CECB9B95210A4E3C001D2032 /* AppDelegate.m */,
 				CECB9B94210A4E3C001D2032 /* AppDelegate.h */,
+				B1C5210221190E5000E73B10 /* BTSettingsViewController.h */,
+				B1C5210321190E5000E73B10 /* BTSettingsViewController.m */,
 				CECB9B9A210A4E3C001D2032 /* Main.storyboard */,
 				CECB9B9D210A4E3D001D2032 /* Assets.xcassets */,
 				CECB9B9F210A4E3D001D2032 /* LaunchScreen.storyboard */,
@@ -682,6 +687,7 @@
 				CEA6B286210BDC83009860C4 /* BTRevealHeadViewController.m in Sources */,
 				A488EEA6211100C70074B42A /* FBUser.m in Sources */,
 				A488EEA92111083F0074B42A /* BTUserManager.m in Sources */,
+				B1C5210421190E5000E73B10 /* BTSettingsViewController.m in Sources */,
 				CEF5C3722110FDC100A33453 /* BTMapViewController.m in Sources */,
 				CEF5C37F2111234E00A33453 /* BTGetManager.m in Sources */,
 				CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */,

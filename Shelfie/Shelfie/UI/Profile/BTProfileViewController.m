@@ -74,8 +74,8 @@
     }  else {
          RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
         BTBook *book = self.booksRequested[indexPath.row];
-       // cellB.book = book;
-      //  [cellB setContents];
+        cellB.book = book;
+        [cellB setContents];
     return cellB;
     }
 }

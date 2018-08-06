@@ -1041,6 +1041,21 @@
             </objects>
             <point key="canvasLocation" x="4034" y="32"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7SY-tc-UWj">
+            <objects>
+                <viewController id="xbN-fq-M8d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lSd-Yu-CYl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hmv-Ab-O1m"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVh-xv-wBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="649"/>
+        </scene>
         <!--Custom Nav Controller-->
         <scene sceneID="6fy-lx-P1o">
             <objects>
@@ -1135,8 +1150,8 @@
         <image name="profile lines" width="1131" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UwN-7p-BPf"/>
+        <segue reference="9OS-DA-nng"/>
         <segue reference="vS7-Sb-czk"/>
-        <segue reference="b1Y-yH-eeN"/>
+        <segue reference="mEt-ia-XKA"/>
     </inferredMetricsTieBreakers>
 </document>
