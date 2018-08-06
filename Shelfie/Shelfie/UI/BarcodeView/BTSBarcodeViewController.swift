@@ -5,7 +5,7 @@
 //  Created by Connor Clancy on 8/6/18. BTSBarcodeViewController
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
-
+/*
 import UIKit
 import BarcodeScanner
 
@@ -84,3 +84,4 @@ extension BTSBarcodeViewController: BarcodeScannerDismissalDelegate {
 }
 
 // MARK: - didCaptureCode
+ */
