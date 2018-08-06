@@ -31,6 +31,5 @@
 - (void)removeFromBooksHave:(NSString *)coverURL;
 - (void)addToBooksWant:(NSString *)coverURL;
 - (void)removeFromBooksWant:(NSString *)coverURL;
-- (void)getBooksHaveWithCompletion:(void(^)(NSArray *books, NSError *error))completion;
-- (void)getBooksWantWithCompletion:(void(^)(NSArray *books, NSError *error))completion;
+
 @end

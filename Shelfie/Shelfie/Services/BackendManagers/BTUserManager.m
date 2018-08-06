@@ -77,29 +77,6 @@
     
 }
 
-- (void)getBooksHaveWithCompletion:(void(^)(NSArray *books, NSError *error))completion {
-    PFQuery *query = [PFQuery queryWithClassName:@"User"];
-    [query includeKey:@"booksHave"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        if (error) {
-            completion(nil, error);
-        } else {
-            completion(objects, nil);
-        }
-    }];
-}
-
-- (void)getBooksWantWithCompletion:(void(^)(NSArray *books, NSError *error))completion {
-    PFQuery *query = [PFQuery queryWithClassName:@"User"];
-    [query includeKey:@"booksWant"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
-        if (error) {
-            completion(nil, error);
-        } else {
-            completion(objects, nil);
-        }
-    }];
-}
 
 - (void)addToBooksHave:(NSString *)coverURL {
     [self.currentUser addObject:coverURL forKey:@"booksHave"];
