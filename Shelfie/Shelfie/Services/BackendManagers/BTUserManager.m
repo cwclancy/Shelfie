@@ -77,6 +77,30 @@
     
 }
 
+- (void)getBooksHaveWithCompletion:(void(^)(NSArray *books, NSError *error))completion {
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    [query includeKey:@"booksHave"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (error) {
+            completion(nil, error);
+        } else {
+            completion(objects, nil);
+        }
+    }];
+}
+
+- (void)getBooksWantWithCompletion:(void(^)(NSArray *books, NSError *error))completion {
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    [query includeKey:@"booksWant"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (error) {
+            completion(nil, error);
+        } else {
+            completion(objects, nil);
+        }
+    }];
+}
+
 - (void)addToBooksHave:(NSString *)bookISBN {
     [self.currentUser addObject:bookISBN forKey:@"booksHave"];
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
@@ -90,6 +114,28 @@
 
 - (void)removeFromBooksHave:(NSString *)bookISBN {
     [self.currentUser removeObject:bookISBN forKey:@"booksHave"];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"updated!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+- (void)addToBooksWant:(NSString *)bookISBN {
+    [self.currentUser addObject:bookISBN forKey:@"booksWant"];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"updated!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+- (void)removeFromBooksWant:(NSString *)bookISBN {
+    [self.currentUser removeObject:bookISBN forKey:@"booksWant"];
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             NSLog(@"updated!");

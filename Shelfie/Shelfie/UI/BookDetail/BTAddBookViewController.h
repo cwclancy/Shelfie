@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BTRevealHeadViewController.h"
+#import "BTWhiteRevealViewController.h"
 #import "BTBarcodeViewController.h"
 
-@interface BTAddBookViewController : BTBarcodeViewController
-
+@interface BTAddBookViewController : BTWhiteRevealViewController
+@property (strong, nonatomic) NSString *isbn;
+@property (nonatomic) BOOL have;
+@property (nonatomic) BOOL want;
 @end
