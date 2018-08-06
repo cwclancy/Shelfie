@@ -972,22 +972,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW2-Qn-r2y">
-                                <rect key="frame" x="154" y="478" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW2-Qn-r2y">
+                                <rect key="frame" x="40" y="431" width="297" height="125"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Book"/>
+                                <state key="normal" image="requestButton"/>
                                 <connections>
                                     <action selector="handleScannerPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="eRf-NB-cMf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-tO-MGZ">
-                                <rect key="frame" x="140" y="168" width="95" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-Km-6VZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Request Book"/>
-                                <connections>
-                                    <action selector="handleScannerPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="Tlh-Nh-exQ"/>
-                                </connections>
-                            </button>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-tO-MGZ">
+                                        <rect key="frame" x="39" y="125" width="297" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="addButton"/>
+                                        <connections>
+                                            <action selector="handleScannerPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="Tlh-Nh-exQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.0" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DPs-Wp-eCh"/>
@@ -996,7 +1003,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqA-qB-BlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5049" y="32"/>
+            <point key="canvasLocation" x="5048.8000000000002" y="31.934032983508249"/>
         </scene>
         <!--Custom Nav Controller-->
         <scene sceneID="6fy-lx-P1o">
@@ -1076,6 +1083,7 @@
     </scenes>
     <resources>
         <image name="Group" width="394" height="130"/>
+        <image name="addButton" width="297" height="125"/>
         <image name="custom signin button" width="750" height="132"/>
         <image name="delete button" width="120" height="47"/>
         <image name="explore button" width="120" height="47"/>
@@ -1089,9 +1097,9 @@
         <image name="iconmonstr-photo-camera-9-240" width="240" height="240"/>
         <image name="post button" width="240" height="94"/>
         <image name="profile lines" width="1131" height="18"/>
+        <image name="requestButton" width="297" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mEt-ia-XKA"/>
         <segue reference="UwN-7p-BPf"/>
         <segue reference="vS7-Sb-czk"/>
     </inferredMetricsTieBreakers>

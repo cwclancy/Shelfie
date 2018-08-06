@@ -10,7 +10,7 @@ import UIKit
 import BarcodeScanner
 
 
-final class BTSBarcodeViewController: BTRevealHeadViewController {
+final class BTSBarcodeViewController: BTWhiteRevealViewController {
     @IBOutlet var presentScannerButton: UIButton!
     @IBOutlet var pushScannerButton: UIButton!
     
