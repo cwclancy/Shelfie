@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zcF-D9-Q2v">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -957,12 +957,46 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eWt-aP-7LS" kind="relationship" relationship="rootViewController" id="XLg-vs-E0t"/>
+                        <segue destination="2UQ-7X-oU4" kind="relationship" relationship="rootViewController" id="G4a-ZN-fXC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS1-gy-beQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4034" y="32"/>
+        </scene>
+        <!--Barcode View Controller-->
+        <scene sceneID="RrO-qU-ySz">
+            <objects>
+                <viewController id="2UQ-7X-oU4" customClass="BTSBarcodeViewController" customModule="Shelfie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jhG-4N-hUF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW2-Qn-r2y">
+                                <rect key="frame" x="154" y="478" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Book"/>
+                                <connections>
+                                    <action selector="handleScannerPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="eRf-NB-cMf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-tO-MGZ">
+                                <rect key="frame" x="140" y="168" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Request Book"/>
+                                <connections>
+                                    <action selector="handleScannerPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="Tlh-Nh-exQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DPs-Wp-eCh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nuv-jn-nMo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqA-qB-BlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5049" y="32"/>
         </scene>
         <!--Custom Nav Controller-->
         <scene sceneID="6fy-lx-P1o">
@@ -1057,7 +1091,8 @@
         <image name="profile lines" width="1131" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="mEt-ia-XKA"/>
         <segue reference="UwN-7p-BPf"/>
-        <segue reference="zty-2R-cCd"/>
+        <segue reference="vS7-Sb-czk"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -42,6 +42,7 @@
 @property (nonatomic, assign) BOOL trade;
 @property (nonatomic, assign) BOOL gift;
 @property (nonatomic, assign) BOOL own;
+@property (nonatomic, assign) BOOL sell;
 @end
 
 @implementation BTAddBookViewController
