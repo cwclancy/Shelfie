@@ -32,9 +32,7 @@
 
 - (void) viewDidAppear:(BOOL)animated {
     // If there is a current session going
-    if ([FBSDKAccessToken currentAccessToken]) {
-        [[BTUserManager shared] initUser:self];
-    }
+    
 }
 
 /*

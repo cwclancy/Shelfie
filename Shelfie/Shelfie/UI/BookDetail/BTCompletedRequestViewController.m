@@ -25,7 +25,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)keepExploring:(id)sender {
-    BTHomeViewController * vc = [[BTHomeViewController alloc] init];
+    BTHomeViewController *vc = [[BTHomeViewController alloc] init];
     UINavigationController *navigationController =
     [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:navigationController animated:YES completion:nil];
