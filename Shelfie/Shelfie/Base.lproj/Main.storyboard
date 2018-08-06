@@ -977,7 +977,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="requestButton"/>
                                 <connections>
-                                    <action selector="handleScannerPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="eRf-NB-cMf"/>
+                                    <action selector="handleRequestPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="Yhy-8j-SsT"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-Km-6VZ">
@@ -989,7 +989,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="addButton"/>
                                         <connections>
-                                            <action selector="handleScannerPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="Tlh-Nh-exQ"/>
+                                            <action selector="handleAddPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="5LI-oy-i7Y"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1000,6 +1000,9 @@
                         <viewLayoutGuide key="safeArea" id="DPs-Wp-eCh"/>
                     </view>
                     <navigationItem key="navigationItem" id="nuv-jn-nMo"/>
+                    <connections>
+                        <segue destination="eWt-aP-7LS" kind="show" identifier="addRequestToPublishSegue" id="VTs-GE-CyN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqA-qB-BlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

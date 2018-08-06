@@ -14,6 +14,7 @@
 #import "BTPostManager.h"
 #import "BTUserDefaults.h"
 #import "BTUserManager.h"
+#import "BTBookAPIManager.h"
 #import <AVFoundation/AVFoundation.h>
 #import <JSONModel/JSONModel.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -21,11 +22,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface BTAddBookViewController () <BarcodeViewControllerDelegate>
+@interface BTAddBookViewController ()
 
 @property (strong, nonatomic) GOBook *book;
 @property (strong, nonatomic) NSString *coverURL;
-@property (strong, nonatomic) NSString *isbn;
 
 @property (strong, nonatomic) IBOutlet UIButton *buySellButton;
 @property (strong, nonatomic) IBOutlet UIButton *tradeButton;
@@ -49,7 +49,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [super setDelegate:self];
+    [[BTBookAPIManager shared] fetchBookWithIsbn:self.isbn completion:^(id book, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            [self makeBook:book];
+        }
+    }];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -86,6 +93,8 @@
     [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
     [self.bookCover.layer setBorderWidth: 2.0];
 }
+
+
 - (IBAction)sellClicked:(id)sender {
     if (!self.buySell) {
         self.buySell = true;

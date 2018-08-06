@@ -11,20 +11,29 @@ import BarcodeScanner
 
 
 final class BTSBarcodeViewController: BTWhiteRevealViewController {
+    var have = false;
+    var want = false;
+    var isbn = "";
+    
     @IBOutlet var presentScannerButton: UIButton!
     @IBOutlet var pushScannerButton: UIButton!
     
-    @IBAction func handleScannerPresent(_ sender: Any, forEvent event: UIEvent) {
+
+    
+    @IBAction func handleAddPresent(_ sender: Any, forEvent event: UIEvent) {
         let viewController = makeBarcodeScannerViewController()
         viewController.title = "Barcode Scanner"
+        self.have = true
         present(viewController, animated: true, completion: nil)
     }
     
-    @IBAction func handleScannerPush(_ sender: Any, forEvent event: UIEvent) {
+    @IBAction func handleRequestPresent(_ sender: Any, forEvent event: UIEvent) {
         let viewController = makeBarcodeScannerViewController()
         viewController.title = "Barcode Scanner"
-        navigationController?.pushViewController(viewController, animated: true)
+        self.want = true
+        present(viewController, animated: true, completion: nil)
     }
+    
     
     private func makeBarcodeScannerViewController() -> BarcodeScannerViewController {
         let viewController = BarcodeScannerViewController()
@@ -32,6 +41,13 @@ final class BTSBarcodeViewController: BTWhiteRevealViewController {
         viewController.errorDelegate = self as BarcodeScannerErrorDelegate
         viewController.dismissalDelegate = self as BarcodeScannerDismissalDelegate
         return viewController
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationViewController = segue.destination as! BTAddBookViewController
+        destinationViewController.isbn = self.isbn
+        destinationViewController.have = self.have
+        destinationViewController.want = self.want
     }
 }
 
@@ -41,10 +57,13 @@ extension BTSBarcodeViewController: BarcodeScannerCodeDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         print("Barcode Data: \(code)")
         print("Symbology Type: \(type)")
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-            controller.resetWithError()
+        self.isbn = code
+        controller.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async() {
+            [unowned self] in
+            self.performSegue(withIdentifier: "addRequestToPublishSegue", sender: nil)
         }
+        controller.reset()
     }
 }
 
@@ -63,3 +82,5 @@ extension BTSBarcodeViewController: BarcodeScannerDismissalDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
 }
+
+// MARK: - didCaptureCode
