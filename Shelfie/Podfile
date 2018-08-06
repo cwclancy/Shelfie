@@ -11,7 +11,6 @@ target 'Shelfie' do
   pod 'FBSDKLoginKit'
   pod 'FBSDKMessengerShareKit'
   pod 'JSONModel'
-  pod 'BarcodeScanner' 
 
   target 'ShelfieTests' do
     inherit! :search_paths
