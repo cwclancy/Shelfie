@@ -14,5 +14,5 @@
 @property (strong, nonatomic) IBOutlet UIImageView *requestBook;
 @property (strong, nonatomic) BTBook *book;
 
--(void) setContents;
+-(void) setContents: (NSString *) coverURL;
 @end

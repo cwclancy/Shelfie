@@ -12,7 +12,7 @@
 
 
 @interface OwnCollectionViewCell : UICollectionViewCell
+
 @property (strong, nonatomic) IBOutlet UIImageView *ownBook;
-@property (strong, nonatomic) BTBook *book;
-- (void) setContents;
+- (void) setContents:(NSString *) coverURL;
 @end

@@ -13,6 +13,7 @@
 #import "OwnCollectionViewCell.h"
 #import "RequestCollectionViewCell.h"
 #import "BTBook.h"
+#import "UIImageView+AFNetworking.h"
 
 
 @interface BTProfileViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -21,12 +22,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePic;
 
-@property (strong, nonatomic) NSArray *booksOwned;
-@property (strong, nonatomic) NSArray *booksRequested;
-
 @property (strong, nonatomic) IBOutlet UICollectionView *booksOwnedView;
 @property (strong, nonatomic) IBOutlet UICollectionView *booksRequestedView;
-
 
 @end
 
@@ -52,7 +49,7 @@
     [self.booksRequestedView reloadData];
     
    // self.numberBooksLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.currentUser.booksHave.count];
-    
+
 }
 
 
@@ -69,24 +66,24 @@
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     if (collectionView == self.booksOwnedView) {
         OwnCollectionViewCell *cellA = [collectionView dequeueReusableCellWithReuseIdentifier:@"ownedCell" forIndexPath:indexPath];
-        BTBook *book = self.booksOwned[indexPath.row];
-        cellA.book = book;
-        [cellA setContents];
-        return cellA;
+         NSString *coverURL = self.currentUser.booksWant[indexPath.row];
+        [cellA setContents:coverURL];
+        return cellA;   
+        
     }  else {
+        
          RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
-        BTBook *book = self.booksRequested[indexPath.row];
-        cellB.book = book;
-        [cellB setContents];
+        NSString *coverURL = self.currentUser.booksWant[indexPath.row];
+        [cellB setContents:coverURL];
     return cellB;
     }
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (collectionView == self.booksOwnedView) {
-       return self.booksOwned.count;
+       return self.currentUser.booksHave.count;
     }
-       return self.booksRequested.count;
+       return self.currentUser.booksWant.count;
   
 }
 

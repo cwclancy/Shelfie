@@ -290,7 +290,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="The Great Gatsby">
                                         <attributes>
-                                            <font key="NSFont" size="20" name="AvenirNext-DemiBold"/>
+                                            <font key="NSFont" size="21" name="AvenirNext-DemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -303,7 +303,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="F. Scott Fitzgerald">
                                         <attributes>
-                                            <font key="NSFont" size="18" name="AvenirNext-Regular"/>
+                                            <font key="NSFont" size="19" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -511,7 +511,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="F. Scott Fitzgerald">
                                                 <attributes>
-                                                    <font key="NSFont" size="18" name="AvenirNext-Regular"/>
+                                                    <font key="NSFont" size="19" name="AvenirNext-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -524,23 +524,15 @@
                                         <attributedString key="attributedText">
                                             <fragment content="The Great Gatsby">
                                                 <attributes>
-                                                    <font key="NSFont" size="20" name="AvenirNext-DemiBold"/>
+                                                    <font key="NSFont" size="21" name="AvenirNext-DemiBold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-checkbox-22-32" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-4K-Frb">
-                                        <rect key="frame" x="40" y="428" width="25" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-circle-thin-32" translatesAutoresizingMaskIntoConstraints="NO" id="iO0-ar-Jgs">
-                                        <rect key="frame" x="261" y="428" width="25" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-circle-thin-32" translatesAutoresizingMaskIntoConstraints="NO" id="qG5-UP-nYp">
-                                        <rect key="frame" x="147" y="428" width="25" height="25"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-check-mark-1-240" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-4K-Frb">
+                                        <rect key="frame" x="137" y="432" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gH-5f-6Ra" userLabel="user view">
@@ -585,42 +577,6 @@
                                             </label>
                                         </subviews>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tO2-9q-5Td">
-                                        <rect key="frame" x="73" y="430" width="47" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Selling">
-                                                <attributes>
-                                                    <font key="NSFont" size="15" name="AvenirNext-Regular"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj9-X3-Qbl">
-                                        <rect key="frame" x="294" y="430" width="47" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Gifting">
-                                                <attributes>
-                                                    <font key="NSFont" size="15" name="AvenirNext-Regular"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEs-oB-u4K">
-                                        <rect key="frame" x="180" y="430" width="52" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Trading">
-                                                <attributes>
-                                                    <font key="NSFont" size="15" name="AvenirNext-Regular"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile lines" translatesAutoresizingMaskIntoConstraints="NO" id="YFQ-o1-9oQ">
                                         <rect key="frame" x="0.0" y="481" width="375" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -646,6 +602,18 @@
                                             <action selector="messengerPressed:" destination="kVl-o9-5IU" eventType="touchUpInside" id="2xf-J9-jqd"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tO2-9q-5Td">
+                                        <rect key="frame" x="172" y="432" width="47" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Selling">
+                                                <attributes>
+                                                    <font key="NSFont" size="15" name="AvenirNext-MediumItalic"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <viewLayoutGuide key="safeArea" id="8nr-0X-0Z9"/>
@@ -826,7 +794,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="The Great Gatsby">
                                                 <attributes>
-                                                    <font key="NSFont" size="20" name="AvenirNext-DemiBold"/>
+                                                    <font key="NSFont" size="21" name="AvenirNext-DemiBold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -849,7 +817,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="F. Scott Fitzgerald">
                                                 <attributes>
-                                                    <font key="NSFont" size="18" name="AvenirNext-Regular"/>
+                                                    <font key="NSFont" size="19" name="AvenirNext-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -1262,7 +1230,7 @@
         <image name="iconmonstr-bell-2-32" width="32" height="32"/>
         <image name="iconmonstr-bell-5-32" width="32" height="32"/>
         <image name="iconmonstr-binoculars-8-32" width="32" height="32"/>
-        <image name="iconmonstr-checkbox-22-32" width="32" height="32"/>
+        <image name="iconmonstr-check-mark-1-240" width="240" height="240"/>
         <image name="iconmonstr-circle-thin-32" width="32" height="32"/>
         <image name="iconmonstr-gear-2-32" width="32" height="32"/>
         <image name="iconmonstr-location-2-32" width="32" height="32"/>
@@ -1274,7 +1242,7 @@
         <image name="profile lines" width="1131" height="18"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9OS-DA-nng"/>
+        <segue reference="un7-uS-p9f"/>
         <segue reference="vS7-Sb-czk"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>
