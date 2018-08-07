@@ -9,10 +9,9 @@
 #import "RequestCollectionViewCell.h"
 
 @implementation RequestCollectionViewCell
-
-- (void)setContents {
     
-    [self.requestBook setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
-    
+    - (void)setContents: (NSString *)coverURL {
+        
+        [self.requestBook setImageWithURL:[NSURL URLWithString:coverURL]];
 }
 @end
