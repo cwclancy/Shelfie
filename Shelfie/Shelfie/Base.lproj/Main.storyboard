@@ -635,6 +635,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="znC-UR-Mhk"/>
                     <connections>
+                        <outlet property="authorLabel" destination="Yrv-fw-527" id="V8J-E8-Kl0"/>
+                        <outlet property="bookStatus" destination="tO2-9q-5Td" id="K09-0f-2tV"/>
                         <outlet property="coverImageView" destination="WUN-iC-rqs" id="wK1-kI-WOm"/>
                         <outlet property="dateLabel" destination="axR-4k-48b" id="HK7-YZ-bao"/>
                         <outlet property="ownerImageView" destination="Xtg-3n-O37" id="hXX-va-Qhg"/>

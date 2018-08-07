@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CB34EE3CBA3F181D99D0E7E /* libPods-ShelfieUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F719773C09E2D8DE0D6E7A7 /* libPods-ShelfieUITests.a */; };
-		1DBB1563D08D47B1F56AF237 /* libPods-ShelfieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B92B7D26D69A1813814CB93A /* libPods-ShelfieTests.a */; };
-		71D688D6EDFCE2C170FC9AB9 /* libPods-Shelfie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF91916D5EC8BB09BF43594A /* libPods-Shelfie.a */; };
+		0312A2F126E7E079FB28C88C /* libPods-ShelfieUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9008F5A60777E4717A5E6E0 /* libPods-ShelfieUITests.a */; };
 		A488EEA0210FD1910074B42A /* BTFbAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EE9F210FD1910074B42A /* BTFbAPIManager.m */; };
 		A488EEA3210FD71C0074B42A /* BTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA2210FD71C0074B42A /* BTUser.m */; };
 		A488EEA6211100C70074B42A /* FBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA5211100C70074B42A /* FBUser.m */; };
 		A488EEA92111083F0074B42A /* BTUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A488EEA82111083F0074B42A /* BTUserManager.m */; };
+		A9520B81627559BD0F0CEC33 /* libPods-Shelfie.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E455BF6C3A77707162478C5F /* libPods-Shelfie.a */; };
 		B12BC27221152ABF0060DF0E /* BTProfileBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12BC27121152ABF0060DF0E /* BTProfileBookViewController.m */; };
 		B12BC2B62118E6BA0060DF0E /* OwnCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B12BC2B52118E6BA0060DF0E /* OwnCollectionViewCell.m */; };
 		B12E1EF52113B8AE003084DB /* BTCompletedRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */; };
@@ -49,6 +48,7 @@
 		CEF5C37A2111059E00A33453 /* BTUIServices.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3792111059E00A33453 /* BTUIServices.m */; };
 		CEF5C37F2111234E00A33453 /* BTGetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C37E2111234E00A33453 /* BTGetManager.m */; };
 		CEF5C387211126E100A33453 /* PinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C386211126E100A33453 /* PinAnnotation.m */; };
+		D297FC2B33EFB1F8E78DE236 /* libPods-ShelfieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0BF90E0266E68FD97A584D /* libPods-ShelfieTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +69,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F719773C09E2D8DE0D6E7A7 /* libPods-ShelfieUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShelfieUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		10813C9F4B276CA39651A6CF /* Pods-Shelfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shelfie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie.debug.xcconfig"; sourceTree = "<group>"; };
-		4AC6ED6AF88CE7E9EC2CE6EF /* Pods-ShelfieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.release.xcconfig"; sourceTree = "<group>"; };
-		597273F60C3FFCE4839282BC /* Pods-ShelfieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieUITests/Pods-ShelfieUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F0BF90E0266E68FD97A584D /* libPods-ShelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E43CC405E6C2EC5CE44595 /* Pods-Shelfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shelfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie.release.xcconfig"; sourceTree = "<group>"; };
+		5C4505A0EC559647DF6F7453 /* Pods-ShelfieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieUITests/Pods-ShelfieUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8DE0377361133E08953E2E41 /* Pods-ShelfieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.release.xcconfig"; sourceTree = "<group>"; };
+		92EBEEC5481145172975AFE4 /* Pods-ShelfieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieUITests/Pods-ShelfieUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A488EE9E210FD1910074B42A /* BTFbAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTFbAPIManager.h; sourceTree = "<group>"; };
 		A488EE9F210FD1910074B42A /* BTFbAPIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTFbAPIManager.m; sourceTree = "<group>"; };
 		A488EEA1210FD71C0074B42A /* BTUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTUser.h; sourceTree = "<group>"; };
@@ -99,9 +100,8 @@
 		B1C521002118F99E00E73B10 /* RequestCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestCollectionViewCell.m; sourceTree = "<group>"; };
 		B1C5210521190F3300E73B10 /* BTSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTSettingsViewController.h; sourceTree = "<group>"; };
 		B1C5210621190F3300E73B10 /* BTSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTSettingsViewController.m; sourceTree = "<group>"; };
-		B736291ADBF925B02B3946E1 /* Pods-ShelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B92B7D26D69A1813814CB93A /* libPods-ShelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC44DE9E9A4AAE0149BBFBD3 /* Pods-Shelfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shelfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie.release.xcconfig"; sourceTree = "<group>"; };
+		B9008F5A60777E4717A5E6E0 /* libPods-ShelfieUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShelfieUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C731960F4FB7307526DE063F /* Pods-Shelfie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shelfie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie.debug.xcconfig"; sourceTree = "<group>"; };
 		CE2A04D5211393E200762D2F /* BTMapBookDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTMapBookDetailsViewController.h; sourceTree = "<group>"; };
 		CE2A04D6211393E200762D2F /* BTMapBookDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTMapBookDetailsViewController.m; sourceTree = "<group>"; };
 		CE665D7D211918BC00BE4776 /* BTAddOrRequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAddOrRequestViewController.h; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 		CEF5C37E2111234E00A33453 /* BTGetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTGetManager.m; sourceTree = "<group>"; };
 		CEF5C385211126E100A33453 /* PinAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinAnnotation.h; sourceTree = "<group>"; };
 		CEF5C386211126E100A33453 /* PinAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinAnnotation.m; sourceTree = "<group>"; };
-		D812159C2E6EFFD51D08D5D8 /* Pods-ShelfieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieUITests/Pods-ShelfieUITests.release.xcconfig"; sourceTree = "<group>"; };
-		EF91916D5EC8BB09BF43594A /* libPods-Shelfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shelfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E455BF6C3A77707162478C5F /* libPods-Shelfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shelfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E859EE592BCFAA4C104AE360 /* Pods-ShelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CECFB54C210A9F3B00D5C220 /* MapKit.framework in Frameworks */,
-				71D688D6EDFCE2C170FC9AB9 /* libPods-Shelfie.a in Frameworks */,
+				A9520B81627559BD0F0CEC33 /* libPods-Shelfie.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DBB1563D08D47B1F56AF237 /* libPods-ShelfieTests.a in Frameworks */,
+				D297FC2B33EFB1F8E78DE236 /* libPods-ShelfieTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CB34EE3CBA3F181D99D0E7E /* libPods-ShelfieUITests.a in Frameworks */,
+				0312A2F126E7E079FB28C88C /* libPods-ShelfieUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,22 +190,22 @@
 			isa = PBXGroup;
 			children = (
 				CECFB54B210A9F3B00D5C220 /* MapKit.framework */,
-				EF91916D5EC8BB09BF43594A /* libPods-Shelfie.a */,
-				B92B7D26D69A1813814CB93A /* libPods-ShelfieTests.a */,
-				0F719773C09E2D8DE0D6E7A7 /* libPods-ShelfieUITests.a */,
+				E455BF6C3A77707162478C5F /* libPods-Shelfie.a */,
+				2F0BF90E0266E68FD97A584D /* libPods-ShelfieTests.a */,
+				B9008F5A60777E4717A5E6E0 /* libPods-ShelfieUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AF6B1A7E3AC0EC5750275BD9 /* Pods */ = {
+		93ED9C9734A9974A05E3C780 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				10813C9F4B276CA39651A6CF /* Pods-Shelfie.debug.xcconfig */,
-				CC44DE9E9A4AAE0149BBFBD3 /* Pods-Shelfie.release.xcconfig */,
-				B736291ADBF925B02B3946E1 /* Pods-ShelfieTests.debug.xcconfig */,
-				4AC6ED6AF88CE7E9EC2CE6EF /* Pods-ShelfieTests.release.xcconfig */,
-				597273F60C3FFCE4839282BC /* Pods-ShelfieUITests.debug.xcconfig */,
-				D812159C2E6EFFD51D08D5D8 /* Pods-ShelfieUITests.release.xcconfig */,
+				C731960F4FB7307526DE063F /* Pods-Shelfie.debug.xcconfig */,
+				33E43CC405E6C2EC5CE44595 /* Pods-Shelfie.release.xcconfig */,
+				E859EE592BCFAA4C104AE360 /* Pods-ShelfieTests.debug.xcconfig */,
+				8DE0377361133E08953E2E41 /* Pods-ShelfieTests.release.xcconfig */,
+				5C4505A0EC559647DF6F7453 /* Pods-ShelfieUITests.debug.xcconfig */,
+				92EBEEC5481145172975AFE4 /* Pods-ShelfieUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -318,8 +318,8 @@
 				CECB9BAC210A4E3D001D2032 /* ShelfieTests */,
 				CECB9BB7210A4E3D001D2032 /* ShelfieUITests */,
 				CECB9B92210A4E3C001D2032 /* Products */,
-				AF6B1A7E3AC0EC5750275BD9 /* Pods */,
 				7C72E0BAE06B35A0C6CED750 /* Frameworks */,
+				93ED9C9734A9974A05E3C780 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -469,11 +469,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CECB9BBD210A4E3D001D2032 /* Build configuration list for PBXNativeTarget "Shelfie" */;
 			buildPhases = (
-				038EFC6B97FF6FDA25FC6E65 /* [CP] Check Pods Manifest.lock */,
+				E8759732C79A8A0EE1850C97 /* [CP] Check Pods Manifest.lock */,
 				CECB9B8D210A4E3C001D2032 /* Sources */,
 				CECB9B8E210A4E3C001D2032 /* Frameworks */,
 				CECB9B8F210A4E3C001D2032 /* Resources */,
-				0069375F229348C870AC33B6 /* [CP] Copy Pods Resources */,
+				1D270937F2C0A42C7C3184A3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -488,7 +488,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CECB9BC0210A4E3D001D2032 /* Build configuration list for PBXNativeTarget "ShelfieTests" */;
 			buildPhases = (
-				9705AB140F98062D49B3E646 /* [CP] Check Pods Manifest.lock */,
+				8634373C5DB0F4008C28DAD2 /* [CP] Check Pods Manifest.lock */,
 				CECB9BA5210A4E3D001D2032 /* Sources */,
 				CECB9BA6210A4E3D001D2032 /* Frameworks */,
 				CECB9BA7210A4E3D001D2032 /* Resources */,
@@ -507,7 +507,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CECB9BC3210A4E3D001D2032 /* Build configuration list for PBXNativeTarget "ShelfieUITests" */;
 			buildPhases = (
-				28686C9E62F02259EC037298 /* [CP] Check Pods Manifest.lock */,
+				DEB4826283113007329C486C /* [CP] Check Pods Manifest.lock */,
 				CECB9BB0210A4E3D001D2032 /* Sources */,
 				CECB9BB1210A4E3D001D2032 /* Frameworks */,
 				CECB9BB2210A4E3D001D2032 /* Resources */,
@@ -593,7 +593,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0069375F229348C870AC33B6 /* [CP] Copy Pods Resources */ = {
+		1D270937F2C0A42C7C3184A3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -613,7 +613,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		038EFC6B97FF6FDA25FC6E65 /* [CP] Check Pods Manifest.lock */ = {
+		8634373C5DB0F4008C28DAD2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -624,14 +624,14 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Shelfie-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ShelfieTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		28686C9E62F02259EC037298 /* [CP] Check Pods Manifest.lock */ = {
+		DEB4826283113007329C486C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -649,7 +649,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9705AB140F98062D49B3E646 /* [CP] Check Pods Manifest.lock */ = {
+		E8759732C79A8A0EE1850C97 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -660,7 +660,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ShelfieTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Shelfie-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -873,7 +873,7 @@
 		};
 		CECB9BBE210A4E3D001D2032 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10813C9F4B276CA39651A6CF /* Pods-Shelfie.debug.xcconfig */;
+			baseConfigurationReference = C731960F4FB7307526DE063F /* Pods-Shelfie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -897,7 +897,7 @@
 		};
 		CECB9BBF210A4E3D001D2032 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC44DE9E9A4AAE0149BBFBD3 /* Pods-Shelfie.release.xcconfig */;
+			baseConfigurationReference = 33E43CC405E6C2EC5CE44595 /* Pods-Shelfie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -920,7 +920,7 @@
 		};
 		CECB9BC1210A4E3D001D2032 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B736291ADBF925B02B3946E1 /* Pods-ShelfieTests.debug.xcconfig */;
+			baseConfigurationReference = E859EE592BCFAA4C104AE360 /* Pods-ShelfieTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -940,7 +940,7 @@
 		};
 		CECB9BC2210A4E3D001D2032 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4AC6ED6AF88CE7E9EC2CE6EF /* Pods-ShelfieTests.release.xcconfig */;
+			baseConfigurationReference = 8DE0377361133E08953E2E41 /* Pods-ShelfieTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -960,7 +960,7 @@
 		};
 		CECB9BC4210A4E3D001D2032 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 597273F60C3FFCE4839282BC /* Pods-ShelfieUITests.debug.xcconfig */;
+			baseConfigurationReference = 5C4505A0EC559647DF6F7453 /* Pods-ShelfieUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
@@ -979,7 +979,7 @@
 		};
 		CECB9BC5210A4E3D001D2032 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D812159C2E6EFFD51D08D5D8 /* Pods-ShelfieUITests.release.xcconfig */;
+			baseConfigurationReference = 92EBEEC5481145172975AFE4 /* Pods-ShelfieUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;

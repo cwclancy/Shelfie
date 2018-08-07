@@ -52,12 +52,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [super setDelegate:self];
+   
     if (self.have) {
         self.own = true;
         self.buySellLabel.text = @"sell?";
         self.giftLabel.text = @"gift?";
     }
-    
     
 }
 
@@ -72,6 +74,7 @@
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.authors[0];
     self.dateLabel.text = self.book.date;
+    NSLog(@"%@", self.book.authors[0]);
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.coverURL]];
     [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
     [self.bookCover.layer setBorderWidth: 2.0];
@@ -129,17 +132,6 @@ if (!self.gift) {
     
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
-
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
      if ([[segue identifier] isEqualToString:@"publishSegue"]) {
          BTCompletedRequestViewController *publishViewController = [segue destinationViewController];
@@ -149,6 +141,15 @@ if (!self.gift) {
          publishViewController.author = self.authorLabel.text;
      }
  }
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+*/
 
 
 @end
