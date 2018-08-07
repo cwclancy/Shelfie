@@ -36,7 +36,6 @@
 		CECB9B9E210A4E3D001D2032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECB9B9D210A4E3D001D2032 /* Assets.xcassets */; };
 		CECB9BA1210A4E3D001D2032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECB9B9F210A4E3D001D2032 /* LaunchScreen.storyboard */; };
 		CECB9BA4210A4E3D001D2032 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BA3210A4E3D001D2032 /* main.m */; };
-		CECB9BA62118B7A3001A5956 /* BTSBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BA52118B7A3001A5956 /* BTSBarcodeViewController.swift */; };
 		CECB9BAE210A4E3D001D2032 /* ShelfieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BAD210A4E3D001D2032 /* ShelfieTests.m */; };
 		CECB9BB9210A4E3D001D2032 /* ShelfieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BB8210A4E3D001D2032 /* ShelfieUITests.m */; };
 		CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECC3384210F83600073A8BE /* BTBarcodeViewController.m */; };
@@ -126,8 +125,6 @@
 		CECB9BA0210A4E3D001D2032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CECB9BA2210A4E3D001D2032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECB9BA3210A4E3D001D2032 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CECB9BA42118B7A2001A5956 /* Shelfie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shelfie-Bridging-Header.h"; sourceTree = "<group>"; };
-		CECB9BA52118B7A3001A5956 /* BTSBarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTSBarcodeViewController.swift; sourceTree = "<group>"; };
 		CECB9BA9210A4E3D001D2032 /* ShelfieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelfieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECB9BAD210A4E3D001D2032 /* ShelfieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShelfieTests.m; sourceTree = "<group>"; };
 		CECB9BAF210A4E3D001D2032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -672,7 +669,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB9BA62118B7A3001A5956 /* BTSBarcodeViewController.swift in Sources */,
 				B197F831210A6E10004805D8 /* BTSideTableViewController.m in Sources */,
 				CEA6B274210B9E4C009860C4 /* BTBook.m in Sources */,
 				B1C521012118F99E00E73B10 /* RequestCollectionViewCell.m in Sources */,
@@ -920,7 +916,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B736291ADBF925B02B3946E1 /* Pods-ShelfieTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
@@ -941,7 +936,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4AC6ED6AF88CE7E9EC2CE6EF /* Pods-ShelfieTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
@@ -962,7 +956,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 597273F60C3FFCE4839282BC /* Pods-ShelfieUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
 				INFOPLIST_FILE = ShelfieUITests/Info.plist;
@@ -982,7 +975,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D812159C2E6EFFD51D08D5D8 /* Pods-ShelfieUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
 				INFOPLIST_FILE = ShelfieUITests/Info.plist;

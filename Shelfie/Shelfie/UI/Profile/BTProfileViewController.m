@@ -64,17 +64,28 @@
 */
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
     if (collectionView == self.booksOwnedView) {
         OwnCollectionViewCell *cellA = [collectionView dequeueReusableCellWithReuseIdentifier:@"ownedCell" forIndexPath:indexPath];
-         NSString *coverURL = self.currentUser.booksWant[indexPath.row];
+        if (self.currentUser.booksHave.count != 0) {
+         NSString *coverURL = self.currentUser.booksHave[indexPath.row];
         [cellA setContents:coverURL];
+        } else {
+            UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
+            [cellA.ownBook setImage:image];
+        }
         return cellA;   
         
-    }  else {
-        
-         RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
+    }
+    else {
+        RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
+        if (self.currentUser.booksWant.count != 0) {
         NSString *coverURL = self.currentUser.booksWant[indexPath.row];
         [cellB setContents:coverURL];
+        } else {
+            UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
+            [cellB.requestBook setImage:image];
+        }
     return cellB;
     }
 }

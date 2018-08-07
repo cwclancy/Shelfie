@@ -13,13 +13,10 @@
 @interface BTMapBookDetailsViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *authorLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *ownerImageView;
 @property (strong, nonatomic) IBOutlet UILabel *ownerNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *postedDateLabel;
-
-
 
 @end
 
@@ -53,7 +50,7 @@
     [self.coverImageView.layer setBorderColor: [[UIColor blackColor] CGColor]];
     [self.coverImageView.layer setBorderWidth: 2.0];
     self.titleLabel.text = self.book.title;
-    self.authorLabel.text = self.book.author;
+   // self.authorLabel.text = self.book.author;
     self.dateLabel.text = self.book.date;
     //TODO: GET owner of book from parse and fill out rest of field (call this funciton in completion of that)
 }
