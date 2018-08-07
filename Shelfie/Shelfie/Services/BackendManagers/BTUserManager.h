@@ -24,10 +24,10 @@
 - (BTUser *) getCurrentUser;
 - (void) setUser: (BTUser *) user;
 
-- (void)addToBooksHave:(NSString *)bookISBN;
 - (void)getBooksHave;
 - (void)getBooksRequested;
 
+- (void)addToBooksHave:(BTBook *)book;
 - (void)removeFromBooksHave:(NSString *)coverURL;
 - (void)addToBooksWant:(NSString *)coverURL;
 - (void)removeFromBooksWant:(NSString *)coverURL;

@@ -26,4 +26,9 @@
 @property (nonatomic, assign) BOOL location;
 @property (nonatomic, assign) BOOL own;
 
++ (BTBook *) createBookWithUserId:(NSString *)userId title:(NSString *)title author:(NSString *)author
+                         isbn:(NSString *)isbn date:(NSString *)date coverURL:(NSString *)coverURL
+                     latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude
+                          own:(BOOL)own gift:(BOOL)gift trade:(BOOL)trade sell:(BOOL)sell;
+
 @end

@@ -78,8 +78,8 @@
 }
 
 
-- (void)addToBooksHave:(NSString *)coverURL {
-    [self.currentUser addObject:coverURL forKey:@"booksHave"];
+- (void)addToBooksHave:(BTBook *)book {
+    [self.currentUser addObject:book forKey:@"booksHave"];
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             NSLog(@"updated!");

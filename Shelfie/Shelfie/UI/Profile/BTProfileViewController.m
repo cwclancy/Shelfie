@@ -35,30 +35,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.currentUser = [[BTUserManager shared] getCurrentUser];
-    [[BTGetManager shared] fetchBooksHaveWithCompletion:self.currentUser.booksHave completion:^(BTBook *book, NSError *error) {
-        if (error) {
-            NSLog(@"%@", error);
-        } else {
-            [self.booksHave addObject:book];
-        }
-    }];
+    [self fetchBooksHaveWithCompletion:self.currentUser.booksHave];
     
     [self.profilePic setImageWithURL:[NSURL URLWithString:self.currentUser.picture]];
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
     self.profilePic.clipsToBounds = YES;
     self.nameLabel.text = self.currentUser.name;
+    self.booksHave = [NSMutableArray new];
 
-    //fetch books
     
     self.booksOwnedView.delegate = self;
     self.booksOwnedView.dataSource = self;
     [self.booksOwnedView reloadData];
-    
+
     self.booksRequestedView.delegate = self;
     self.booksRequestedView.dataSource = self;
     [self.booksRequestedView reloadData];
-    
-   // self.numberBooksLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.currentUser.booksHave.count];
 
 }
 
@@ -74,27 +66,59 @@
 */
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
     if (collectionView == self.booksOwnedView) {
         OwnCollectionViewCell *cellA = [collectionView dequeueReusableCellWithReuseIdentifier:@"ownedCell" forIndexPath:indexPath];
-         NSString *coverURL = self.currentUser.booksWant[indexPath.row];
-        [cellA setContents:coverURL];
-        return cellA;   
+        if (self.currentUser.booksHave.count != 0) {
+            BTBook *currentBook = self.booksHave[indexPath.row];
+            NSString *coverURL = currentBook.coverURL;
+            [cellA setContents:coverURL];
+        } else {
+            NSLog(@"no books in own array!");
+            UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
+            [cellA.ownBook setImage:image];
+        }
+        return cellA;
         
-    }  else {
-        
-         RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
-        NSString *coverURL = self.currentUser.booksWant[indexPath.row];
-        [cellB setContents:coverURL];
-    return cellB;
+    }
+    else {
+        RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
+        if (self.currentUser.booksWant.count != 0) {
+            NSString *coverURL = self.currentUser.booksWant[indexPath.row];
+            [cellB setContents:coverURL];
+        } else {
+            NSLog(@"no books in want array!");
+            UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
+            [cellB.requestBook setImage:image];
+        }
+        return cellB;
     }
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (collectionView == self.booksOwnedView) {
-       return self.currentUser.booksHave.count;
+       return self.booksHave.count;
     }
-       return self.currentUser.booksWant.count;
-  
+       return self.booksWant.count;
+
+}
+
+- (void)fetchBooksHaveWithCompletion:(NSArray *)pointerArray {
+    for (int i = 0; i < pointerArray.count; i++) {
+        BTBook *currentBook = pointerArray[i];
+        NSString *bookId = currentBook.objectId;
+        [[BTBook query] getObjectInBackgroundWithId:bookId block:^(PFObject * _Nullable object, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"%@", error);
+            } else {
+                [self.booksHave addObject:object];
+                if (self.booksHave.count == pointerArray.count) {
+                    NSLog(@"here");
+                    [self.booksOwnedView reloadData];
+                }
+            }
+        }];
+    }
 }
 
 @end
