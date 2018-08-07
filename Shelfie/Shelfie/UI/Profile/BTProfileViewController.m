@@ -33,12 +33,6 @@
     [super viewDidLoad];
     self.currentUser = [[BTUserManager shared] getCurrentUser];
     
-    [self.profilePic setImageWithURL:[NSURL URLWithString:self.currentUser.picture]];
-    self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
-    self.profilePic.clipsToBounds = YES;
-    self.nameLabel.text = self.currentUser.name;
-
-    //fetch books
     
     self.booksOwnedView.delegate = self;
     self.booksOwnedView.dataSource = self;
@@ -48,8 +42,6 @@
     self.booksRequestedView.dataSource = self;
     [self.booksRequestedView reloadData];
     
-   // self.numberBooksLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.currentUser.booksHave.count];
-
 }
 
 
@@ -71,6 +63,7 @@
          NSString *coverURL = self.currentUser.booksHave[indexPath.row];
         [cellA setContents:coverURL];
         } else {
+            NSLog(@"no books in own array!");
             UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
             [cellA.ownBook setImage:image];
         }
@@ -83,6 +76,7 @@
         NSString *coverURL = self.currentUser.booksWant[indexPath.row];
         [cellB setContents:coverURL];
         } else {
+            NSLog(@"no books in want array!");
             UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
             [cellB.requestBook setImage:image];
         }
