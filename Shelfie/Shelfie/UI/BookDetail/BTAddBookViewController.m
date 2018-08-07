@@ -50,9 +50,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     if (self.have) {
         self.own = true;
     }
+    
     
 }
 
