@@ -51,30 +51,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [super setDelegate:self];
-    [[BTBookAPIManager shared] fetchBookWithIsbn:self.isbn completion:^(id book, NSError *error) {
-        if (error) {
-            NSLog(@"%@", error);
-        } else {
-            [self makeBook:book];
-        }
-    }];
+   
     if (self.have) {
         self.own = true;
     }
-    
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (void)makeBook:(NSDictionary *)book {
     NSDictionary *bookDictionary = book[@"items"][0][@"volumeInfo"];
@@ -87,6 +73,7 @@
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.authors[0];
     self.dateLabel.text = self.book.date;
+    NSLog(@"%@", self.book.authors[0]);
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.coverURL]];
     [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
     [self.bookCover.layer setBorderWidth: 2.0];
@@ -143,7 +130,6 @@ if (!self.gift) {
     [self performSegueWithIdentifier:@"publishSegue" sender:nil];
     
 }
-
 
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
      if ([[segue identifier] isEqualToString:@"publishSegue"]) {
