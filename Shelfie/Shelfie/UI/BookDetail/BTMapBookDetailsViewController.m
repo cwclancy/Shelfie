@@ -8,18 +8,18 @@
 
 #import "BTMapBookDetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "BTUserManager.h"
 #import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
 
 @interface BTMapBookDetailsViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
-@property (strong, nonatomic) IBOutlet UILabel *authorLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *authorLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *ownerImageView;
 @property (strong, nonatomic) IBOutlet UILabel *ownerNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *postedDateLabel;
-
-
+@property (weak, nonatomic) IBOutlet UILabel *bookStatus;
 
 @end
 
@@ -35,7 +35,16 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)messengerPressed:(id)sender {
-    [FBSDKMessengerSharer openMessenger];
+    //[FBSDKMessengerSharer openMessenger];
+    NSString *stringURL = [NSString stringWithFormat:@"fb-messenger://user-thread/%@", self.book.messengerId];
+    NSURL *url = [NSURL URLWithString:stringURL];
+    
+    // Open Messenger app
+    [[UIApplication sharedApplication] openURL:url options:[NSDictionary new] completionHandler:^(BOOL success) {
+        if (success) {
+            NSLog(@"Messenger Open");
+        }
+    }];
 }
 
 /*
@@ -49,13 +58,35 @@
 */
 
 -(void) createPage {
-    [self.coverImageView setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
-    [self.coverImageView.layer setBorderColor: [[UIColor blackColor] CGColor]];
-    [self.coverImageView.layer setBorderWidth: 2.0];
-    self.titleLabel.text = self.book.title;
-    self.authorLabel.text = self.book.author;
-    self.dateLabel.text = self.book.date;
     //TODO: GET owner of book from parse and fill out rest of field (call this funciton in completion of that)
+    [BTUserManager getUserWithID:self.book.userId user:^(BTUser *owner) {
+        NSLog(@"%@", owner);
+        [self.coverImageView setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
+        [self.coverImageView.layer setBorderColor: [[UIColor blackColor] CGColor]];
+        [self.coverImageView.layer setBorderWidth: 2.0];
+        self.titleLabel.text = self.book.title;
+        self.authorLabel.text = self.book.author;
+        self.dateLabel.text = self.book.date;
+        self.ownerNameLabel.text = owner.name;
+        
+        if (self.book.sell && self.book.gift && self.book.trade) {
+            self.bookStatus.text = @"Selling, Trading, Gifting";
+        } else if (self.book.sell) {
+            self.bookStatus.text = @"Selling";
+        } else if (self.book.trade) {
+            self.bookStatus.text = @"Trading";
+        } else if (self.book.gift) {
+            self.bookStatus.text = @"Gifting";
+        } else if (self.book.trade && self.book.gift) {
+            self.bookStatus.text = @"Trading, Gifting";
+        } else if (self.book.trade && self.book.sell) {
+            self.bookStatus.text = @"Trading, Selling";
+        } else if (self.book.sell && self.book.gift) {
+            self.bookStatus.text = @"Selling, Gifting";
+        }
+        
+        [self.ownerImageView setImageWithURL:[NSURL URLWithString:owner.picture]];
+    }];
 }
 
 @end

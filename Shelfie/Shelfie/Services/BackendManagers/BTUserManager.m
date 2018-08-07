@@ -111,6 +111,7 @@
     }];
 }
 
+
 - (void)removeFromBooksWant:(BTBook *)book {
     [self.currentUser removeObject:book forKey:@"booksWant"];
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
@@ -121,5 +122,23 @@
         }
     }];
 }
+
+
++ (void) getUserWithID: (NSString *) userId user:(void(^)(BTUser * owner))user {
+    PFQuery *query = [PFQuery queryWithClassName:@"User"];
+    [query includeKey:@"userId"];
+    [query whereKey:@"userId" containsString: userId];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray * _Nullable objects, NSError * _Nullable error) {
+        if (!error) {
+            if(objects.count==1) {
+                user(objects[0]);
+            }
+        } else {
+            NSLog(@"%@", error.localizedDescription);
+        }
+    }];
+}
+
 
 @end

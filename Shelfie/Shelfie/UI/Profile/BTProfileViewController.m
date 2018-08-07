@@ -21,8 +21,6 @@
 @interface BTProfileViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) BTUser *currentUser;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *profilePic;
 
 @property (strong, nonatomic) IBOutlet UICollectionView *booksOwnedView;
 @property (strong, nonatomic) IBOutlet UICollectionView *booksRequestedView;
@@ -44,16 +42,12 @@
     self.nameLabel.text = self.currentUser.name;
     self.booksHave = [NSMutableArray new];
     self.booksWant = [NSMutableArray new];
-
-    
     self.booksOwnedView.delegate = self;
     self.booksOwnedView.dataSource = self;
     [self.booksOwnedView reloadData];
-
     self.booksRequestedView.delegate = self;
     self.booksRequestedView.dataSource = self;
     [self.booksRequestedView reloadData];
-
 }
 
 
@@ -72,8 +66,7 @@
             UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
             [cellA.ownBook setImage:image];
         }
-        return cellA;
-        
+        return cellA;       
     }
     else {
         RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
@@ -139,11 +132,8 @@
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UICollectionViewCell *tappedCell = sender;
     NSIndexPath *indexPath = [self.booksOwnedView indexPathForCell:tappedCell];
-     BTBook *currentBook = self.booksHave[indexPath.item];
-     BTProfileBookViewController *profileDetailsViewController = [segue destinationViewController];
-     profileDetailsViewController.book = currentBook;
-     
+    BTBook *currentBook = self.booksHave[indexPath.item];
+    BTProfileBookViewController *profileDetailsViewController = [segue destinationViewController];
+    profileDetailsViewController.book = currentBook;  
  }
-
-
 @end
