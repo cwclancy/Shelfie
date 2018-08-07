@@ -7,6 +7,7 @@
 //
 
 #import "BTProfileBookViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface BTProfileBookViewController ()
 
@@ -22,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  //  [self createPage];
+    [self createPage];
     //TO DO:
    // self.dateLabel =
 }
@@ -35,7 +36,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*-(void) createPage {
+- (void) createPage {
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
     [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
     [self.bookCover.layer setBorderWidth: 2.0];
@@ -44,7 +45,7 @@
     self.dateLabel.text = self.book.date;
     //TODO: GET owner of book from parse and fill out rest of field (call this funciton in completion of that)
 }
-*/
+
 
 /*
 #pragma mark - Navigation

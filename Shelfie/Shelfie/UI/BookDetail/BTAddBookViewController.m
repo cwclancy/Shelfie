@@ -37,6 +37,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *bookCover;
+@property (strong, nonatomic) IBOutlet UILabel *buySellLabel;
+@property (strong, nonatomic) IBOutlet UILabel *giftLabel;
 
 //@property (strong, nonatomic) NSInteger *bookDistance;
 @property (nonatomic, assign) BOOL buySell;
@@ -50,11 +52,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     [super setDelegate:self];
    
     if (self.have) {
         self.own = true;
+        self.buySellLabel.text = @"sell?";
+        self.giftLabel.text = @"gift?";
     }
+    
 }
 
 - (void)makeBook:(NSDictionary *)book {
@@ -111,6 +117,7 @@ if (!self.gift) {
 
 - (IBAction)submitClicked:(id)sender {
     CLLocationCoordinate2D currentLocation = [BTUserDefaults getCurrentLocation];
+    BTBook *submittedBook = [BTBook createBookWithUserId:[FBSDKAccessToken currentAccessToken].userID title:self.book.title author:self.book.authors[0] isbn:self.isbn date:self.book.date coverURL:self.coverURL latitude:@(currentLocation.latitude) longitude:@(currentLocation.longitude) own:self.own gift:self.gift trade:self.trade sell:self.sell];
     [BTPostManager addBookToDatabaseWithUserId:[FBSDKAccessToken currentAccessToken].userID title:self.book.title author:self.book.authors[0] isbn:self.isbn date:self.book.date coverURL:self.coverURL latitude:@(currentLocation.latitude) longitude:@(currentLocation.longitude) own:self.own gift:self.gift trade:self.trade sell:self.buySell completion:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
         } else {
@@ -118,9 +125,9 @@ if (!self.gift) {
         }
     }];
     if (self.own) {
-        [[BTUserManager shared] addToBooksHave:self.coverURL];
+        [[BTUserManager shared] addToBooksHave:submittedBook];
     } else {
-        [[BTUserManager shared] addToBooksWant:self.coverURL];
+        [[BTUserManager shared] addToBooksWant:submittedBook];
     }
     [self performSegueWithIdentifier:@"publishSegue" sender:nil];
     
