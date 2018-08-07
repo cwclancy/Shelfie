@@ -11,6 +11,7 @@
 @implementation BTBook
 
 @dynamic userId;
+@dynamic messengerId;
 @dynamic title;
 @dynamic author;
 @dynamic isbn;
