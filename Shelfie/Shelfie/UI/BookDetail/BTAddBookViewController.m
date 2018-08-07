@@ -22,7 +22,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface BTAddBookViewController ()
+@interface BTAddBookViewController () <BarcodeViewControllerDelegate>
 
 @property (strong, nonatomic) GOBook *book;
 @property (strong, nonatomic) NSString *coverURL;
@@ -49,6 +49,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [super setDelegate:self];
     [[BTBookAPIManager shared] fetchBookWithIsbn:self.isbn completion:^(id book, NSError *error) {
         if (error) {
             NSLog(@"%@", error);
@@ -59,6 +60,7 @@
     if (self.have) {
         self.own = true;
     }
+    
     
 }
 

@@ -1034,17 +1034,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2UQ-7X-oU4" kind="relationship" relationship="rootViewController" id="G4a-ZN-fXC"/>
+                        <segue destination="2UQ-7X-oU4" kind="relationship" relationship="rootViewController" id="Ds7-rc-LRp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS1-gy-beQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4034" y="32"/>
         </scene>
-        <!--Barcode View Controller-->
+        <!--Add Or Request View Controller-->
         <scene sceneID="RrO-qU-ySz">
             <objects>
-                <viewController id="2UQ-7X-oU4" customClass="BTSBarcodeViewController" customModule="Shelfie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2UQ-7X-oU4" customClass="BTAddOrRequestViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jhG-4N-hUF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1054,7 +1054,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="requestButton"/>
                                 <connections>
-                                    <action selector="handleRequestPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="Yhy-8j-SsT"/>
+                                    <action selector="requestButtonPressed:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="OsU-DG-Woj"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3m-Km-6VZ">
@@ -1066,7 +1066,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="addButton"/>
                                         <connections>
-                                            <action selector="handleAddPresent:forEvent:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="5LI-oy-i7Y"/>
+                                            <action selector="addButtonPressed:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="gRy-ZN-p2P"/>
                                         </connections>
                                     </button>
                                 </subviews>
