@@ -10,9 +10,9 @@
 
 @implementation OwnCollectionViewCell
 
-- (void)setContents {
+- (void)setContents: (NSString *)coverURL {
     
-  [self.ownBook setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
+  [self.ownBook setImageWithURL:[NSURL URLWithString:coverURL]];
   //  [self.bookCover loadInBackground];
     
 }

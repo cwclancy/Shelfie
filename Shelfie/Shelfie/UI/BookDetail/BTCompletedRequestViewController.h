@@ -10,5 +10,8 @@
 #import"BTRevealHeadViewController.h"
 
 @interface BTCompletedRequestViewController : BTRevealHeadViewController
-
+@property (strong, nonatomic) NSString *coverURL;
+@property (strong, nonatomic) NSString *author;
+@property (strong, nonatomic) NSString *bookTitle;
+@property (strong, nonatomic) NSString *date;
 @end

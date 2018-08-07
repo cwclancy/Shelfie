@@ -88,7 +88,7 @@
 }
 
 - (void)drawGuideBox {
-    self.guideBorderView = [[UIView alloc] initWithFrame:CGRectMake(100, 370, 300, 100)];
+    self.guideBorderView = [[UIView alloc] initWithFrame:CGRectMake(35, 300, 300, 150)];
     self.guideBorderView.layer.borderColor = [UIColor colorWithRed:200.0/256.0 green:1.0/256.0 blue:43.0/256.0 alpha:1].CGColor;
     self.guideBorderView.layer.borderWidth = 5.0;
     self.guideBorderView.layer.cornerRadius = 5.0;
