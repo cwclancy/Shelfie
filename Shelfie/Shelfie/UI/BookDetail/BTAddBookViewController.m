@@ -37,6 +37,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *bookCover;
+@property (strong, nonatomic) IBOutlet UILabel *buySellLabel;
+@property (strong, nonatomic) IBOutlet UILabel *giftLabel;
 
 //@property (strong, nonatomic) NSInteger *bookDistance;
 @property (nonatomic, assign) BOOL buySell;
@@ -50,9 +52,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     if (self.have) {
         self.own = true;
+        self.buySellLabel.text = @"sell?";
+        self.giftLabel.text = @"gift?";
     }
     
     
