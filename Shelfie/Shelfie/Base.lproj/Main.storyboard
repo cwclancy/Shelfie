@@ -224,20 +224,15 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="logout" id="kYG-sq-QP3">
-                                <rect key="frame" x="0.0" y="348" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kYG-sq-QP3" id="YZm-lZ-SzV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNy-LD-nOG">
-                                            <rect key="frame" x="60" y="49" width="61" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="settings">
                                                     <attributes>
-                                                        <font key="NSFont" size="17" name="AvenirNext-Medium"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -251,7 +246,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zcF-D9-Q2v" kind="presentation" id="mEt-ia-XKA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -290,7 +284,6 @@
                                 <attributedString key="attributedText">
                                     <fragment content="The Great Gatsby">
                                         <attributes>
-                                            <font key="NSFont" size="20" name="AvenirNext-DemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -303,7 +296,6 @@
                                 <attributedString key="attributedText">
                                     <fragment content="F. Scott Fitzgerald">
                                         <attributes>
-                                            <font key="NSFont" size="18" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -524,23 +516,12 @@
                                         <attributedString key="attributedText">
                                             <fragment content="The Great Gatsby">
                                                 <attributes>
-                                                    <font key="NSFont" size="20" name="AvenirNext-DemiBold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-checkbox-22-32" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-4K-Frb">
-                                        <rect key="frame" x="40" y="428" width="25" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-circle-thin-32" translatesAutoresizingMaskIntoConstraints="NO" id="iO0-ar-Jgs">
-                                        <rect key="frame" x="261" y="428" width="25" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-circle-thin-32" translatesAutoresizingMaskIntoConstraints="NO" id="qG5-UP-nYp">
-                                        <rect key="frame" x="147" y="428" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gH-5f-6Ra" userLabel="user view">
@@ -667,7 +648,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDu-KN-ZAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3524" y="814.54272863568224"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="kvj-Wy-0rH">
@@ -765,7 +745,6 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B9-3w-mYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1290.4000000000001" y="1350.6746626686659"/>
         </scene>
         <!--Profile Book View Controller-->
         <scene sceneID="HEm-xm-nri">
@@ -826,7 +805,6 @@
                                         <attributedString key="attributedText">
                                             <fragment content="The Great Gatsby">
                                                 <attributes>
-                                                    <font key="NSFont" size="20" name="AvenirNext-DemiBold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -849,7 +827,6 @@
                                         <attributedString key="attributedText">
                                             <fragment content="F. Scott Fitzgerald">
                                                 <attributes>
-                                                    <font key="NSFont" size="18" name="AvenirNext-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -912,7 +889,6 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fv9-bL-iJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="32"/>
         </scene>
         <!--Completed Request View Controller-->
         <scene sceneID="9p0-Js-Dpb">
@@ -1045,7 +1021,6 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS1-gy-beQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4034" y="32"/>
         </scene>
         <!--Add Or Request View Controller-->
         <scene sceneID="RrO-qU-ySz">
@@ -1107,7 +1082,6 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSA-36-xlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352.80000000000001" y="1351.5742128935533"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HbB-wY-1IK">
@@ -1145,8 +1119,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d0-MX-gG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2686" y="815"/>
+<<<<<<< HEAD
+=======
         </scene>
+>>>>>>> origin/design_branch
     </scenes>
     <resources>
         <image name="Back" width="16" height="16"/>
@@ -1158,7 +1134,6 @@
         <image name="fb-2" width="250" height="44"/>
         <image name="iconmonstr-bell-5-32" width="32" height="32"/>
         <image name="iconmonstr-binoculars-8-32" width="32" height="32"/>
-        <image name="iconmonstr-checkbox-22-32" width="32" height="32"/>
         <image name="iconmonstr-circle-thin-32" width="32" height="32"/>
         <image name="iconmonstr-gear-2-32" width="32" height="32"/>
         <image name="iconmonstr-photo-camera-9-240" width="240" height="240"/>
