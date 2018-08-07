@@ -40,6 +40,8 @@
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
     self.profilePic.clipsToBounds = YES;
     self.nameLabel.text = self.currentUser.name;
+
+    //fetch books
     
     self.booksOwnedView.delegate = self;
     self.booksOwnedView.dataSource = self;

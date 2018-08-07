@@ -7,6 +7,7 @@
 //
 
 #import "BTSettingsViewController.h"
+#import "BTFbAPIManager.h"
 
 @interface BTSettingsViewController ()
 
@@ -22,6 +23,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)onLogout:(id)sender {
+    [BTFbAPIManager logout];
 }
 
 /*

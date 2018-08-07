@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import"BTWhiteRevealViewController.h"
 
-@interface BTSettingsViewController : UIViewController
+
+@interface BTSettingsViewController : BTWhiteRevealViewController
 
 @end
