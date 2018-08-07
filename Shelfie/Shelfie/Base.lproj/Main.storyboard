@@ -1022,7 +1022,7 @@
                         <outlet property="coverImageView" destination="Nde-Bi-ctt" id="Uug-QG-gyJ"/>
                         <outlet property="dateLabel" destination="3mK-zm-WCO" id="9Ya-0W-ejI"/>
                         <outlet property="titleLabel" destination="AOu-vd-ZwD" id="QhD-Ul-9C1"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="exploreSegue" id="31S-wF-b1X"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="exploreSegue" id="31S-wF-b1X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnT-XE-1mD" userLabel="First Responder" sceneMemberID="firstResponder"/>
