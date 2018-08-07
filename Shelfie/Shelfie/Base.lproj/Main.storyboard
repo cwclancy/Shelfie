@@ -318,7 +318,6 @@
                                 </state>
                                 <connections>
                                     <action selector="submitClicked:" destination="eWt-aP-7LS" eventType="touchUpInside" id="t4u-1e-jfX"/>
-                                    <segue destination="WSW-h5-dVI" kind="presentation" id="qa5-ZM-w0b"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ede-Fq-lEY">
@@ -458,6 +457,7 @@
                         <outlet property="sliderLabel" destination="itJ-zf-dSL" id="tB3-EV-PUS"/>
                         <outlet property="titleLabel" destination="KDz-AF-TC7" id="k9B-xY-X70"/>
                         <outlet property="tradeButton" destination="O2t-dY-g9F" id="4TN-Ff-qbt"/>
+                        <segue destination="OCU-lf-lpK" kind="show" identifier="publishSegue" id="dMJ-qp-Dys"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Zz-cR-lSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -997,7 +997,6 @@
                                 </state>
                                 <connections>
                                     <action selector="keepExploring:" destination="OCU-lf-lpK" eventType="touchUpInside" id="Etc-eG-zGV"/>
-                                    <segue destination="BYZ-38-t0r" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="0Ns-CJ-oKx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk7-4W-rai">
@@ -1018,6 +1017,13 @@
                         <viewLayoutGuide key="safeArea" id="933-up-HvY"/>
                     </view>
                     <navigationItem key="navigationItem" id="crt-2Q-znV"/>
+                    <connections>
+                        <outlet property="authorLabel" destination="3KF-6c-q9H" id="HWQ-00-62H"/>
+                        <outlet property="coverImageView" destination="Nde-Bi-ctt" id="Uug-QG-gyJ"/>
+                        <outlet property="dateLabel" destination="3mK-zm-WCO" id="9Ya-0W-ejI"/>
+                        <outlet property="titleLabel" destination="AOu-vd-ZwD" id="QhD-Ul-9C1"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="exploreSegue" id="31S-wF-b1X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnT-XE-1mD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1141,25 +1147,6 @@
             </objects>
             <point key="canvasLocation" x="2686" y="815"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="gbx-OG-u1N">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="WSW-h5-dVI" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hUm-6G-BjZ">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="OCU-lf-lpK" kind="relationship" relationship="rootViewController" id="G9V-QS-sfL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ein-ch-veo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4874" y="-842"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Back" width="16" height="16"/>
@@ -1183,7 +1170,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="9OS-DA-nng"/>
         <segue reference="vS7-Sb-czk"/>
-        <segue reference="lmB-lM-JkE"/>
+        <segue reference="31S-wF-b1X"/>
         <segue reference="b1Y-yH-eeN"/>
     </inferredMetricsTieBreakers>
 </document>

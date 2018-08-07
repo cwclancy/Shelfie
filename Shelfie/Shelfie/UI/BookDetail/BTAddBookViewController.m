@@ -15,6 +15,7 @@
 #import "BTUserDefaults.h"
 #import "BTUserManager.h"
 #import "BTBookAPIManager.h"
+#import "BTCompletedRequestViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <JSONModel/JSONModel.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -73,15 +74,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (void)makeBook:(NSDictionary *)book {
     NSDictionary *bookDictionary = book[@"items"][0][@"volumeInfo"];
@@ -147,8 +140,20 @@ if (!self.gift) {
     } else {
         [[BTUserManager shared] addToBooksWant:self.coverURL];
     }
+    [self performSegueWithIdentifier:@"publishSegue" sender:nil];
     
 }
+
+
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     if ([[segue identifier] isEqualToString:@"publishSegue"]) {
+         BTCompletedRequestViewController *publishViewController = [segue destinationViewController];
+         publishViewController.bookTitle = self.titleLabel.text;
+         publishViewController.coverURL = self.coverURL;
+         publishViewController.date = self.dateLabel.text;
+         publishViewController.author = self.authorLabel.text;
+     }
+ }
 
 
 @end
