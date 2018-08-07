@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BTRevealHeadViewController.h"
+#import "BTWhiteRevealViewController.h"
 #import "BTUserManager.h"
 
 
-@interface BTProfileViewController : BTRevealHeadViewController
+@interface BTProfileViewController : BTWhiteRevealViewController
 
 @end

@@ -19,8 +19,6 @@
 @interface BTProfileViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) BTUser *currentUser;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *profilePic;
 
 @property (strong, nonatomic) IBOutlet UICollectionView *booksOwnedView;
 @property (strong, nonatomic) IBOutlet UICollectionView *booksRequestedView;
@@ -33,13 +31,6 @@
     [super viewDidLoad];
     self.currentUser = [[BTUserManager shared] getCurrentUser];
     
-    [self.profilePic setImageWithURL:[NSURL URLWithString:self.currentUser.picture]];
-    self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
-    self.profilePic.clipsToBounds = YES;
-    self.nameLabel.text = self.currentUser.name;
-
-    //fetch books
-    
     self.booksOwnedView.delegate = self;
     self.booksOwnedView.dataSource = self;
     [self.booksOwnedView reloadData];
@@ -48,8 +39,6 @@
     self.booksRequestedView.dataSource = self;
     [self.booksRequestedView reloadData];
     
-   // self.numberBooksLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.currentUser.booksHave.count];
-
 }
 
 
@@ -64,17 +53,30 @@
 */
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
     if (collectionView == self.booksOwnedView) {
         OwnCollectionViewCell *cellA = [collectionView dequeueReusableCellWithReuseIdentifier:@"ownedCell" forIndexPath:indexPath];
-         NSString *coverURL = self.currentUser.booksWant[indexPath.row];
+        if (self.currentUser.booksHave.count != 0) {
+         NSString *coverURL = self.currentUser.booksHave[indexPath.row];
         [cellA setContents:coverURL];
+        } else {
+            NSLog(@"no books in own array!");
+            UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
+            [cellA.ownBook setImage:image];
+        }
         return cellA;   
         
-    }  else {
-        
-         RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
+    }
+    else {
+        RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
+        if (self.currentUser.booksWant.count != 0) {
         NSString *coverURL = self.currentUser.booksWant[indexPath.row];
         [cellB setContents:coverURL];
+        } else {
+            NSLog(@"no books in want array!");
+            UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
+            [cellB.requestBook setImage:image];
+        }
     return cellB;
     }
 }
