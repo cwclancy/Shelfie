@@ -1,32 +1,31 @@
 //
-//  BTLoginViewController.m
+//  BTSettingsViewController.m
 //  Shelfie
 //
-//  Created by Claudia Haddad on 7/26/18.
+//  Created by Claudia Haddad on 8/6/18.
 //  Copyright © 2018 BookTrader. All rights reserved.
 //
 
+#import "BTSettingsViewController.h"
 #import "BTFbAPIManager.h"
-#import "BTLoginViewController.h"
 
-@interface BTLoginViewController ()
+@interface BTSettingsViewController ()
+
 @end
 
-@implementation BTLoginViewController
+@implementation BTSettingsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //Handle clicks on the login/logout button
-    [self.loginButton addTarget : self action : @selector (onLoginClicked) forControlEvents : UIControlEventTouchUpInside ];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void) onLoginClicked {
-    [[BTFbAPIManager shared] login:self];
+- (IBAction)onLogout:(id)sender {
+    [BTFbAPIManager logout];
 }
 
 /*

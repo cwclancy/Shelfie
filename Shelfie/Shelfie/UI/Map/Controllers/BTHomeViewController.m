@@ -11,6 +11,7 @@
 #import "BTUserManager.h"
 #import "BTUIServices.h"
 
+
 @interface BTHomeViewController () <UISearchBarDelegate>
 @property (strong, nonatomic) UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UIView *tapCheckView;
@@ -25,14 +26,13 @@
         [self isUserOnParse:[FBSDKAccessToken currentAccessToken].userID];
     }
     
-    
     NSLog(@"HOME VIEW : %@", [[BTUserManager shared] getCurrentUser]);
     self.searchBar = [BTUIServices createSearchBarWithDimensions:CGRectMake(30, 70, 320, 44)];
     self.searchBar.delegate = self;
     [self.view addSubview:self.tapCheckView];
     [self.view addSubview:self.searchBar];
-}
 
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -65,7 +65,6 @@
             NSLog(@"%@", error.localizedDescription);
         }
     }];
-    
 }
 
 

@@ -63,10 +63,7 @@
                  [[BTUserManager shared] FBUserExists: fbUser loginController:loginController];
              }
          }];
-        
     }
-    
 }
-
 
 @end

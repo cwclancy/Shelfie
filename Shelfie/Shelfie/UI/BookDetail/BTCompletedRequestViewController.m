@@ -8,8 +8,14 @@
 
 #import "BTCompletedRequestViewController.h"
 #import "BTHomeViewController.h"
+#import "UIImageView+AFNetworking.h"
+
 
 @interface BTCompletedRequestViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *authorLabel;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 
 @end
 
@@ -17,6 +23,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.coverImageView setImageWithURL:[NSURL URLWithString:self.coverURL]];
+    self.titleLabel.text = self.bookTitle;
+    self.authorLabel.text = self.author;
+    self.dateLabel.text = self.date;
     // Do any additional setup after loading the view.
 }
 
@@ -25,10 +35,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)keepExploring:(id)sender {
-    BTHomeViewController *vc = [[BTHomeViewController alloc] init];
-    UINavigationController *navigationController =
-    [[UINavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:navigationController animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"exploreSegue" sender:nil];
 }
 
 /*
