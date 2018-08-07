@@ -338,10 +338,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnD-zM-QwO">
-                                        <rect key="frame" x="64" y="55" width="35" height="24"/>
+                                        <rect key="frame" x="64" y="55" width="38" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="sell?">
+                                            <fragment content="buy?">
                                                 <attributes>
                                                     <font key="NSFont" size="17" name="AvenirNext-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -387,12 +387,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8m-4Z-ZtC">
-                                        <rect key="frame" x="279" y="55" width="34" height="24"/>
+                                        <rect key="frame" x="279" y="55" width="79" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="gift?">
+                                            <fragment content="be gifted?">
                                                 <attributes>
                                                     <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -452,8 +453,10 @@
                         <outlet property="authorLabel" destination="41i-ao-WiB" id="mXh-bK-Vea"/>
                         <outlet property="bookCover" destination="LSf-oL-Oyo" id="APa-yp-yN4"/>
                         <outlet property="buySellButton" destination="DFk-jy-Ypc" id="azr-LU-Uwb"/>
+                        <outlet property="buySellLabel" destination="CnD-zM-QwO" id="mR4-nZ-rl3"/>
                         <outlet property="dateLabel" destination="BqT-rG-KCj" id="JLS-zq-1NI"/>
                         <outlet property="giftButton" destination="6T9-Za-20R" id="PjZ-NX-1RV"/>
+                        <outlet property="giftLabel" destination="j8m-4Z-ZtC" id="9BK-FK-r03"/>
                         <outlet property="slider" destination="yfR-HL-YSw" id="JNg-cX-hSG"/>
                         <outlet property="sliderLabel" destination="itJ-zf-dSL" id="tB3-EV-PUS"/>
                         <outlet property="titleLabel" destination="KDz-AF-TC7" id="k9B-xY-X70"/>
