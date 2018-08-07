@@ -1232,8 +1232,6 @@
             </objects>
             <point key="canvasLocation" x="3624.8000000000002" y="814.54272863568224"/>
         </scene>
-<<<<<<< HEAD
-=======
         <!--Navigation Controller-->
         <scene sceneID="gbx-OG-u1N">
             <objects>
@@ -1271,7 +1269,6 @@
             </objects>
             <point key="canvasLocation" x="360.80000000000001" y="648.12593703148434"/>
         </scene>
->>>>>>> origin/design_branch
     </scenes>
     <resources>
         <image name="Back" width="16" height="16"/>
