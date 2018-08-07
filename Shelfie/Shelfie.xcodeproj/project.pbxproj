@@ -226,12 +226,9 @@
 		B197F843210A82E3004805D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-=======
 				B1C5210521190F3300E73B10 /* BTSettingsViewController.h */,
 				B1C5210621190F3300E73B10 /* BTSettingsViewController.m */,
 				CECB9BA32118B76D001A5956 /* BarcodeView */,
->>>>>>> origin/design_branch
 				B1C520FE2118EFF100E73B10 /* SideNav */,
 				B12BC2B72118E7660060DF0E /* Profile */,
 				CEF5C36F2110FDA100A33453 /* Map */,
@@ -354,8 +351,6 @@
 			path = Shelfie;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-=======
 		CECB9BA32118B76D001A5956 /* BarcodeView */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,7 +358,6 @@
 			path = BarcodeView;
 			sourceTree = "<group>";
 		};
->>>>>>> origin/design_branch
 		CECB9BAC210A4E3D001D2032 /* ShelfieTests */ = {
 			isa = PBXGroup;
 			children = (
