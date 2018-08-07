@@ -28,5 +28,8 @@
 - (void)getBooksHave;
 - (void)getBooksRequested;
 
-- (void)removeFromBooksHave:(NSString *)bookISBN;
+- (void)removeFromBooksHave:(NSString *)coverURL;
+- (void)addToBooksWant:(NSString *)coverURL;
+- (void)removeFromBooksWant:(NSString *)coverURL;
+
 @end

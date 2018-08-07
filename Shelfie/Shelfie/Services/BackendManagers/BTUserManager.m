@@ -77,8 +77,9 @@
     
 }
 
-- (void)addToBooksHave:(NSString *)bookISBN {
-    [self.currentUser addObject:bookISBN forKey:@"booksHave"];
+
+- (void)addToBooksHave:(NSString *)coverURL {
+    [self.currentUser addObject:coverURL forKey:@"booksHave"];
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             NSLog(@"updated!");
@@ -88,8 +89,30 @@
     }];
 }
 
-- (void)removeFromBooksHave:(NSString *)bookISBN {
-    [self.currentUser removeObject:bookISBN forKey:@"booksHave"];
+- (void)removeFromBooksHave:(NSString *)coverURL {
+    [self.currentUser removeObject:coverURL forKey:@"booksHave"];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"updated!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+- (void)addToBooksWant:(NSString *)coverURL {
+    [self.currentUser addObject:coverURL forKey:@"booksWant"];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"updated!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+- (void)removeFromBooksWant:(NSString *)bookISBN {
+    [self.currentUser removeObject:bookISBN forKey:@"booksWant"];
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             NSLog(@"updated!");
