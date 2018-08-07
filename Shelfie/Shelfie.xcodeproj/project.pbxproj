@@ -22,6 +22,7 @@
 		B1C521012118F99E00E73B10 /* RequestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C521002118F99E00E73B10 /* RequestCollectionViewCell.m */; };
 		B1C5210721190F3300E73B10 /* BTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C5210621190F3300E73B10 /* BTSettingsViewController.m */; };
 		CE2A04D7211393E200762D2F /* BTMapBookDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A04D6211393E200762D2F /* BTMapBookDetailsViewController.m */; };
+		CE665D7F211918BC00BE4776 /* BTAddOrRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE665D7E211918BC00BE4776 /* BTAddOrRequestViewController.m */; };
 		CEA6B274210B9E4C009860C4 /* BTBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B273210B9E4C009860C4 /* BTBook.m */; };
 		CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B278210BCBC7009860C4 /* BTBookAPIManager.m */; };
 		CEA6B280210BD256009860C4 /* BTPostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B27F210BD256009860C4 /* BTPostManager.m */; };
@@ -34,7 +35,6 @@
 		CECB9B9E210A4E3D001D2032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CECB9B9D210A4E3D001D2032 /* Assets.xcassets */; };
 		CECB9BA1210A4E3D001D2032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECB9B9F210A4E3D001D2032 /* LaunchScreen.storyboard */; };
 		CECB9BA4210A4E3D001D2032 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BA3210A4E3D001D2032 /* main.m */; };
-		CECB9BA62118B7A3001A5956 /* BTSBarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BA52118B7A3001A5956 /* BTSBarcodeViewController.swift */; };
 		CECB9BAE210A4E3D001D2032 /* ShelfieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BAD210A4E3D001D2032 /* ShelfieTests.m */; };
 		CECB9BB9210A4E3D001D2032 /* ShelfieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9BB8210A4E3D001D2032 /* ShelfieUITests.m */; };
 		CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECC3384210F83600073A8BE /* BTBarcodeViewController.m */; };
@@ -108,6 +108,8 @@
 		CC44DE9E9A4AAE0149BBFBD3 /* Pods-Shelfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shelfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie.release.xcconfig"; sourceTree = "<group>"; };
 		CE2A04D5211393E200762D2F /* BTMapBookDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTMapBookDetailsViewController.h; sourceTree = "<group>"; };
 		CE2A04D6211393E200762D2F /* BTMapBookDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTMapBookDetailsViewController.m; sourceTree = "<group>"; };
+		CE665D7D211918BC00BE4776 /* BTAddOrRequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTAddOrRequestViewController.h; sourceTree = "<group>"; };
+		CE665D7E211918BC00BE4776 /* BTAddOrRequestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTAddOrRequestViewController.m; sourceTree = "<group>"; };
 		CEA6B272210B9E4C009860C4 /* BTBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTBook.h; sourceTree = "<group>"; };
 		CEA6B273210B9E4C009860C4 /* BTBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTBook.m; sourceTree = "<group>"; };
 		CEA6B277210BCBC7009860C4 /* BTBookAPIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTBookAPIManager.h; sourceTree = "<group>"; };
@@ -130,8 +132,6 @@
 		CECB9BA0210A4E3D001D2032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CECB9BA2210A4E3D001D2032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECB9BA3210A4E3D001D2032 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CECB9BA42118B7A2001A5956 /* Shelfie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shelfie-Bridging-Header.h"; sourceTree = "<group>"; };
-		CECB9BA52118B7A3001A5956 /* BTSBarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTSBarcodeViewController.swift; sourceTree = "<group>"; };
 		CECB9BA9210A4E3D001D2032 /* ShelfieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShelfieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECB9BAD210A4E3D001D2032 /* ShelfieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShelfieTests.m; sourceTree = "<group>"; };
 		CECB9BAF210A4E3D001D2032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -240,6 +240,8 @@
 				CECFB54D210A9F8D00D5C220 /* Login */,
 				CECC3383210F83600073A8BE /* BTBarcodeViewController.h */,
 				CECC3384210F83600073A8BE /* BTBarcodeViewController.m */,
+				CE665D7D211918BC00BE4776 /* BTAddOrRequestViewController.h */,
+				CE665D7E211918BC00BE4776 /* BTAddOrRequestViewController.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -675,7 +677,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CECB9BA62118B7A3001A5956 /* BTSBarcodeViewController.swift in Sources */,
 				B197F831210A6E10004805D8 /* BTSideTableViewController.m in Sources */,
 				CEA6B274210B9E4C009860C4 /* BTBook.m in Sources */,
 				B1C521012118F99E00E73B10 /* RequestCollectionViewCell.m in Sources */,
@@ -685,6 +686,7 @@
 				CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */,
 				CEB3E70621150C09004589AB /* BTWhiteRevealViewController.m in Sources */,
 				CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */,
+				CE665D7F211918BC00BE4776 /* BTAddOrRequestViewController.m in Sources */,
 				B12BC27221152ABF0060DF0E /* BTProfileBookViewController.m in Sources */,
 				B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */,
 				B12BC2B62118E6BA0060DF0E /* OwnCollectionViewCell.m in Sources */,
@@ -880,7 +882,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KV6X26527X;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -904,7 +906,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KV6X26527X;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -923,7 +925,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B30E07D3C609E4D545454286 /* Pods-ShelfieTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
@@ -944,7 +945,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 847D6197578A73C550FB2778 /* Pods-ShelfieTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
@@ -965,7 +965,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 51C26F73505FB51C63787AD3 /* Pods-ShelfieUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
 				INFOPLIST_FILE = ShelfieUITests/Info.plist;
@@ -985,7 +984,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E36CBDEE3C2F48249644CF9A /* Pods-ShelfieUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HDF54N6KHN;
 				INFOPLIST_FILE = ShelfieUITests/Info.plist;

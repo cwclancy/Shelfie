@@ -11,7 +11,7 @@
 #import "BTWhiteRevealViewController.h"
 #import "BTBarcodeViewController.h"
 
-@interface BTAddBookViewController : BTWhiteRevealViewController
+@interface BTAddBookViewController : BTBarcodeViewController
 @property (strong, nonatomic) NSString *isbn;
 @property (nonatomic) BOOL have;
 @property (nonatomic) BOOL want;
