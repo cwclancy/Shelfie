@@ -603,7 +603,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tO2-9q-5Td">
-                                        <rect key="frame" x="172" y="432" width="47" height="21"/>
+                                        <rect key="frame" x="172" y="432" width="195" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Selling">
@@ -624,7 +624,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="znC-UR-Mhk"/>
                     <connections>
-                        <outlet property="authorLabel" destination="axR-4k-48b" id="v4P-PN-Rpn"/>
+                        <outlet property="authorLabel" destination="Yrv-fw-527" id="TUx-xd-XZ7"/>
+                        <outlet property="bookStatus" destination="tO2-9q-5Td" id="K09-0f-2tV"/>
                         <outlet property="coverImageView" destination="WUN-iC-rqs" id="wK1-kI-WOm"/>
                         <outlet property="dateLabel" destination="axR-4k-48b" id="HK7-YZ-bao"/>
                         <outlet property="ownerImageView" destination="Xtg-3n-O37" id="hXX-va-Qhg"/>
@@ -1294,6 +1295,7 @@
         <image name="requestButton" width="297" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="dMJ-qp-Dys"/>
         <segue reference="9OS-DA-nng"/>
         <segue reference="vS7-Sb-czk"/>
         <segue reference="31S-wF-b1X"/>
