@@ -228,7 +228,6 @@
 			children = (
 				B1C5210521190F3300E73B10 /* BTSettingsViewController.h */,
 				B1C5210621190F3300E73B10 /* BTSettingsViewController.m */,
-				CECB9BA32118B76D001A5956 /* BarcodeView */,
 				B1C520FE2118EFF100E73B10 /* SideNav */,
 				B12BC2B72118E7660060DF0E /* Profile */,
 				CEF5C36F2110FDA100A33453 /* Map */,
@@ -349,13 +348,6 @@
 				CECB9BA3210A4E3D001D2032 /* main.m */,
 			);
 			path = Shelfie;
-			sourceTree = "<group>";
-		};
-		CECB9BA32118B76D001A5956 /* BarcodeView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BarcodeView;
 			sourceTree = "<group>";
 		};
 		CECB9BAC210A4E3D001D2032 /* ShelfieTests */ = {

@@ -12,6 +12,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "OwnCollectionViewCell.h"
 #import "RequestCollectionViewCell.h"
+#import "BTGetManager.h"
 #import "BTBook.h"
 #import "UIImageView+AFNetworking.h"
 
@@ -24,6 +25,8 @@
 
 @property (strong, nonatomic) IBOutlet UICollectionView *booksOwnedView;
 @property (strong, nonatomic) IBOutlet UICollectionView *booksRequestedView;
+@property (strong, nonatomic) NSMutableArray *booksHave;
+@property (strong, nonatomic) NSArray *booksWant;
 
 @end
 
@@ -32,6 +35,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.currentUser = [[BTUserManager shared] getCurrentUser];
+    [[BTGetManager shared] fetchBooksHaveWithCompletion:self.currentUser.booksHave completion:^(BTBook *book, NSError *error) {
+        if (error) {
+            NSLog(@"%@", error);
+        } else {
+            [self.booksHave addObject:book];
+        }
+    }];
     
     [self.profilePic setImageWithURL:[NSURL URLWithString:self.currentUser.picture]];
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
