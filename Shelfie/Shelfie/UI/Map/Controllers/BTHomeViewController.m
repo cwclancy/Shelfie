@@ -11,6 +11,7 @@
 #import "BTUserManager.h"
 #import "BTUIServices.h"
 
+
 @interface BTHomeViewController () <UISearchBarDelegate>
 @property (strong, nonatomic) UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UIView *tapCheckView;

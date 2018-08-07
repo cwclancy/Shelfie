@@ -141,9 +141,9 @@ if (!self.gift) {
         }
     }];
     if (self.own) {
-        [[BTUserManager shared] addToBooksHave:self.isbn];
+        [[BTUserManager shared] addToBooksHave:self.coverURL];
     } else {
-        [[BTUserManager shared] addToBooksWant:self.isbn];
+        [[BTUserManager shared] addToBooksWant:self.coverURL];
     }
     
 }
