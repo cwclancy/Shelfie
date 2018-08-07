@@ -13,6 +13,7 @@
 @interface BTBook : PFObject <PFSubclassing>
 
 @property (strong, nonatomic) NSString *userId;
+@property (strong, nonatomic) NSString *messengerId;
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *author;
 @property (strong, nonatomic) NSString *isbn;
