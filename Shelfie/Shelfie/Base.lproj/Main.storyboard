@@ -224,15 +224,20 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="logout" rowHeight="88" id="kYG-sq-QP3">
+                                <rect key="frame" x="0.0" y="348" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kYG-sq-QP3" id="YZm-lZ-SzV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNy-LD-nOG">
+                                            <rect key="frame" x="60" y="49" width="81" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="settings">
                                                     <attributes>
+                                                        <font key="NSFont" size="18" name="AvenirNext-Medium"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -246,6 +251,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <segue destination="p45-fo-eGE" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="XaS-Zm-y7g"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -257,7 +263,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xd9-YL-JCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1245.5999999999999" y="31.934032983508249"/>
+            <point key="canvasLocation" x="2184.8000000000002" y="31.934032983508249"/>
         </scene>
         <!--Add Book View Controller-->
         <scene sceneID="whR-8a-yaF">
@@ -284,6 +290,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="The Great Gatsby">
                                         <attributes>
+                                            <font key="NSFont" size="21" name="AvenirNext-DemiBold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -296,6 +303,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="F. Scott Fitzgerald">
                                         <attributes>
+                                            <font key="NSFont" size="19" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -474,7 +482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPm-oF-yZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3196" y="31.934032983508249"/>
+            <point key="canvasLocation" x="4135.1999999999998" y="31.934032983508249"/>
         </scene>
         <!--Map Book Details View Controller-->
         <scene sceneID="i01-0C-0Rm">
@@ -503,7 +511,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="F. Scott Fitzgerald">
                                                 <attributes>
-                                                    <font key="NSFont" size="18" name="AvenirNext-Regular"/>
+                                                    <font key="NSFont" size="19" name="AvenirNext-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -516,12 +524,15 @@
                                         <attributedString key="attributedText">
                                             <fragment content="The Great Gatsby">
                                                 <attributes>
+                                                    <font key="NSFont" size="21" name="AvenirNext-DemiBold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-check-mark-1-240" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-4K-Frb">
+                                        <rect key="frame" x="137" y="432" width="25" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gH-5f-6Ra" userLabel="user view">
@@ -566,42 +577,6 @@
                                             </label>
                                         </subviews>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tO2-9q-5Td">
-                                        <rect key="frame" x="73" y="430" width="47" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Selling">
-                                                <attributes>
-                                                    <font key="NSFont" size="15" name="AvenirNext-Regular"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sj9-X3-Qbl">
-                                        <rect key="frame" x="294" y="430" width="47" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Gifting">
-                                                <attributes>
-                                                    <font key="NSFont" size="15" name="AvenirNext-Regular"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEs-oB-u4K">
-                                        <rect key="frame" x="180" y="430" width="52" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="Trading">
-                                                <attributes>
-                                                    <font key="NSFont" size="15" name="AvenirNext-Regular"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile lines" translatesAutoresizingMaskIntoConstraints="NO" id="YFQ-o1-9oQ">
                                         <rect key="frame" x="0.0" y="481" width="375" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -627,6 +602,18 @@
                                             <action selector="messengerPressed:" destination="kVl-o9-5IU" eventType="touchUpInside" id="2xf-J9-jqd"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tO2-9q-5Td">
+                                        <rect key="frame" x="172" y="432" width="47" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Selling">
+                                                <attributes>
+                                                    <font key="NSFont" size="15" name="AvenirNext-MediumItalic"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <viewLayoutGuide key="safeArea" id="8nr-0X-0Z9"/>
@@ -648,6 +635,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDu-KN-ZAQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4463.1999999999998" y="814.54272863568224"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="kvj-Wy-0rH">
@@ -745,6 +733,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4B9-3w-mYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1305" y="1689"/>
         </scene>
         <!--Profile Book View Controller-->
         <scene sceneID="HEm-xm-nri">
@@ -805,6 +794,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="The Great Gatsby">
                                                 <attributes>
+                                                    <font key="NSFont" size="21" name="AvenirNext-DemiBold"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -827,6 +817,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="F. Scott Fitzgerald">
                                                 <attributes>
+                                                    <font key="NSFont" size="19" name="AvenirNext-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -889,6 +880,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fv9-bL-iJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3143.1999999999998" y="31.934032983508249"/>
         </scene>
         <!--Completed Request View Controller-->
         <scene sceneID="9p0-Js-Dpb">
@@ -1021,6 +1013,124 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wS1-gy-beQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4972" y="31.934032983508249"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="7SY-tc-UWj">
+            <objects>
+                <viewController id="xbN-fq-M8d" customClass="BTSettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lSd-Yu-CYl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2a7-0b-k6E">
+                                <rect key="frame" x="64" y="213" width="136" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="location settings">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="AvenirNext-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4L-YO-yhj">
+                                <rect key="frame" x="64" y="271" width="129" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="privacy settings">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="AvenirNext-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile lines" translatesAutoresizingMaskIntoConstraints="NO" id="YkG-jk-jgD">
+                                <rect key="frame" x="0.0" y="168" width="375" height="9"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7uR-ML-iLN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSF-TL-sbb">
+                                        <rect key="frame" x="21" y="110" width="202" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="settings">
+                                                <attributes>
+                                                    <font key="NSFont" size="30" name="AvenirNext-DemiBold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgO-xb-VHc">
+                                <rect key="frame" x="64" y="335" width="162" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="notification settings">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="AvenirNext-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-log-out-18-32" translatesAutoresizingMaskIntoConstraints="NO" id="uBp-KT-J77">
+                                <rect key="frame" x="16" y="389" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-bell-2-32" translatesAutoresizingMaskIntoConstraints="NO" id="rwF-e5-le8">
+                                <rect key="frame" x="14" y="331" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-user-20-32" translatesAutoresizingMaskIntoConstraints="NO" id="ZvS-RG-VHB">
+                                <rect key="frame" x="16" y="274" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-location-2-32" translatesAutoresizingMaskIntoConstraints="NO" id="J7R-UN-17J">
+                                <rect key="frame" x="16" y="213" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O1y-sr-wUW">
+                                <rect key="frame" x="0.0" y="389" width="186" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="log out">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="18" name="AvenirNext-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onLogout:" destination="xbN-fq-M8d" eventType="touchUpInside" id="kpj-tz-6fJ"/>
+                                    <segue destination="zcF-D9-Q2v" kind="presentation" id="vRL-Rt-ucT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hmv-Ab-O1m"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qdc-da-ctd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVh-xv-wBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="648.12593703148434"/>
         </scene>
         <!--Add Or Request View Controller-->
         <scene sceneID="RrO-qU-ySz">
@@ -1082,6 +1192,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BSA-36-xlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="481" y="1689"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HbB-wY-1IK">
@@ -1119,8 +1230,46 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2d0-MX-gG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3624.8000000000002" y="814.54272863568224"/>
+        </scene>
 <<<<<<< HEAD
 =======
+        <!--Navigation Controller-->
+        <scene sceneID="gbx-OG-u1N">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="WSW-h5-dVI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hUm-6G-BjZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OCU-lf-lpK" kind="relationship" relationship="rootViewController" id="G9V-QS-sfL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ein-ch-veo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4874" y="-842"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gg9-V2-7sE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p45-fo-eGE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dht-3I-rOX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xbN-fq-M8d" kind="relationship" relationship="rootViewController" id="xVx-vl-kz4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fv-hX-0Pa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360.80000000000001" y="648.12593703148434"/>
         </scene>
 >>>>>>> origin/design_branch
     </scenes>
@@ -1132,11 +1281,16 @@
         <image name="delete button" width="120" height="47"/>
         <image name="explore button" width="120" height="47"/>
         <image name="fb-2" width="250" height="44"/>
+        <image name="iconmonstr-bell-2-32" width="32" height="32"/>
         <image name="iconmonstr-bell-5-32" width="32" height="32"/>
         <image name="iconmonstr-binoculars-8-32" width="32" height="32"/>
+        <image name="iconmonstr-check-mark-1-240" width="240" height="240"/>
         <image name="iconmonstr-circle-thin-32" width="32" height="32"/>
         <image name="iconmonstr-gear-2-32" width="32" height="32"/>
+        <image name="iconmonstr-location-2-32" width="32" height="32"/>
+        <image name="iconmonstr-log-out-18-32" width="32" height="32"/>
         <image name="iconmonstr-photo-camera-9-240" width="240" height="240"/>
+        <image name="iconmonstr-user-20-32" width="32" height="32"/>
         <image name="message-2" width="320" height="88"/>
         <image name="post button" width="240" height="94"/>
         <image name="profile lines" width="1131" height="18"/>
