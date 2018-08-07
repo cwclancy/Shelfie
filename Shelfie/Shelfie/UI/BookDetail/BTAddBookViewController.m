@@ -139,7 +139,7 @@ if (!self.gift) {
     if (self.own) {
         [[BTUserManager shared] addToBooksHave:submittedBook];
     } else {
-        [[BTUserManager shared] addToBooksWant:self.coverURL];
+        [[BTUserManager shared] addToBooksWant:submittedBook];
     }
     [self performSegueWithIdentifier:@"publishSegue" sender:nil];
     

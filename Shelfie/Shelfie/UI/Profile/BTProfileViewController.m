@@ -27,7 +27,7 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *booksOwnedView;
 @property (strong, nonatomic) IBOutlet UICollectionView *booksRequestedView;
 @property (strong, nonatomic) NSMutableArray *booksHave;
-@property (strong, nonatomic) NSArray *booksWant;
+@property (strong, nonatomic) NSMutableArray *booksWant;
 
 @end
 
@@ -36,13 +36,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.currentUser = [[BTUserManager shared] getCurrentUser];
-    [self fetchBooksHaveWithCompletion:self.currentUser.booksHave];
-    
+    [self fetchBooksHave:self.currentUser.booksHave];
+    [self fetchBooksWant:self.currentUser.booksWant];
     [self.profilePic setImageWithURL:[NSURL URLWithString:self.currentUser.picture]];
     self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
     self.profilePic.clipsToBounds = YES;
     self.nameLabel.text = self.currentUser.name;
     self.booksHave = [NSMutableArray new];
+    self.booksWant = [NSMutableArray new];
 
     
     self.booksOwnedView.delegate = self;
@@ -77,7 +78,8 @@
     else {
         RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
         if (self.currentUser.booksWant.count != 0) {
-            NSString *coverURL = self.currentUser.booksWant[indexPath.row];
+            BTBook *currentBook = self.booksWant[indexPath.row];
+            NSString *coverURL = currentBook.coverURL;
             [cellB setContents:coverURL];
         } else {
             NSLog(@"no books in want array!");
@@ -96,7 +98,7 @@
 
 }
 
-- (void)fetchBooksHaveWithCompletion:(NSArray *)pointerArray {
+- (void)fetchBooksHave:(NSArray *)pointerArray {
     for (int i = 0; i < pointerArray.count; i++) {
         BTBook *currentBook = pointerArray[i];
         NSString *bookId = currentBook.objectId;
@@ -114,6 +116,23 @@
     }
 }
 
+- (void)fetchBooksWant:(NSArray *)pointerArray {
+    for (int i = 0; i < pointerArray.count; i++) {
+        BTBook *currentBook = pointerArray[i];
+        NSString *bookId = currentBook.objectId;
+        [[BTBook query] getObjectInBackgroundWithId:bookId block:^(PFObject * _Nullable object, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"%@", error);
+            } else {
+                [self.booksWant addObject:object];
+                if (self.booksWant.count == pointerArray.count) {
+                    NSLog(@"here");
+                    [self.booksRequestedView reloadData];
+                }
+            }
+        }];
+    }
+}
 
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation

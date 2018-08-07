@@ -28,8 +28,9 @@
 - (void)getBooksRequested;
 
 - (void)addToBooksHave:(BTBook *)book;
-- (void)removeFromBooksHave:(NSString *)coverURL;
-- (void)addToBooksWant:(NSString *)coverURL;
-- (void)removeFromBooksWant:(NSString *)coverURL;
+- (void)addToBooksRequested:(BTBook *)book;
+- (void)removeFromBooksHave:(BTBook *)book;
+- (void)addToBooksWant:(BTBook *)book;
+- (void)removeFromBooksWant:(BTBook *)book;
 
 @end

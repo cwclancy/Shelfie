@@ -714,8 +714,7 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="bookRequestedCover" destination="FIx-ha-2mq" id="Tro-1r-6Af"/>
-                                            <outlet property="requestBook" destination="FIx-ha-2mq" id="NOF-Q9-3q6"/>
+                                            <outlet property="requestBook" destination="FIx-ha-2mq" id="hgg-9e-SaA"/>
                                             <segue destination="TN6-dw-Tgh" kind="show" id="FhM-Vb-U8A"/>
                                         </connections>
                                     </collectionViewCell>

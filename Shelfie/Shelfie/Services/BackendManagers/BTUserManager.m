@@ -89,8 +89,8 @@
     }];
 }
 
-- (void)removeFromBooksHave:(NSString *)coverURL {
-    [self.currentUser removeObject:coverURL forKey:@"booksHave"];
+- (void)removeFromBooksHave:(BTBook *)book {
+    [self.currentUser removeObject:book forKey:@"booksHave"];
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             NSLog(@"updated!");
@@ -100,8 +100,8 @@
     }];
 }
 
-- (void)addToBooksWant:(NSString *)coverURL {
-    [self.currentUser addObject:coverURL forKey:@"booksWant"];
+- (void)addToBooksWant:(BTBook *)book {
+    [self.currentUser addObject:book forKey:@"booksWant"];
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             NSLog(@"updated!");
@@ -111,8 +111,8 @@
     }];
 }
 
-- (void)removeFromBooksWant:(NSString *)bookISBN {
-    [self.currentUser removeObject:bookISBN forKey:@"booksWant"];
+- (void)removeFromBooksWant:(BTBook *)book {
+    [self.currentUser removeObject:book forKey:@"booksWant"];
     [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
         if (succeeded) {
             NSLog(@"updated!");
