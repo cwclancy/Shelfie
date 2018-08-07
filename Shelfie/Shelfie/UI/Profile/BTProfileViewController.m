@@ -19,8 +19,6 @@
 @interface BTProfileViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) BTUser *currentUser;
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *profilePic;
 
 @property (strong, nonatomic) IBOutlet UICollectionView *booksOwnedView;
 @property (strong, nonatomic) IBOutlet UICollectionView *booksRequestedView;
@@ -32,7 +30,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.currentUser = [[BTUserManager shared] getCurrentUser];
-    
     
     self.booksOwnedView.delegate = self;
     self.booksOwnedView.dataSource = self;
