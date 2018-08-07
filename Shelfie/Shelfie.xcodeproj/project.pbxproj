@@ -20,6 +20,7 @@
 		B197F831210A6E10004805D8 /* BTSideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F830210A6E10004805D8 /* BTSideTableViewController.m */; };
 		B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B197F841210A8254004805D8 /* BTProfileViewController.m */; };
 		B1C521012118F99E00E73B10 /* RequestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C521002118F99E00E73B10 /* RequestCollectionViewCell.m */; };
+		B1C5210721190F3300E73B10 /* BTSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C5210621190F3300E73B10 /* BTSettingsViewController.m */; };
 		CE2A04D7211393E200762D2F /* BTMapBookDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A04D6211393E200762D2F /* BTMapBookDetailsViewController.m */; };
 		CEA6B274210B9E4C009860C4 /* BTBook.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B273210B9E4C009860C4 /* BTBook.m */; };
 		CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B278210BCBC7009860C4 /* BTBookAPIManager.m */; };
@@ -97,9 +98,17 @@
 		B197F841210A8254004805D8 /* BTProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTProfileViewController.m; sourceTree = "<group>"; };
 		B1C520FF2118F99E00E73B10 /* RequestCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestCollectionViewCell.h; sourceTree = "<group>"; };
 		B1C521002118F99E00E73B10 /* RequestCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestCollectionViewCell.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		B2E1A2826F17DBB41CD34337 /* libPods-Shelfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shelfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30E07D3C609E4D545454286 /* Pods-ShelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C82AF0A54D730F4630802253 /* Pods-Shelfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shelfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie.release.xcconfig"; sourceTree = "<group>"; };
+=======
+		B1C5210521190F3300E73B10 /* BTSettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTSettingsViewController.h; sourceTree = "<group>"; };
+		B1C5210621190F3300E73B10 /* BTSettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTSettingsViewController.m; sourceTree = "<group>"; };
+		B736291ADBF925B02B3946E1 /* Pods-ShelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B92B7D26D69A1813814CB93A /* libPods-ShelfieTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ShelfieTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC44DE9E9A4AAE0149BBFBD3 /* Pods-Shelfie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shelfie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shelfie/Pods-Shelfie.release.xcconfig"; sourceTree = "<group>"; };
+>>>>>>> 0f500754dfd0b9c76ce3fab4ec79d6a8d1fa1bc4
 		CE2A04D5211393E200762D2F /* BTMapBookDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTMapBookDetailsViewController.h; sourceTree = "<group>"; };
 		CE2A04D6211393E200762D2F /* BTMapBookDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTMapBookDetailsViewController.m; sourceTree = "<group>"; };
 		CEA6B272210B9E4C009860C4 /* BTBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTBook.h; sourceTree = "<group>"; };
@@ -223,6 +232,8 @@
 		B197F843210A82E3004805D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B1C5210521190F3300E73B10 /* BTSettingsViewController.h */,
+				B1C5210621190F3300E73B10 /* BTSettingsViewController.m */,
 				CECB9BA32118B76D001A5956 /* BarcodeView */,
 				B1C520FE2118EFF100E73B10 /* SideNav */,
 				B12BC2B72118E7660060DF0E /* Profile */,
@@ -347,8 +358,6 @@
 		CECB9BA32118B76D001A5956 /* BarcodeView */ = {
 			isa = PBXGroup;
 			children = (
-				CECB9BA52118B7A3001A5956 /* BTSBarcodeViewController.swift */,
-				CECB9BA42118B7A2001A5956 /* Shelfie-Bridging-Header.h */,
 			);
 			path = BarcodeView;
 			sourceTree = "<group>";
@@ -698,6 +707,7 @@
 				A488EEA6211100C70074B42A /* FBUser.m in Sources */,
 				A488EEA92111083F0074B42A /* BTUserManager.m in Sources */,
 				CEF5C3722110FDC100A33453 /* BTMapViewController.m in Sources */,
+				B1C5210721190F3300E73B10 /* BTSettingsViewController.m in Sources */,
 				CEF5C37F2111234E00A33453 /* BTGetManager.m in Sources */,
 				CEA6B279210BCBC7009860C4 /* BTBookAPIManager.m in Sources */,
 				B12E1EF52113B8AE003084DB /* BTCompletedRequestViewController.m in Sources */,
