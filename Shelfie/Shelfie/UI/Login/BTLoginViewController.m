@@ -18,7 +18,6 @@
     [super viewDidLoad];
     //Handle clicks on the login/logout button
     [self.loginButton addTarget : self action : @selector (onLoginClicked) forControlEvents : UIControlEventTouchUpInside ];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,11 +27,6 @@
 
 - (void) onLoginClicked {
     [[BTFbAPIManager shared] login:self];
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    // If there is a current session going
-    
 }
 
 /*
