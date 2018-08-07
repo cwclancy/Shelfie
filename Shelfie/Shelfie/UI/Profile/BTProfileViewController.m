@@ -14,6 +14,7 @@
 #import "RequestCollectionViewCell.h"
 #import "BTGetManager.h"
 #import "BTBook.h"
+#import "BTProfileBookViewController.h"
 #import "UIImageView+AFNetworking.h"
 
 
@@ -55,15 +56,7 @@
 }
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
@@ -120,5 +113,18 @@
         }];
     }
 }
+
+
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UICollectionViewCell *tappedCell = sender;
+    NSIndexPath *indexPath = [self.booksOwnedView indexPathForCell:tappedCell];
+     BTBook *currentBook = self.booksHave[indexPath.item];
+     BTProfileBookViewController *profileDetailsViewController = [segue destinationViewController];
+     profileDetailsViewController.book = currentBook;
+     
+ }
+
 
 @end
