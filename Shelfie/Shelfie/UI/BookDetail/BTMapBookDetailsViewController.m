@@ -35,7 +35,17 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)messengerPressed:(id)sender {
-    [FBSDKMessengerSharer openMessenger];
+    //[FBSDKMessengerSharer openMessenger];
+    NSLog(@"%@", self.book.userId);
+    NSString *stringURL = [NSString stringWithFormat:@"fb-messenger://user-thread/connor.clancy.9"];
+    NSURL *url = [NSURL URLWithString:stringURL];
+    
+    // Open Messenger app
+    [[UIApplication sharedApplication] openURL:url options:[NSDictionary new] completionHandler:^(BOOL success) {
+        if (success) {
+            NSLog(@"Messenger Open");
+        }
+    }];
 }
 
 /*
