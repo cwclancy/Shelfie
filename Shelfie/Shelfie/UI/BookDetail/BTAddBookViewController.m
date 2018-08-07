@@ -15,6 +15,7 @@
 #import "BTUserDefaults.h"
 #import "BTUserManager.h"
 #import "BTBookAPIManager.h"
+#import "BTCompletedRequestViewController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <JSONModel/JSONModel.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -22,7 +23,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 
-@interface BTAddBookViewController ()
+@interface BTAddBookViewController () <BarcodeViewControllerDelegate>
 
 @property (strong, nonatomic) GOBook *book;
 @property (strong, nonatomic) NSString *coverURL;
@@ -119,6 +120,7 @@ if (!self.gift) {
     } else {
         [[BTUserManager shared] addToBooksWant:self.coverURL];
     }
+    [self performSegueWithIdentifier:@"publishSegue" sender:nil];
     
 }
 
@@ -131,6 +133,17 @@ if (!self.gift) {
  // Pass the selected object to the new view controller.
  }
  */
+
+
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     if ([[segue identifier] isEqualToString:@"publishSegue"]) {
+         BTCompletedRequestViewController *publishViewController = [segue destinationViewController];
+         publishViewController.bookTitle = self.titleLabel.text;
+         publishViewController.coverURL = self.coverURL;
+         publishViewController.date = self.dateLabel.text;
+         publishViewController.author = self.authorLabel.text;
+     }
+ }
 
 
 @end
