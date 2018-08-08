@@ -51,7 +51,11 @@
     //TODO: add bool to see if it is a book request or owned
     [[BTUserManager shared] removeFromBooksHave:self.book];
     [[BTPostManager shared] removeBookFromDatabase:self.book];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
+        [[BTUserManager shared] setUser:owner];
+        NSLog(@"LOCAL USER REFRESHED");
+    }];
+    [self performSegueWithIdentifier:<#(nonnull NSString *)#> sender:<#(nullable id)#>];
 }
 
 /*

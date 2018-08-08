@@ -58,7 +58,7 @@
 
 -(void) createPage {
     //TODO: GET owner of book from parse and fill out rest of field (call this funciton in completion of that)
-    [BTUserManager getUserWithID:self.book.userId user:^(BTUser *owner) {
+    [BTUserManager getUserWithID: self.book.userId completion:^(BTUser *owner) {
         NSLog(@"%@", owner);
         [self.coverImageView setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
         [self.coverImageView.layer setBorderColor: [[UIColor blackColor] CGColor]];

@@ -125,6 +125,14 @@
     }
 }
 
+/*
+- (void) viewDidAppear:(BOOL)animated {
+    self.currentUser = [[BTUserManager shared] getCurrentUser];
+    [self.booksOwnedView reloadData];
+    [self.booksRequestedView reloadData];
+}
+ */
+
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
