@@ -40,9 +40,11 @@
     self.booksWant = [NSMutableArray new];
     self.booksOwnedView.delegate = self;
     self.booksOwnedView.dataSource = self;
+    self.booksOwnedView.alwaysBounceHorizontal = YES;
     [self.booksOwnedView reloadData];
     self.booksRequestedView.delegate = self;
     self.booksRequestedView.dataSource = self;
+    self.booksRequestedView.alwaysBounceHorizontal = YES;
     [self.booksRequestedView reloadData];
 }
 

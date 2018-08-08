@@ -685,7 +685,7 @@
                                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="ownBook" destination="frB-0K-U2k" id="dze-Ye-G5s"/>
-                                            <segue destination="TN6-dw-Tgh" kind="show" id="Z8J-V8-1fL"/>
+                                            <segue destination="TN6-dw-Tgh" kind="show" id="gUo-tM-cUu"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -716,7 +716,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="requestBook" destination="FIx-ha-2mq" id="hgg-9e-SaA"/>
-                                            <segue destination="TN6-dw-Tgh" kind="show" id="FhM-Vb-U8A"/>
+                                            <segue destination="TN6-dw-Tgh" kind="show" id="sPT-pb-pot"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -816,7 +816,7 @@
                                             <attributedString key="attributedTitle"/>
                                         </state>
                                         <connections>
-                                            <action selector="deleteButton:" destination="TN6-dw-Tgh" eventType="touchUpInside" id="kbS-nM-NlW"/>
+                                            <action selector="deleteButtonPressed:" destination="TN6-dw-Tgh" eventType="touchUpInside" id="yfj-PD-04B"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zk-Hu-es3">
@@ -853,11 +853,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Ym-78-eqE"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DJc-yk-KVc">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Deo-55-dOr">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="authorLabel" destination="0Zk-Hu-es3" id="nrS-eK-ePr"/>
                         <outlet property="bookCover" destination="NlN-rz-gGU" id="SRx-d3-3Zz"/>
@@ -1288,7 +1283,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="G9V-QS-sfL"/>
         <segue reference="9OS-DA-nng"/>
-        <segue reference="Z8J-V8-1fL"/>
+        <segue reference="gUo-tM-cUu"/>
         <segue reference="vS7-Sb-czk"/>
         <segue reference="lmB-lM-JkE"/>
         <segue reference="b1Y-yH-eeN"/>

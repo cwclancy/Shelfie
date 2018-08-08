@@ -19,5 +19,6 @@
                             latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude
                                  own:(BOOL)own gift:(BOOL)gift trade:(BOOL)trade sell:(BOOL)sell
                           completion:(PFBooleanResultBlock)completion;
+- (void) removeBookFromDatabase:(BTBook *)book;
 
 @end

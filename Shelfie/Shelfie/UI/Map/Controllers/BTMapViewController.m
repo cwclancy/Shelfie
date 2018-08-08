@@ -40,6 +40,7 @@
     [self.mapView setRegion:self.currentLocation animated:false];
     UITapGestureRecognizer *screenTapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resetSearchBar)];
     [self.mapView addGestureRecognizer:screenTapped];
+    self.mapView.showsUserLocation = YES;
     
     self.locationFlag = true;
     self.locationManager = [CLLocationManager new];
@@ -96,10 +97,16 @@
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     PinAnnotation *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-    
+    PinAnnotation *pin = annotation;
     annotationView.canShowCallout = YES;
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    annotationView.image = [UIImage imageNamed:@"bookmap.png"];
+    if (pin.book.gift) {
+        annotationView.image = [UIImage imageNamed:@"yellowbook.png"];
+    } else if (pin.book.trade) {
+        annotationView.image = [UIImage imageNamed:@"bluebook.png"];
+    } else {
+        annotationView.image = [UIImage imageNamed:@"redbook.png"];
+    }
     return annotationView;
 }
 
@@ -128,12 +135,15 @@
     if (searchText.length != 0) {
         self.filteredBooks = [self.mapBooks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(title contains[c] %@)", searchText]];
         NSLog(@"%@", self.filteredBooks);
-        
     } else {
         self.filteredBooks = self.mapBooks;
     }
     [self.mapView removeAnnotations:self.mapView.annotations];
     [self updateBookLocations:self.filteredBooks];
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.searchBar resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
