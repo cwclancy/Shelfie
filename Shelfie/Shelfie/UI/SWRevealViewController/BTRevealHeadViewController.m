@@ -26,8 +26,7 @@
     {
         [barButton setTarget: self.revealViewController];
         [barButton setAction: @selector( revealToggle: )];
-        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-        
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];        
     }
 
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
