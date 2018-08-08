@@ -29,7 +29,6 @@
 		CEA6B280210BD256009860C4 /* BTPostManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B27F210BD256009860C4 /* BTPostManager.m */; };
 		CEA6B283210BD461009860C4 /* BTBookBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B282210BD461009860C4 /* BTBookBaseViewController.m */; };
 		CEA6B286210BDC83009860C4 /* BTRevealHeadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA6B285210BDC83009860C4 /* BTRevealHeadViewController.m */; };
-		CEB3E70621150C09004589AB /* BTWhiteRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB3E70521150C09004589AB /* BTWhiteRevealViewController.m */; };
 		CECB9B96210A4E3C001D2032 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9B95210A4E3C001D2032 /* AppDelegate.m */; };
 		CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECB9B98210A4E3C001D2032 /* BTHomeViewController.m */; };
 		CECB9B9C210A4E3C001D2032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CECB9B9A210A4E3C001D2032 /* Main.storyboard */; };
@@ -116,8 +115,6 @@
 		CEA6B282210BD461009860C4 /* BTBookBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTBookBaseViewController.m; sourceTree = "<group>"; };
 		CEA6B284210BDC83009860C4 /* BTRevealHeadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTRevealHeadViewController.h; sourceTree = "<group>"; };
 		CEA6B285210BDC83009860C4 /* BTRevealHeadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTRevealHeadViewController.m; sourceTree = "<group>"; };
-		CEB3E70421150C09004589AB /* BTWhiteRevealViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTWhiteRevealViewController.h; sourceTree = "<group>"; };
-		CEB3E70521150C09004589AB /* BTWhiteRevealViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTWhiteRevealViewController.m; sourceTree = "<group>"; };
 		CECB9B91210A4E3C001D2032 /* Shelfie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shelfie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECB9B94210A4E3C001D2032 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CECB9B95210A4E3C001D2032 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -401,8 +398,6 @@
 				CECFB551210B99B000D5C220 /* SWRevealViewController.m */,
 				CEA6B284210BDC83009860C4 /* BTRevealHeadViewController.h */,
 				CEA6B285210BDC83009860C4 /* BTRevealHeadViewController.m */,
-				CEB3E70421150C09004589AB /* BTWhiteRevealViewController.h */,
-				CEB3E70521150C09004589AB /* BTWhiteRevealViewController.m */,
 			);
 			path = SWRevealViewController;
 			sourceTree = "<group>";
@@ -673,7 +668,6 @@
 				CEA6B280210BD256009860C4 /* BTPostManager.m in Sources */,
 				CECC3388210FC9B50073A8BE /* GOBook.m in Sources */,
 				CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */,
-				CEB3E70621150C09004589AB /* BTWhiteRevealViewController.m in Sources */,
 				CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */,
 				CE665D7F211918BC00BE4776 /* BTAddOrRequestViewController.m in Sources */,
 				B12BC27221152ABF0060DF0E /* BTProfileBookViewController.m in Sources */,
@@ -871,13 +865,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PH9LZZN4D9;
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.shel;
+				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.cl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shelfie/UI/BarcodeView/Shelfie-Bridging-Header.h";
@@ -895,13 +889,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = PH9LZZN4D9;
 				INFOPLIST_FILE = Shelfie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.shel;
+				PRODUCT_BUNDLE_IDENTIFIER = Shelfie.cl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shelfie/UI/BarcodeView/Shelfie-Bridging-Header.h";
