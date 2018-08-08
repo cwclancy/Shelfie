@@ -66,7 +66,7 @@
         self.titleLabel.text = self.book.title;
         self.authorLabel.text = self.book.author;
         self.dateLabel.text = self.book.date;
-        self.ownerNameLabel.text = owner.messenger_id;
+        self.ownerNameLabel.text = owner.name;
         self.book.messengerId = owner.messenger_id;
         
         if (self.book.sell && self.book.gift && self.book.trade) {

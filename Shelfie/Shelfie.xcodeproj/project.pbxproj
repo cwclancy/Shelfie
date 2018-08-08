@@ -279,13 +279,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		CEA6B271210B9E3D009860C4 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cache;
-			sourceTree = "<group>";
-		};
 		CEA6B275210BA287009860C4 /* APIManagers */ = {
 			isa = PBXGroup;
 			children = (
@@ -335,7 +328,6 @@
 		CECB9B93210A4E3C001D2032 /* Shelfie */ = {
 			isa = PBXGroup;
 			children = (
-				CEA6B271210B9E3D009860C4 /* Cache */,
 				CEA6B270210B9E35009860C4 /* Services */,
 				CEA6B26F210B9E29009860C4 /* Models */,
 				B197F843210A82E3004805D8 /* UI */,
