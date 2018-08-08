@@ -96,10 +96,16 @@
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     PinAnnotation *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-    
+    PinAnnotation *pin = annotation;
     annotationView.canShowCallout = YES;
     annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    annotationView.image = [UIImage imageNamed:@"bookmap.png"];
+    if (pin.book.gift) {
+        annotationView.image = [UIImage imageNamed:@"yellowbook.png"];
+    } else if (pin.book.trade) {
+        annotationView.image = [UIImage imageNamed:@"bluebook.png"];
+    } else {
+        annotationView.image = [UIImage imageNamed:@"redbook.png"];
+    }
     return annotationView;
 }
 
