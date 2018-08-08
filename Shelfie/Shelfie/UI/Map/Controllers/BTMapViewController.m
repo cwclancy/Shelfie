@@ -13,6 +13,7 @@
 #import "PinAnnotation.h"
 #import "BTMapBookDetailsViewController.h"
 #import "BTUIServices.h"
+#import "SWRevealViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 

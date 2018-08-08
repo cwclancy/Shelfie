@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BTBook.h"
-#import "BTWhiteRevealViewController.h"
+#import "BTRevealHeadViewController.h"
 #import "BTBookBaseViewController.h"
 
 @interface BTProfileBookViewController : BTBookBaseViewController
 
 @property (strong, nonatomic) BTBook *book;
+@property (nonatomic) BOOL own;
 
 @end
