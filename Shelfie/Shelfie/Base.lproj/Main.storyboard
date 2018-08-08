@@ -1210,20 +1210,26 @@
                                     <action selector="requestButtonPressed:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="OsU-DG-Woj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-tO-MGZ">
-                                <rect key="frame" x="39" y="165" width="297" height="106"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="redadd"/>
-                                <connections>
-                                    <action selector="addButtonPressed:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="gRy-ZN-p2P"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addreqlines-1" translatesAutoresizingMaskIntoConstraints="NO" id="KaK-7Q-fcD">
                                 <rect key="frame" x="0.0" y="321" width="375" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRl-th-z5h">
+                                <rect key="frame" x="0.0" y="64" width="375" height="259"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-tO-MGZ">
+                                        <rect key="frame" x="39" y="59" width="297" height="141"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="addButton"/>
+                                        <connections>
+                                            <action selector="addButtonPressed:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="gRy-ZN-p2P"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DPs-Wp-eCh"/>
                     </view>
                     <navigationItem key="navigationItem" id="nuv-jn-nMo"/>
@@ -1316,6 +1322,7 @@
     <resources>
         <image name="Group" width="394" height="130"/>
         <image name="Line 2" width="1128" height="3"/>
+        <image name="addButton" width="297" height="125"/>
         <image name="addreqlines-1" width="730" height="42"/>
         <image name="custom signin button" width="750" height="132"/>
         <image name="delete button" width="120" height="47"/>
@@ -1335,7 +1342,6 @@
         <image name="message-2" width="320" height="88"/>
         <image name="post button" width="240" height="94"/>
         <image name="profile lines" width="1131" height="18"/>
-        <image name="redadd" width="242" height="68"/>
         <image name="requestButton" width="297" height="125"/>
     </resources>
     <inferredMetricsTieBreakers>
