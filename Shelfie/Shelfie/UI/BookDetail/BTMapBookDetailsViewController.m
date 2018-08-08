@@ -35,7 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)messengerPressed:(id)sender {
-    //[FBSDKMessengerSharer openMessenger];
     NSString *stringURL = [NSString stringWithFormat:@"fb-messenger://user-thread/%@", self.book.messengerId];
     NSURL *url = [NSURL URLWithString:stringURL];
     
@@ -67,7 +66,8 @@
         self.titleLabel.text = self.book.title;
         self.authorLabel.text = self.book.author;
         self.dateLabel.text = self.book.date;
-        self.ownerNameLabel.text = owner.name;
+        self.ownerNameLabel.text = owner.messenger_id;
+        self.book.messengerId = owner.messenger_id;
         
         if (self.book.sell && self.book.gift && self.book.trade) {
             self.bookStatus.text = @"Selling, Trading, Gifting";

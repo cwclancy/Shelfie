@@ -15,6 +15,7 @@
 // USER PROPERTIES
 @property (strong, nonatomic) NSString *userId;
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *messenger_id;
 @property (strong, nonatomic) NSString *picture;
 @property (strong, nonatomic) NSMutableArray *booksHave;
 @property (strong, nonatomic) NSMutableArray *booksWant;

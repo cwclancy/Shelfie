@@ -12,6 +12,7 @@
 
 @dynamic userId;
 @dynamic name;
+@dynamic messenger_id;
 @dynamic picture;
 @dynamic booksHave;
 @dynamic booksSell;
@@ -25,6 +26,7 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.userId forKey:@"userId"];
     [aCoder encodeObject:self.name forKey:@"name"];
+    [aCoder encodeObject:self.messenger_id forKey:@"messenger_id"];
     [aCoder encodeObject:self.picture forKey:@"picture"];
     [aCoder encodeObject:self.booksTrade forKey:@"booksTrade"];
     [aCoder encodeObject:self.booksHave forKey:@"booksHave"];
@@ -36,6 +38,7 @@
     if (self == [super init]) {
         self.userId = [aDecoder decodeObjectForKey:@"userId"];
         self.name = [aDecoder decodeObjectForKey:@"name"];
+        self.messenger_id = [aDecoder decodeObjectForKey:@"messenger_id"];
         self.picture = [aDecoder decodeObjectForKey:@"picture"];
         self.booksTrade = [aDecoder decodeObjectForKey:@"booksTrade"];
         self.booksSell = [aDecoder decodeObjectForKey:@"booksSell"];
