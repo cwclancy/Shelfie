@@ -9,6 +9,7 @@
 #import "BTProfileBookViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "BTUserManager.h"
+#import "BTPostManager.h"
 
 @interface BTProfileBookViewController ()
 
@@ -49,6 +50,8 @@
 - (IBAction)deleteButtonPressed:(id)sender {
     //TODO: add bool to see if it is a book request or owned
     [[BTUserManager shared] removeFromBooksHave:self.book];
+    [[BTPostManager shared] removeBookFromDatabase:self.book];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

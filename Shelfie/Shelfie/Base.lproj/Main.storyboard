@@ -816,8 +816,7 @@
                                             <attributedString key="attributedTitle"/>
                                         </state>
                                         <connections>
-                                            <action selector="deleteButton:" destination="TN6-dw-Tgh" eventType="touchUpInside" id="kbS-nM-NlW"/>
-                                            <action selector="deleteButtonPressed:" destination="TN6-dw-Tgh" eventType="touchUpInside" id="Dh3-aX-nIj"/>
+                                            <action selector="deleteButtonPressed:" destination="TN6-dw-Tgh" eventType="touchUpInside" id="yfj-PD-04B"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zk-Hu-es3">
