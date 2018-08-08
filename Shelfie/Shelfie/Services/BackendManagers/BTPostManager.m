@@ -58,4 +58,14 @@
     [newUser saveInBackgroundWithBlock:completion];
 };
 
+- (void)removeBookFromDatabase:(BTBook *)book {
+    [book deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"deleted");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
 @end

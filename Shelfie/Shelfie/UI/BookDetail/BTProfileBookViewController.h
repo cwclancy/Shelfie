@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BTBook.h"
 #import "BTWhiteRevealViewController.h"
+#import "BTBookBaseViewController.h"
 
-@interface BTProfileBookViewController : BTWhiteRevealViewController
+@interface BTProfileBookViewController : BTBookBaseViewController
 
 @property (strong, nonatomic) BTBook *book;
 

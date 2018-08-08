@@ -381,9 +381,9 @@
 			isa = PBXGroup;
 			children = (
 				CEA6B281210BD461009860C4 /* BTBookBaseViewController.h */,
+				CEA6B282210BD461009860C4 /* BTBookBaseViewController.m */,
 				B12E1EF32113B8AE003084DB /* BTCompletedRequestViewController.h */,
 				B12E1EF42113B8AE003084DB /* BTCompletedRequestViewController.m */,
-				CEA6B282210BD461009860C4 /* BTBookBaseViewController.m */,
 				B12BC27021152ABF0060DF0E /* BTProfileBookViewController.h */,
 				B12BC27121152ABF0060DF0E /* BTProfileBookViewController.m */,
 				B163B48D2110D48B007C5ADB /* BTAddBookViewController.h */,
