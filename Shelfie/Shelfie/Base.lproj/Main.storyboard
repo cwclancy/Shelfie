@@ -674,7 +674,7 @@
         <!--Profile View Controller-->
         <scene sceneID="kvj-Wy-0rH">
             <objects>
-                <viewController id="cgZ-8R-W6u" customClass="BTProfileViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="cgZ-8R-W6u" customClass="BTProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FSZ-wF-NbR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -902,6 +902,7 @@
                         <outlet property="createdAtLabel" destination="Q6i-vO-hci" id="51x-Lg-tB4"/>
                         <outlet property="dateLabel" destination="1e2-oj-AdE" id="IXP-Fr-jqK"/>
                         <outlet property="titleLabel" destination="OWv-Rm-Zaf" id="27c-1g-WSz"/>
+                        <segue destination="cgZ-8R-W6u" kind="show" identifier="ProfileViewController" id="K1C-ai-erJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z32-cT-NGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1324,6 +1325,7 @@
         <segue reference="dMJ-qp-Dys"/>
         <segue reference="9OS-DA-nng"/>
         <segue reference="gUo-tM-cUu"/>
+        <segue reference="K1C-ai-erJ"/>
         <segue reference="vS7-Sb-czk"/>
         <segue reference="31S-wF-b1X"/>
         <segue reference="vRL-Rt-ucT"/>

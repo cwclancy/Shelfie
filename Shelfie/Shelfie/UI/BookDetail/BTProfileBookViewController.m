@@ -55,7 +55,7 @@
         [[BTUserManager shared] setUser:owner];
         NSLog(@"LOCAL USER REFRESHED");
     }];
-    [self performSegueWithIdentifier:<#(nonnull NSString *)#> sender:<#(nullable id)#>];
+    [self performSegueWithIdentifier:@"ProfileViewController" sender:self];
 }
 
 /*
