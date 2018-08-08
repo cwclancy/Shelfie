@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BTWhiteRevealViewController.h"
+#import "BTRevealHeadViewController.h"
 
-@interface BTAddOrRequestViewController : BTWhiteRevealViewController
+@interface BTAddOrRequestViewController : BTRevealHeadViewController
 
 @end
