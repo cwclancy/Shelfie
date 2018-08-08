@@ -53,6 +53,7 @@
     
     if (collectionView == self.booksOwnedView) {
         OwnCollectionViewCell *cellA = [collectionView dequeueReusableCellWithReuseIdentifier:@"ownedCell" forIndexPath:indexPath];
+        cellA.tag = 0;
         if (self.currentUser.booksHave.count != 0) {
             BTBook *currentBook = self.booksHave[indexPath.row];
             NSString *coverURL = currentBook.coverURL;
@@ -66,6 +67,7 @@
     }
     else {
         RequestCollectionViewCell *cellB = [collectionView dequeueReusableCellWithReuseIdentifier:@"requestCell" forIndexPath:indexPath];
+        cellB.tag = 1;
         if (self.currentUser.booksWant.count != 0) {
             BTBook *currentBook = self.booksWant[indexPath.row];
             NSString *coverURL = currentBook.coverURL;
@@ -122,14 +124,23 @@
         }];
     }
 }
-
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UICollectionViewCell *tappedCell = sender;
-    NSIndexPath *indexPath = [self.booksOwnedView indexPathForCell:tappedCell];
-    BTBook *currentBook = self.booksHave[indexPath.item];
-    BTProfileBookViewController *profileDetailsViewController = [segue destinationViewController];
+     NSString *className = NSStringFromClass([sender class]);
+     NSLog(@"%@", [sender class]);
+     BTBook *currentBook = [BTBook new];
+     BTProfileBookViewController *profileDetailsViewController = [segue destinationViewController];
+     if ([className isEqualToString:@"OwnCollectionViewCell"]) {
+         NSIndexPath *indexPath = [self.booksOwnedView indexPathForCell:tappedCell];
+         currentBook = self.booksHave[indexPath.item];
+         profileDetailsViewController.own = YES;
+     } else {
+         NSIndexPath *indexPath = [self.booksRequestedView indexPathForCell:tappedCell];
+         currentBook = self.booksWant[indexPath.item];
+         profileDetailsViewController.own = NO;
+     }
     profileDetailsViewController.book = currentBook;  
  }
 @end

@@ -14,5 +14,6 @@
 @interface BTProfileBookViewController : BTBookBaseViewController
 
 @property (strong, nonatomic) BTBook *book;
+@property (nonatomic) BOOL own;
 
 @end
