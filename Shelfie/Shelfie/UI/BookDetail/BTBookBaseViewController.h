@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BTWhiteRevealViewController.h"
 
 @interface BTBookBaseViewController : UIViewController
 

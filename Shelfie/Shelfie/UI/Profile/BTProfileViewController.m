@@ -49,8 +49,6 @@
 }
 
 
-
-
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     if (collectionView == self.booksOwnedView) {
@@ -61,7 +59,7 @@
             [cellA setContents:coverURL];
         } else {
             NSLog(@"no books in own array!");
-            UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
+            UIImage *image = [UIImage imageNamed: @"listmore.png"];
             [cellA.ownBook setImage:image];
         }
         return cellA;       
@@ -74,7 +72,7 @@
             [cellB setContents:coverURL];
         } else {
             NSLog(@"no books in want array!");
-            UIImage *image = [UIImage imageNamed: @"iconmonstr-menu.png"];
+            UIImage *image = [UIImage imageNamed: @"requestmore.png"];
             [cellB.requestBook setImage:image];
         }
         return cellB;
@@ -124,7 +122,6 @@
         }];
     }
 }
-
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

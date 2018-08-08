@@ -18,7 +18,7 @@
 + (instancetype) shared;
 
 - (void) initUser: (BTLoginViewController *) loginController;
-+ (void) getUserWithID: (NSString *) userId user:(void(^)(BTUser * owner))user;
++ (void) getUserWithID: (NSString *) userId completion:(void(^)(BTUser * owner))completion;
 - (void) FBUserExists: (FBUser *) user loginController: (BTLoginViewController *) loginVC;
 
 - (BTUser *) getCurrentUser;

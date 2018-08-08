@@ -58,7 +58,7 @@
 
 -(void) createPage {
     //TODO: GET owner of book from parse and fill out rest of field (call this funciton in completion of that)
-    [BTUserManager getUserWithID:self.book.userId user:^(BTUser *owner) {
+    [BTUserManager getUserWithID: self.book.userId completion:^(BTUser *owner) {
         NSLog(@"%@", owner);
         [self.coverImageView setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
         [self.coverImageView.layer setBorderColor: [[UIColor blackColor] CGColor]];
@@ -66,7 +66,7 @@
         self.titleLabel.text = self.book.title;
         self.authorLabel.text = self.book.author;
         self.dateLabel.text = self.book.date;
-        self.ownerNameLabel.text = owner.messenger_id;
+        self.ownerNameLabel.text = owner.name;
         self.book.messengerId = owner.messenger_id;
         
         if (self.book.sell && self.book.gift && self.book.trade) {

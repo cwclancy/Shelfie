@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BTRevealHeadViewController.h"
-#import "BTWhiteRevealViewController.h"
 #import "BTBarcodeViewController.h"
 
 @interface BTAddBookViewController : BTBarcodeViewController
