@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BTBook.h"
-#import "BTWhiteRevealViewController.h"
+#import "BTRevealHeadViewController.h"
 #import "BTBookBaseViewController.h"
 
 @interface BTProfileBookViewController : BTBookBaseViewController
