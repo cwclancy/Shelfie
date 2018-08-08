@@ -40,6 +40,7 @@
     [self.mapView setRegion:self.currentLocation animated:false];
     UITapGestureRecognizer *screenTapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resetSearchBar)];
     [self.mapView addGestureRecognizer:screenTapped];
+    self.mapView.showsUserLocation = YES;
     
     self.locationFlag = true;
     self.locationManager = [CLLocationManager new];
