@@ -24,8 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createPage];
-    //TO DO:
-   // self.dateLabel =
+
 }
 
 - (IBAction)deleteButton:(id)sender {
