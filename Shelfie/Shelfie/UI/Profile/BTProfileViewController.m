@@ -36,10 +36,6 @@
     self.currentUser = [[BTUserManager shared] getCurrentUser];
     [self fetchBooksHave:self.currentUser.booksHave];
     [self fetchBooksWant:self.currentUser.booksWant];
-    [self.profilePic setImageWithURL:[NSURL URLWithString:self.currentUser.picture]];
-    self.profilePic.layer.cornerRadius = self.profilePic.frame.size.width / 2;
-    self.profilePic.clipsToBounds = YES;
-    self.nameLabel.text = self.currentUser.name;
     self.booksHave = [NSMutableArray new];
     self.booksWant = [NSMutableArray new];
     self.booksOwnedView.delegate = self;
