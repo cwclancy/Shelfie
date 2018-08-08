@@ -716,6 +716,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="requestBook" destination="FIx-ha-2mq" id="hgg-9e-SaA"/>
+                                            <segue destination="TN6-dw-Tgh" kind="show" id="sPT-pb-pot"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -816,6 +817,7 @@
                                         </state>
                                         <connections>
                                             <action selector="deleteButton:" destination="TN6-dw-Tgh" eventType="touchUpInside" id="kbS-nM-NlW"/>
+                                            <action selector="deleteButtonPressed:" destination="TN6-dw-Tgh" eventType="touchUpInside" id="Dh3-aX-nIj"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zk-Hu-es3">
@@ -1282,6 +1284,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="G9V-QS-sfL"/>
         <segue reference="9OS-DA-nng"/>
+        <segue reference="gUo-tM-cUu"/>
         <segue reference="vS7-Sb-czk"/>
         <segue reference="31S-wF-b1X"/>
         <segue reference="b1Y-yH-eeN"/>

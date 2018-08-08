@@ -8,6 +8,7 @@
 
 #import "BTProfileBookViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "BTUserManager.h"
 
 @interface BTProfileBookViewController ()
 
@@ -45,6 +46,10 @@
     //TODO: GET owner of book from parse and fill out rest of field (call this funciton in completion of that)
 }
 
+- (IBAction)deleteButtonPressed:(id)sender {
+    //TODO: add bool to see if it is a book request or owned
+    [[BTUserManager shared] removeFromBooksHave:self.book];
+}
 
 /*
 #pragma mark - Navigation
