@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *ownerNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *postedDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bookStatus;
+@property (weak, nonatomic) IBOutlet UIView *bookStatusView;
 
 @end
 
@@ -46,18 +47,7 @@
     }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 -(void) createPage {
-    //TODO: GET owner of book from parse and fill out rest of field (call this funciton in completion of that)
     [BTUserManager getUserWithID: self.book.userId completion:^(BTUser *owner) {
         NSLog(@"%@", owner);
         [self.coverImageView setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
@@ -69,20 +59,29 @@
         self.ownerNameLabel.text = owner.name;
         self.book.messengerId = owner.messenger_id;
         
+        // BookStatusView Original position x = y =
+        NSLog(@"%@", self.bookStatusView.center);
+        
         if (self.book.sell && self.book.gift && self.book.trade) {
-            self.bookStatus.text = @"Selling, Trading, Gifting";
+            //self.bookStatus.text = @"Selling, Trading, Gifting";
         } else if (self.book.sell) {
             self.bookStatus.text = @"Selling";
+            //self.bookStatusView.center = CGPointMake(178, 68);
         } else if (self.book.trade) {
             self.bookStatus.text = @"Trading";
+            //self.bookStatusView.center = CGPointMake(178, 68);
         } else if (self.book.gift) {
             self.bookStatus.text = @"Gifting";
+            //self.bookStatusView.center = CGPointMake(178, 68);
         } else if (self.book.trade && self.book.gift) {
             self.bookStatus.text = @"Trading, Gifting";
+            // self.bookStatusView.center = CGPointMake(125, 96);
         } else if (self.book.trade && self.book.sell) {
             self.bookStatus.text = @"Trading, Selling";
+            // self.bookStatusView.center = CGPointMake(125, 96);
         } else if (self.book.sell && self.book.gift) {
             self.bookStatus.text = @"Selling, Gifting";
+            // self.bookStatusView.center = CGPointMake(125, 96);
         }
         
         [self.ownerImageView setImageWithURL:[NSURL URLWithString:owner.picture]];
