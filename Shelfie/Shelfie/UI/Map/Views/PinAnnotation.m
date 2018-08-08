@@ -16,6 +16,7 @@
         self.book = book;
         self.coordinate = coordinate;
         self.title = title;
+        
     }
     return self;
 }
