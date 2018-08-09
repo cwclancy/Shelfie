@@ -54,7 +54,7 @@
 - (void) fetchFBSDKUserData: (BTLoginViewController *) loginController {
     // If user logged in successfully, fetch data from facebook
     if ([FBSDKAccessToken currentAccessToken ]) {
-        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"name, picture"}]
+        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{@"fields": @"first_name, picture"}]
          startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
              if (!error) { // Initiate FBUser using JSONModel
                  NSLog(@"User dictionary after log in:%@", result);
