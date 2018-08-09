@@ -10,6 +10,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "BTUserManager.h"
 #import "BTUserDefaults.h"
+#import <FBSDKShareKit/FBSDKShareKit.h>
 #import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
 
 @interface BTMapBookDetailsViewController ()
@@ -35,15 +36,24 @@
 
 
 - (IBAction)messengerPressed:(id)sender {
-    NSString *stringURL = [NSString stringWithFormat:@"fb-messenger://user-thread/%@", self.book.messengerId];
-    NSURL *url = [NSURL URLWithString:stringURL];
+    // Content to share
+    FBSDKShareMessengerGenericTemplateElement *element = [[FBSDKShareMessengerGenericTemplateElement alloc] init];
+    element.title = self.book.title;
+    element.subtitle = [NSString stringWithFormat:@"By %@", self.book.author];
+    element.imageURL = [NSURL URLWithString:self.book.coverURL];
     
-    // Open Messenger app
-    [[UIApplication sharedApplication] openURL:url options:[NSDictionary new] completionHandler:^(BOOL success) {
-        if (success) {
-            NSLog(@"Messenger Open");
-        }
-    }];
+    FBSDKShareMessengerGenericTemplateContent *content = [[FBSDKShareMessengerGenericTemplateContent alloc] init];
+    content.pageID = @"Shelfie";
+    content.element = element;
+    
+    FBSDKMessageDialog *messageDialog = [[FBSDKMessageDialog alloc] init];
+    messageDialog.shareContent = content;
+    
+    if ([messageDialog canShow]) {
+        [messageDialog show];
+        
+    }
+    
 }
 - (IBAction)closeButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
