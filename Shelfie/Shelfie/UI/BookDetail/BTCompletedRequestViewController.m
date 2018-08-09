@@ -26,7 +26,8 @@
     [self.coverImageView setImageWithURL:[NSURL URLWithString:self.coverURL]];
     self.titleLabel.text = self.bookTitle;
     self.authorLabel.text = self.author;
-    self.dateLabel.text = self.date;
+    NSString *formattedDate = [self.date substringToIndex:4];
+    self.dateLabel.text = formattedDate;
     // Do any additional setup after loading the view.
 }
 
