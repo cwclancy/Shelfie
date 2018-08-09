@@ -632,7 +632,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laW-66-5Dp">
                                                 <rect key="frame" x="44" y="64" width="137" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" image="message-2"/>
+                                                <state key="normal" image="messageowner"/>
                                                 <connections>
                                                     <action selector="messengerPressed:" destination="kVl-o9-5IU" eventType="touchUpInside" id="2xf-J9-jqd"/>
                                                 </connections>
@@ -641,6 +641,9 @@
                                                 <rect key="frame" x="193" y="64" width="137" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="saveforlater"/>
+                                                <connections>
+                                                    <action selector="saveClicked:" destination="kVl-o9-5IU" eventType="touchUpInside" id="OrA-4q-7cS"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </view>
@@ -1359,7 +1362,7 @@
         <image name="iconmonstr-log-out-18-32" width="32" height="32"/>
         <image name="iconmonstr-map-8-240 (1)" width="240" height="240"/>
         <image name="iconmonstr-user-20-32" width="32" height="32"/>
-        <image name="message-2" width="320" height="88"/>
+        <image name="messageowner" width="320" height="88"/>
         <image name="post button" width="240" height="94"/>
         <image name="profile lines" width="1131" height="18"/>
         <image name="reqbook" width="332" height="126"/>
