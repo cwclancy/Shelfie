@@ -8,6 +8,8 @@
 
 #import "BTSideTableViewController.h"
 #import "BTFbAPIManager.h"
+#import "SWRevealViewController.h"
+
 
 @interface BTSideTableViewController ()
 
@@ -20,7 +22,10 @@ NSArray *menuItems;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     menuItems = @[@"profile", @"home", @"addbook", @"favorites", @"logout", @"blank1", @"blank2", @"blank3", @"blank4"];
+     menuItems = @[@"profile", @"home", @"addbook", @"favorites", @"logout", @"blank"];
+    self.revealViewController.rearViewRevealWidth = 180;
+    //self.view.frame.size.width-100;
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -42,13 +47,6 @@ NSArray *menuItems;
     return menuItems.count;
 }
 
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
-    if ([CellIdentifier isEqualToString:@"logout"]) {
-        [BTFbAPIManager logout];
-    }
-    
-}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
