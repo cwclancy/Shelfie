@@ -27,13 +27,14 @@
 @property (strong, nonatomic) UISearchBar *searchBar;
 @property (nonatomic) MKCoordinateRegion currentLocation;
 @property BOOL locationFlag;
+@property BOOL firstPass;
 @end
 
 @implementation BTMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.firstPass = [[BTUserDefaults shared] getStatus];
     SWRevealViewController *revealViewController = [self revealViewController];
     [self revealViewController].delegate = self;
     UIImage *image = [[UIImage imageNamed:@"iconmonstr-menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -84,6 +85,18 @@
     self.searchBar = [BTUIServices createSearchBarWithDimensions:CGRectMake(30, 70, 320, 44)];
     self.searchBar.delegate = self;
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    if (!self.firstPass) {
+        self.mapView.userInteractionEnabled = true;
+        self.mapView.scrollEnabled = true;
+        [[BTUserDefaults shared] setStatus];
+    } else {
+        self.mapView.userInteractionEnabled = false;
+        self.mapView.scrollEnabled = false;
+    }
+}
+
 
 - (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position {
     self.mapView.userInteractionEnabled = !self.mapView.userInteractionEnabled;

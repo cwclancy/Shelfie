@@ -8,6 +8,10 @@
 
 #import "BTUserDefaults.h"
 
+@interface BTUserDefaults ()
+@property BOOL status;
+@end
+
 @implementation BTUserDefaults
 
 + (void)setCurrentLocation:(MKCoordinateRegion)currentLocation {
@@ -30,5 +34,23 @@
         return res;
     }
 }
+
++ (instancetype) shared {
+    static BTUserDefaults *sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedManager = [[self alloc] init];
+    });
+    return sharedManager;
+}
+
+- (BOOL)getStatus {
+    return self.status;
+}
+
+- (void)setStatus {
+    self.status = YES;
+}
+
 
 @end
