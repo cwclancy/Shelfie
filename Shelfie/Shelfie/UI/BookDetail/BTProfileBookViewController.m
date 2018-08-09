@@ -60,7 +60,6 @@
     [[BTPostManager shared] removeBookFromDatabase:self.book];
     [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
         [[BTUserManager shared] setUser:owner];
-        NSLog(@"LOCAL USER REFRESHED");
     }];
     [self performSegueWithIdentifier:@"ProfileViewController" sender:self];
 }
