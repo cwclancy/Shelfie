@@ -15,5 +15,6 @@
 + (CLLocationCoordinate2D) getCurrentLocation;
 + (instancetype) shared;
 - (void) setStatus;
+- (void) setStatusFalse;
 - (BOOL) getStatus;
 @end

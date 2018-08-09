@@ -173,13 +173,59 @@
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if (searchText.length != 0) {
-        self.filteredBooks = [self.mapBooks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(title contains[c] %@)", searchText]];
-        NSLog(@"%@", self.filteredBooks);
+        NSString *firstChar = [searchText substringToIndex:1];
+        if ([firstChar isEqualToString:@"#"]) {
+            if ([searchText isEqualToString:@"#gift"]) {
+                self.filteredBooks = [self getBooksGift];
+            } else if ([searchText isEqualToString:@"#buy"]) {
+                self.filteredBooks = [self getBooksBuy];
+            } else if ([searchText isEqualToString:@"#trade"]) {
+                self.filteredBooks = [self getBooksTrade];
+            } else {
+                self.filteredBooks = self.mapBooks;
+            }
+        } else {
+            self.filteredBooks = [self.mapBooks filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(title contains[c] %@)", searchText]];
+            NSLog(@"%@", self.filteredBooks);
+        }
     } else {
         self.filteredBooks = self.mapBooks;
     }
     [self.mapView removeAnnotations:self.mapView.annotations];
     [self updateBookLocations:self.filteredBooks];
+}
+
+- (NSMutableArray *)getBooksGift {
+    NSMutableArray *res = [NSMutableArray new];
+    for (int i = 0; i < self.mapBooks.count; i++) {
+        BTBook *book = self.mapBooks[i];
+        if (book.gift) {
+            [res addObject:book];
+        }
+    }
+    return res;
+}
+
+- (NSMutableArray *)getBooksTrade {
+    NSMutableArray *res = [NSMutableArray new];
+    for (int i = 0; i < self.mapBooks.count; i++) {
+        BTBook *book = self.mapBooks[i];
+        if (book.trade) {
+            [res addObject:book];
+        }
+    }
+    return res;
+}
+
+- (NSMutableArray *)getBooksBuy {
+    NSMutableArray *res = [NSMutableArray new];
+    for (int i = 0; i < self.mapBooks.count; i++) {
+        BTBook *book = self.mapBooks[i];
+        if (book.sell) {
+            [res addObject:book];
+        }
+    }
+    return res;
 }
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {

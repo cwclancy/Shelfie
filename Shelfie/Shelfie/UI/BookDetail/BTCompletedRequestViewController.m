@@ -9,6 +9,7 @@
 #import "BTCompletedRequestViewController.h"
 #import "BTHomeViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "BTUserDefaults.h"
 
 
 @interface BTCompletedRequestViewController ()
@@ -37,8 +38,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)keepExploring:(id)sender {
     [self performSegueWithIdentifier:@"exploreSegue" sender:nil];
+    [[BTUserDefaults shared] setStatusFalse];
 }
 
 /*

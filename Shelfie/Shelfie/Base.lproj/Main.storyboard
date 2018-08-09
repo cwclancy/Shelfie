@@ -520,7 +520,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="TtW-7p-w0u"/>
                     <connections>
-                        <segue destination="kVl-o9-5IU" kind="show" identifier="mapToBookSegue" id="vS7-Sb-czk"/>
+                        <segue destination="kVl-o9-5IU" kind="presentation" identifier="mapToBookSegue" id="vS7-Sb-czk"/>
                         <segue destination="zcF-D9-Q2v" kind="presentation" identifier="HomeToLogin" id="b1Y-yH-eeN"/>
                     </connections>
                 </viewController>
@@ -673,6 +673,14 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ele-7d-BtG">
+                                        <rect key="frame" x="29" y="39" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeButtonPressed:" destination="kVl-o9-5IU" eventType="touchUpInside" id="qPL-JX-hcb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <viewLayoutGuide key="safeArea" id="8nr-0X-0Z9"/>
@@ -685,7 +693,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="iconmonstr-arrow-64-24" id="fL2-Mj-rOa">
                             <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="showDetail" id="QNL-ca-g7Q"/>
+                                <segue destination="BYZ-38-t0r" kind="showDetail" identifier="bookToMapSegue" id="QNL-ca-g7Q"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="iconmonstr-heart-thin-24 (1)" id="FfF-qe-13Y">
@@ -1356,6 +1364,7 @@
         <image name="Line 2" width="1128" height="3"/>
         <image name="add book" width="332" height="126"/>
         <image name="addreqlines-1" width="730" height="42"/>
+        <image name="close" width="24" height="24"/>
         <image name="custom signin button" width="750" height="132"/>
         <image name="delete button" width="120" height="47"/>
         <image name="explore button" width="120" height="47"/>
@@ -1381,9 +1390,9 @@
         <segue reference="dMJ-qp-Dys"/>
         <segue reference="9OS-DA-nng"/>
         <segue reference="gUo-tM-cUu"/>
-        <segue reference="K1C-ai-erJ"/>
-        <segue reference="zty-2R-cCd"/>
-        <segue reference="QNL-ca-g7Q"/>
+        <segue reference="13B-jv-Hcu"/>
+        <segue reference="vS7-Sb-czk"/>
+        <segue reference="31S-wF-b1X"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>
 </document>
