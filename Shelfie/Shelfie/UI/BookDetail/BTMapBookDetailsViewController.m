@@ -9,6 +9,7 @@
 #import "BTMapBookDetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "BTUserManager.h"
+#import "BTUserDefaults.h"
 #import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
 
 @interface BTMapBookDetailsViewController ()
@@ -29,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createPage];
+    [[BTUserDefaults shared] setStatusFalse];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +47,9 @@
             NSLog(@"Messenger Open");
         }
     }];
+}
+- (IBAction)closeButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void) createPage {

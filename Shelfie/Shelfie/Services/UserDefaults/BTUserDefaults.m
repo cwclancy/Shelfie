@@ -52,5 +52,9 @@
     self.status = YES;
 }
 
+- (void)setStatusFalse {
+    self.status = NO;
+}
+
 
 @end
