@@ -42,7 +42,6 @@
 @property (strong, nonatomic) IBOutlet UIView *distanceView;
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
 
-//@property (strong, nonatomic) NSInteger *bookDistance;
 @property (nonatomic, assign) BOOL buySell;
 @property (nonatomic, assign) BOOL trade;
 @property (nonatomic, assign) BOOL gift;
@@ -80,10 +79,9 @@
     self.dateLabel.text = formattedDate;
     NSLog(@"%@", self.book.authors[0]);
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.coverURL]];
-    [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
-    [self.bookCover.layer setBorderWidth: 2.0];
+    self.bookCover.layer.shadowRadius = 2;
+    self.bookCover.layer.shadowOpacity = 0.8;
 }
-
 
 - (IBAction)sellClicked:(id)sender {
     if (!self.buySell) {
@@ -104,7 +102,6 @@
     }
 }
 - (IBAction)giftClicked:(id)sender {
-
 if (!self.gift) {
         self.gift = true;
         [self.giftButton setImage:[UIImage imageNamed:@"iconmonstr-circle-1-240.png"] forState:UIControlStateNormal];
@@ -114,7 +111,6 @@ if (!self.gift) {
     }
 }
 - (IBAction)sliderValueChanged:(id)sender {
-    //self.slider.value = round(self.slider.value);
     self.sliderLabel.text = [NSString stringWithFormat:@"%.0f miles", self.slider.value];
 }
 
@@ -122,17 +118,20 @@ if (!self.gift) {
 - (IBAction)submitClicked:(id)sender {
     CLLocationCoordinate2D currentLocation = [BTUserDefaults getCurrentLocation];
     BTBook *submittedBook = [BTBook createBookWithUserId:[FBSDKAccessToken currentAccessToken].userID title:self.book.title author:self.book.authors[0] isbn:self.isbn date:self.book.date coverURL:self.coverURL latitude:@(currentLocation.latitude) longitude:@(currentLocation.longitude) own:self.own gift:self.gift trade:self.trade sell:self.sell];
-    [BTPostManager addBookToDatabaseWithUserId:[FBSDKAccessToken currentAccessToken].userID title:self.book.title author:self.book.authors[0] isbn:self.isbn date:self.book.date coverURL:self.coverURL latitude:@(currentLocation.latitude) longitude:@(currentLocation.longitude) own:self.own gift:self.gift trade:self.trade sell:self.buySell completion:^(BOOL succeeded, NSError * _Nullable error) {
-        if (succeeded) {
-        } else {
-            NSLog(@"%@", error);
-        }
-    }];
+//    [BTPostManager addBookToDatabaseWithUserId:[FBSDKAccessToken currentAccessToken].userID title:self.book.title author:self.book.authors[0] isbn:self.isbn date:self.book.date coverURL:self.coverURL latitude:@(currentLocation.latitude) longitude:@(currentLocation.longitude) own:self.own gift:self.gift trade:self.trade sell:self.buySell completion:^(BOOL succeeded, NSError * _Nullable error) {
+//        if (succeeded) {
+//        } else {
+//            NSLog(@"%@", error);
+//        }
+//    }];
     if (self.own) {
         [[BTUserManager shared] addToBooksHave:submittedBook];
     } else {
         [[BTUserManager shared] addToBooksWant:submittedBook];
     }
+    [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
+        [[BTUserManager shared] setUser:owner];
+    }];
     [self performSegueWithIdentifier:@"publishSegue" sender:nil];
     
 }

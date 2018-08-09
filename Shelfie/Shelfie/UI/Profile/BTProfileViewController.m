@@ -33,11 +33,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
+        self.currentUser = owner;
+        self.booksHave = [NSMutableArray new];
+        self.booksWant = [NSMutableArray new];
+        [self fetchBooksHave:self.currentUser.booksHave];
+        [self fetchBooksWant:self.currentUser.booksWant];
+        NSLog(@"%@", self.currentUser.booksHave);
+    }];
     self.currentUser = [[BTUserManager shared] getCurrentUser];
-    [self fetchBooksHave:self.currentUser.booksHave];
-    [self fetchBooksWant:self.currentUser.booksWant];
-    self.booksHave = [NSMutableArray new];
-    self.booksWant = [NSMutableArray new];
     self.booksOwnedView.delegate = self;
     self.booksOwnedView.dataSource = self;
     self.booksOwnedView.alwaysBounceHorizontal = YES;

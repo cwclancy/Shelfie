@@ -33,10 +33,7 @@
     [[BTUserDefaults shared] setStatusFalse];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 - (IBAction)messengerPressed:(id)sender {
     NSString *stringURL = [NSString stringWithFormat:@"fb-messenger://user-thread/%@", self.book.messengerId];
     NSURL *url = [NSURL URLWithString:stringURL];
@@ -50,14 +47,17 @@
 }
 - (IBAction)closeButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [[BTUserDefaults shared] setStatusFalse];
 }
 
 -(void) createPage {
     [BTUserManager getUserWithID: self.book.userId completion:^(BTUser *owner) {
         NSLog(@"%@", owner);
         [self.coverImageView setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
-        [self.coverImageView.layer setBorderColor: [[UIColor blackColor] CGColor]];
-        [self.coverImageView.layer setBorderWidth: 2.0];
+       // self.coverImageView.layer.cornerRadius = 3;
+      //  self.coverImageView.layer.shadowOffset = CGSize(width: 0, height: 1.75);
+        self.coverImageView.layer.shadowRadius = 2;
+        self.coverImageView.layer.shadowOpacity = 0.8;
         self.titleLabel.text = self.book.title;
         self.authorLabel.text = self.book.author;
         NSString *formattedDate = [self.book.date substringToIndex:4];

@@ -37,7 +37,7 @@
     self.firstPass = [[BTUserDefaults shared] getStatus];
     SWRevealViewController *revealViewController = [self revealViewController];
     [self revealViewController].delegate = self;
-    UIImage *image = [[UIImage imageNamed:@"iconmonstr-menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *image = [[UIImage imageNamed:@"iconmonstr-menu-thin-24.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithImage:image  style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.leftBarButtonItem = barButton;
@@ -87,6 +87,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    self.firstPass = [[BTUserDefaults shared] getStatus];
     if (!self.firstPass) {
         self.mapView.userInteractionEnabled = true;
         self.mapView.scrollEnabled = true;
@@ -155,6 +156,10 @@
     [self performSegueWithIdentifier:@"mapToBookSegue" sender:view.annotation];
 }
 
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views {
+    MKAnnotationView *currentLocation = [mapView viewForAnnotation:mapView.userLocation];
+    currentLocation.enabled = NO;
+}
 
 
 

@@ -9,6 +9,7 @@
 #import "BTCompletedRequestViewController.h"
 #import "BTHomeViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "BTUserDefaults.h"
 
 
 @interface BTCompletedRequestViewController ()
@@ -24,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.coverImageView setImageWithURL:[NSURL URLWithString:self.coverURL]];
+    self.coverImageView.layer.shadowRadius = 2;
+    self.coverImageView.layer.shadowOpacity = 0.8;
     self.titleLabel.text = self.bookTitle;
     self.authorLabel.text = self.author;
     NSString *formattedDate = [self.date substringToIndex:4];
@@ -35,8 +38,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)keepExploring:(id)sender {
     [self performSegueWithIdentifier:@"exploreSegue" sender:nil];
+    [[BTUserDefaults shared] setStatusFalse];
 }
 
 /*

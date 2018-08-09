@@ -31,9 +31,6 @@
 
 }
 
-- (IBAction)deleteButton:(id)sender {
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -41,8 +38,8 @@
 
 - (void) createPage {
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
-    [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
-    [self.bookCover.layer setBorderWidth: 2.0];
+    self.bookCover.layer.shadowRadius = 2;
+    self.bookCover.layer.shadowOpacity = 0.8;
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.author;
     NSString *formattedDate = [self.book.date substringToIndex:4];
@@ -58,9 +55,15 @@
         [[BTUserManager shared] removeFromBooksWant:self.book];
     }
     [[BTPostManager shared] removeBookFromDatabase:self.book];
+    [self.book deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"deleted");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
     [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
         [[BTUserManager shared] setUser:owner];
-        NSLog(@"LOCAL USER REFRESHED");
     }];
     [self performSegueWithIdentifier:@"ProfileViewController" sender:self];
 }
