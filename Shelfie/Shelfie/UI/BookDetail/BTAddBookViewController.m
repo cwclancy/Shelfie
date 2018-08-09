@@ -122,17 +122,20 @@ if (!self.gift) {
 - (IBAction)submitClicked:(id)sender {
     CLLocationCoordinate2D currentLocation = [BTUserDefaults getCurrentLocation];
     BTBook *submittedBook = [BTBook createBookWithUserId:[FBSDKAccessToken currentAccessToken].userID title:self.book.title author:self.book.authors[0] isbn:self.isbn date:self.book.date coverURL:self.coverURL latitude:@(currentLocation.latitude) longitude:@(currentLocation.longitude) own:self.own gift:self.gift trade:self.trade sell:self.sell];
-    [BTPostManager addBookToDatabaseWithUserId:[FBSDKAccessToken currentAccessToken].userID title:self.book.title author:self.book.authors[0] isbn:self.isbn date:self.book.date coverURL:self.coverURL latitude:@(currentLocation.latitude) longitude:@(currentLocation.longitude) own:self.own gift:self.gift trade:self.trade sell:self.buySell completion:^(BOOL succeeded, NSError * _Nullable error) {
-        if (succeeded) {
-        } else {
-            NSLog(@"%@", error);
-        }
-    }];
+//    [BTPostManager addBookToDatabaseWithUserId:[FBSDKAccessToken currentAccessToken].userID title:self.book.title author:self.book.authors[0] isbn:self.isbn date:self.book.date coverURL:self.coverURL latitude:@(currentLocation.latitude) longitude:@(currentLocation.longitude) own:self.own gift:self.gift trade:self.trade sell:self.buySell completion:^(BOOL succeeded, NSError * _Nullable error) {
+//        if (succeeded) {
+//        } else {
+//            NSLog(@"%@", error);
+//        }
+//    }];
     if (self.own) {
         [[BTUserManager shared] addToBooksHave:submittedBook];
     } else {
         [[BTUserManager shared] addToBooksWant:submittedBook];
     }
+    [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
+        [[BTUserManager shared] setUser:owner];
+    }];
     [self performSegueWithIdentifier:@"publishSegue" sender:nil];
     
 }
