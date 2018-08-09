@@ -18,6 +18,7 @@
 @dynamic booksSell;
 @dynamic booksWant;
 @dynamic booksTrade;
+@dynamic booksFavorite;
 
 + (nonnull NSString *) parseClassName {
     return @"User";

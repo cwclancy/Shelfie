@@ -47,6 +47,9 @@
 		CEF5C37A2111059E00A33453 /* BTUIServices.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C3792111059E00A33453 /* BTUIServices.m */; };
 		CEF5C37F2111234E00A33453 /* BTGetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C37E2111234E00A33453 /* BTGetManager.m */; };
 		CEF5C387211126E100A33453 /* PinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF5C386211126E100A33453 /* PinAnnotation.m */; };
+		CEFABF60211CDE3200EF3506 /* BTFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFABF5F211CDE3200EF3506 /* BTFavoritesViewController.m */; };
+		CEFABF63211CDE6500EF3506 /* FavoriteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFABF62211CDE6500EF3506 /* FavoriteCell.m */; };
+		CEFABF66211CE82200EF3506 /* BTFavoriteBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFABF65211CE82200EF3506 /* BTFavoriteBookViewController.m */; };
 		D297FC2B33EFB1F8E78DE236 /* libPods-ShelfieTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0BF90E0266E68FD97A584D /* libPods-ShelfieTests.a */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +153,12 @@
 		CEF5C37E2111234E00A33453 /* BTGetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTGetManager.m; sourceTree = "<group>"; };
 		CEF5C385211126E100A33453 /* PinAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinAnnotation.h; sourceTree = "<group>"; };
 		CEF5C386211126E100A33453 /* PinAnnotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PinAnnotation.m; sourceTree = "<group>"; };
+		CEFABF5E211CDE3200EF3506 /* BTFavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTFavoritesViewController.h; sourceTree = "<group>"; };
+		CEFABF5F211CDE3200EF3506 /* BTFavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTFavoritesViewController.m; sourceTree = "<group>"; };
+		CEFABF61211CDE6500EF3506 /* FavoriteCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoriteCell.h; sourceTree = "<group>"; };
+		CEFABF62211CDE6500EF3506 /* FavoriteCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteCell.m; sourceTree = "<group>"; };
+		CEFABF64211CE82200EF3506 /* BTFavoriteBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTFavoriteBookViewController.h; sourceTree = "<group>"; };
+		CEFABF65211CE82200EF3506 /* BTFavoriteBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTFavoriteBookViewController.m; sourceTree = "<group>"; };
 		E455BF6C3A77707162478C5F /* libPods-Shelfie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shelfie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E859EE592BCFAA4C104AE360 /* Pods-ShelfieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShelfieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShelfieTests/Pods-ShelfieTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,6 +232,7 @@
 		B197F843210A82E3004805D8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				CEFABF5B211CDE0500EF3506 /* Favorites */,
 				B1C5210521190F3300E73B10 /* BTSettingsViewController.h */,
 				B1C5210621190F3300E73B10 /* BTSettingsViewController.m */,
 				B1C520FE2118EFF100E73B10 /* SideNav */,
@@ -379,6 +389,8 @@
 				B163B48C2110D48B007C5ADB /* BTAddBookViewController.m */,
 				CE2A04D5211393E200762D2F /* BTMapBookDetailsViewController.h */,
 				CE2A04D6211393E200762D2F /* BTMapBookDetailsViewController.m */,
+				CEFABF64211CE82200EF3506 /* BTFavoriteBookViewController.h */,
+				CEFABF65211CE82200EF3506 /* BTFavoriteBookViewController.m */,
 			);
 			path = BookDetail;
 			sourceTree = "<group>";
@@ -439,6 +451,33 @@
 				CEF5C3712110FDC100A33453 /* BTMapViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CEFABF5B211CDE0500EF3506 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				CEFABF5D211CDE1900EF3506 /* Views */,
+				CEFABF5C211CDE1200EF3506 /* Controllers */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		CEFABF5C211CDE1200EF3506 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEFABF5E211CDE3200EF3506 /* BTFavoritesViewController.h */,
+				CEFABF5F211CDE3200EF3506 /* BTFavoritesViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CEFABF5D211CDE1900EF3506 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEFABF61211CDE6500EF3506 /* FavoriteCell.h */,
+				CEFABF62211CDE6500EF3506 /* FavoriteCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -659,8 +698,10 @@
 				CEF5C3762110FF3700A33453 /* BTUserDefaults.m in Sources */,
 				CEA6B280210BD256009860C4 /* BTPostManager.m in Sources */,
 				CECC3388210FC9B50073A8BE /* GOBook.m in Sources */,
+				CEFABF66211CE82200EF3506 /* BTFavoriteBookViewController.m in Sources */,
 				CECC3385210F83600073A8BE /* BTBarcodeViewController.m in Sources */,
 				CECB9B99210A4E3C001D2032 /* BTHomeViewController.m in Sources */,
+				CEFABF60211CDE3200EF3506 /* BTFavoritesViewController.m in Sources */,
 				CE665D7F211918BC00BE4776 /* BTAddOrRequestViewController.m in Sources */,
 				B12BC27221152ABF0060DF0E /* BTProfileBookViewController.m in Sources */,
 				B197F842210A8254004805D8 /* BTProfileViewController.m in Sources */,
@@ -669,6 +710,7 @@
 				CECFB552210B99B000D5C220 /* SWRevealViewController.m in Sources */,
 				A488EEA3210FD71C0074B42A /* BTUser.m in Sources */,
 				A488EEA0210FD1910074B42A /* BTFbAPIManager.m in Sources */,
+				CEFABF63211CDE6500EF3506 /* FavoriteCell.m in Sources */,
 				B163B48E2110D48B007C5ADB /* BTAddBookViewController.m in Sources */,
 				CEF5C387211126E100A33453 /* PinAnnotation.m in Sources */,
 				CECB9BA4210A4E3D001D2032 /* main.m in Sources */,
