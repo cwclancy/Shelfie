@@ -123,6 +123,29 @@
     }];
 }
 
+- (void)addToBooksFavorite:(BTBook *)book {
+    [self.currentUser addObject:book forKey:@"booksFavorite"];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"updated!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+
+- (void)removeFromBooksFavorite:(BTBook *)book {
+    [self.currentUser removeObject:book forKey:@"booksFavorite"];
+    [self.currentUser saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"updated!");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
 
 + (void) getUserWithID: (NSString *) userId completion:(void(^)(BTUser * owner))completion {
     PFQuery *query = [PFQuery queryWithClassName:@"User"];
