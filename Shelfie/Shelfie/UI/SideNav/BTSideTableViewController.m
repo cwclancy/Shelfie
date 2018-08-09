@@ -20,7 +20,7 @@ NSArray *menuItems;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     menuItems = @[@"profile", @"home", @"addbook", @"notifications", @"logout", @"blank1", @"blank2", @"blank3", @"blank4"];
+     menuItems = @[@"profile", @"home", @"addbook", @"favorites", @"logout", @"blank1", @"blank2", @"blank3", @"blank4"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

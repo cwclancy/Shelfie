@@ -42,7 +42,6 @@
 @property (strong, nonatomic) IBOutlet UIView *distanceView;
 @property (strong, nonatomic) IBOutlet UIButton *submitButton;
 
-//@property (strong, nonatomic) NSInteger *bookDistance;
 @property (nonatomic, assign) BOOL buySell;
 @property (nonatomic, assign) BOOL trade;
 @property (nonatomic, assign) BOOL gift;
@@ -80,10 +79,9 @@
     self.dateLabel.text = formattedDate;
     NSLog(@"%@", self.book.authors[0]);
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.coverURL]];
-    [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
-    [self.bookCover.layer setBorderWidth: 2.0];
+    self.bookCover.layer.shadowRadius = 2;
+    self.bookCover.layer.shadowOpacity = 0.8;
 }
-
 
 - (IBAction)sellClicked:(id)sender {
     if (!self.buySell) {
@@ -104,7 +102,6 @@
     }
 }
 - (IBAction)giftClicked:(id)sender {
-
 if (!self.gift) {
         self.gift = true;
         [self.giftButton setImage:[UIImage imageNamed:@"iconmonstr-circle-1-240.png"] forState:UIControlStateNormal];
@@ -114,7 +111,6 @@ if (!self.gift) {
     }
 }
 - (IBAction)sliderValueChanged:(id)sender {
-    //self.slider.value = round(self.slider.value);
     self.sliderLabel.text = [NSString stringWithFormat:@"%.0f miles", self.slider.value];
 }
 

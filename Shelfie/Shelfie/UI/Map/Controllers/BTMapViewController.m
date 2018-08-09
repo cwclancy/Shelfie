@@ -37,7 +37,7 @@
     self.firstPass = [[BTUserDefaults shared] getStatus];
     SWRevealViewController *revealViewController = [self revealViewController];
     [self revealViewController].delegate = self;
-    UIImage *image = [[UIImage imageNamed:@"iconmonstr-menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *image = [[UIImage imageNamed:@"iconmonstr-menu-thin-24.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithImage:image  style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.leftBarButtonItem = barButton;
