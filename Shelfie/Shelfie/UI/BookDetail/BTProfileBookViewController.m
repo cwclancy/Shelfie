@@ -58,9 +58,15 @@
         [[BTUserManager shared] removeFromBooksWant:self.book];
     }
     [[BTPostManager shared] removeBookFromDatabase:self.book];
+    [self.book deleteInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
+        if (succeeded) {
+            NSLog(@"deleted");
+        } else {
+            NSLog(@"%@", error);
+        }
+    }];
     [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
         [[BTUserManager shared] setUser:owner];
-        NSLog(@"LOCAL USER REFRESHED");
     }];
     [self performSegueWithIdentifier:@"ProfileViewController" sender:self];
 }
