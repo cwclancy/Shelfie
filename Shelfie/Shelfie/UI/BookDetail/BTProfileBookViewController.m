@@ -10,6 +10,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "BTUserManager.h"
 #import "BTPostManager.h"
+#import "BTUserDefaults.h"
 
 @interface BTProfileBookViewController ()
 
@@ -26,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self createPage];
+    
 
 }
 
