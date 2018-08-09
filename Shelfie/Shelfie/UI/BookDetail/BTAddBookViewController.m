@@ -39,6 +39,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *bookCover;
 @property (strong, nonatomic) IBOutlet UILabel *buySellLabel;
 @property (strong, nonatomic) IBOutlet UILabel *giftLabel;
+@property (strong, nonatomic) IBOutlet UIView *distanceView;
+@property (strong, nonatomic) IBOutlet UIButton *submitButton;
 
 //@property (strong, nonatomic) NSInteger *bookDistance;
 @property (nonatomic, assign) BOOL buySell;
@@ -59,8 +61,9 @@
         self.own = true;
         self.buySellLabel.text = @"sell?";
         self.giftLabel.text = @"gift?";
+        self.distanceView.hidden = YES;
+        self.submitButton.frame = CGRectMake(127,540,120,47);
     }
-    
 }
 
 - (void)makeBook:(NSDictionary *)book {
