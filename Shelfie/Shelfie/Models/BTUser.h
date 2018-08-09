@@ -21,11 +21,14 @@
 @property (strong, nonatomic) NSMutableArray *booksWant;
 @property (strong, nonatomic) NSMutableArray *booksSell;
 @property (strong, nonatomic) NSMutableArray *booksTrade;
+@property (strong, nonatomic) NSMutableArray *booksFavorite;
 
 // USER METHODS
 - (void) addToBooksHave;
 - (void) addToBooksWant;
 - (void) removeFromBooksHave;
 - (void) removeFromBooksWant;
+- (void) addToBooksFavorite;
+- (void) removeFromBooksFavorite;
 
 @end
