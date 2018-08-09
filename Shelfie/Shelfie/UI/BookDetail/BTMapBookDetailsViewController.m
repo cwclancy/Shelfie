@@ -60,28 +60,28 @@
         self.book.messengerId = owner.messenger_id;
         
         // BookStatusView Original position x = y =
-        NSLog(@"%@", self.bookStatusView.center);
+        self.bookStatusView.transform = CGAffineTransformMakeTranslation(0, 0);
         
         if (self.book.sell && self.book.gift && self.book.trade) {
-            //self.bookStatus.text = @"Selling, Trading, Gifting";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(0, 0);
         } else if (self.book.sell) {
             self.bookStatus.text = @"Selling";
-            //self.bookStatusView.center = CGPointMake(178, 68);
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
         } else if (self.book.trade) {
             self.bookStatus.text = @"Trading";
-            //self.bookStatusView.center = CGPointMake(178, 68);
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
         } else if (self.book.gift) {
             self.bookStatus.text = @"Gifting";
-            //self.bookStatusView.center = CGPointMake(178, 68);
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
         } else if (self.book.trade && self.book.gift) {
             self.bookStatus.text = @"Trading, Gifting";
-            // self.bookStatusView.center = CGPointMake(125, 96);
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(40, 0);
         } else if (self.book.trade && self.book.sell) {
             self.bookStatus.text = @"Trading, Selling";
-            // self.bookStatusView.center = CGPointMake(125, 96);
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(40, 0);
         } else if (self.book.sell && self.book.gift) {
             self.bookStatus.text = @"Selling, Gifting";
-            // self.bookStatusView.center = CGPointMake(125, 96);
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(40, 0);
         }
         
         [self.ownerImageView setImageWithURL:[NSURL URLWithString:owner.picture]];
