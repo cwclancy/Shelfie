@@ -32,5 +32,7 @@
 - (void)removeFromBooksHave:(BTBook *)book;
 - (void)addToBooksWant:(BTBook *)book;
 - (void)removeFromBooksWant:(BTBook *)book;
+- (void)addToBooksFavorite:(BTBook *)book;
+- (void)removeFromBooksFavorite:(BTBook *)book;
 
 @end
