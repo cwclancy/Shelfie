@@ -633,7 +633,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laW-66-5Dp">
-                                                <rect key="frame" x="44" y="64" width="137" height="40"/>
+                                                <rect key="frame" x="44" y="64" width="137" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="messageowner"/>
                                                 <connections>
@@ -641,7 +641,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyZ-4D-u2Y">
-                                                <rect key="frame" x="193" y="64" width="137" height="40"/>
+                                                <rect key="frame" x="193" y="64" width="137" height="42"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="saveforlater"/>
                                                 <connections>
@@ -694,6 +694,7 @@
                         <outlet property="ownerImageView" destination="Xtg-3n-O37" id="hXX-va-Qhg"/>
                         <outlet property="ownerNameLabel" destination="S8B-Uq-qkq" id="cJD-JG-zow"/>
                         <outlet property="postedDateLabel" destination="clm-KN-2Gt" id="aJx-Je-opN"/>
+                        <outlet property="saveButton" destination="nyZ-4D-u2Y" id="FWE-ht-K4h"/>
                         <outlet property="titleLabel" destination="GPB-mX-Q7n" id="MRO-E6-plj"/>
                     </connections>
                 </viewController>
@@ -1527,7 +1528,7 @@
         <image name="iconmonstr-log-out-18-32" width="32" height="32"/>
         <image name="iconmonstr-map-8-240 (1)" width="240" height="240"/>
         <image name="iconmonstr-user-20-32" width="32" height="32"/>
-        <image name="messageowner" width="320" height="88"/>
+        <image name="messageowner" width="480" height="132"/>
         <image name="post button" width="240" height="94"/>
         <image name="profile lines" width="1131" height="18"/>
         <image name="reqbook" width="332" height="126"/>
@@ -1539,7 +1540,7 @@
         <segue reference="gUo-tM-cUu"/>
         <segue reference="K1C-ai-erJ"/>
         <segue reference="vS7-Sb-czk"/>
-        <segue reference="31S-wF-b1X"/>
+        <segue reference="lmB-lM-JkE"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>
 </document>
