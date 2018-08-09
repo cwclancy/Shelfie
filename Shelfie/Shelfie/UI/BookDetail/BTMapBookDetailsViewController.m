@@ -50,6 +50,7 @@
 }
 - (IBAction)closeButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [[BTUserDefaults shared] setStatusFalse];
 }
 
 -(void) createPage {

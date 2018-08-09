@@ -87,6 +87,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    self.firstPass = [[BTUserDefaults shared] getStatus];
     if (!self.firstPass) {
         self.mapView.userInteractionEnabled = true;
         self.mapView.scrollEnabled = true;
