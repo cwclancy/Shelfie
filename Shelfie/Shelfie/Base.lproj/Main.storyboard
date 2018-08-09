@@ -118,7 +118,7 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaO-Gm-f1P">
                                             <rect key="frame" x="7" y="0.0" width="70" height="70"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                     <integer key="value" value="35"/>
@@ -334,16 +334,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bUp-Gn-fwW">
-                                <rect key="frame" x="127" y="600" width="120" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="post button">
-                                    <attributedString key="attributedTitle"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitClicked:" destination="eWt-aP-7LS" eventType="touchUpInside" id="t4u-1e-jfX"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ede-Fq-lEY">
                                 <rect key="frame" x="0.0" y="412" width="375" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -422,35 +412,42 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="yfR-HL-YSw">
-                                        <rect key="frame" x="111" y="133" width="164" height="30"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RjG-Cd-F9q">
+                                        <rect key="frame" x="63" y="90" width="240" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="thumbTintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="sliderValueChanged:" destination="eWt-aP-7LS" eventType="valueChanged" id="VcB-VT-gRz"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itJ-zf-dSL">
-                                        <rect key="frame" x="302" y="138" width="73" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMP-cg-Yq6">
-                                        <rect key="frame" x="84" y="104" width="218" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="How far can the book be? ">
-                                                <attributes>
-                                                    <font key="NSFont" size="17" name="AvenirNext-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMP-cg-Yq6">
+                                                <rect key="frame" x="-9" y="8" width="249" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="How far away can the book be? ">
+                                                        <attributes>
+                                                            <font key="NSFont" size="17" name="AvenirNext-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itJ-zf-dSL">
+                                                <rect key="frame" x="83" y="55" width="73" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="yfR-HL-YSw">
+                                                <rect key="frame" x="38" y="50" width="164" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="thumbTintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="sliderValueChanged:" destination="eWt-aP-7LS" eventType="valueChanged" id="VcB-VT-gRz"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -471,6 +468,16 @@
                                 <rect key="frame" x="94" y="64" width="187" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bUp-Gn-fwW">
+                                <rect key="frame" x="127" y="600" width="120" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="post button">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitClicked:" destination="eWt-aP-7LS" eventType="touchUpInside" id="t4u-1e-jfX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lc3-Fp-mcX"/>
@@ -486,10 +493,12 @@
                         <outlet property="buySellButton" destination="DFk-jy-Ypc" id="azr-LU-Uwb"/>
                         <outlet property="buySellLabel" destination="CnD-zM-QwO" id="mR4-nZ-rl3"/>
                         <outlet property="dateLabel" destination="BqT-rG-KCj" id="JLS-zq-1NI"/>
+                        <outlet property="distanceView" destination="RjG-Cd-F9q" id="ZJJ-ZO-4v9"/>
                         <outlet property="giftButton" destination="6T9-Za-20R" id="PjZ-NX-1RV"/>
                         <outlet property="giftLabel" destination="j8m-4Z-ZtC" id="9BK-FK-r03"/>
                         <outlet property="slider" destination="yfR-HL-YSw" id="JNg-cX-hSG"/>
                         <outlet property="sliderLabel" destination="itJ-zf-dSL" id="tB3-EV-PUS"/>
+                        <outlet property="submitButton" destination="bUp-Gn-fwW" id="bxT-Ze-x7z"/>
                         <outlet property="titleLabel" destination="KDz-AF-TC7" id="k9B-xY-X70"/>
                         <outlet property="tradeButton" destination="O2t-dY-g9F" id="4TN-Ff-qbt"/>
                         <segue destination="OCU-lf-lpK" kind="show" identifier="publishSegue" id="dMJ-qp-Dys"/>
@@ -670,7 +679,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="iconmonstr-arrow-64-24" id="fL2-Mj-rOa">
                             <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="i0O-eH-rXS" kind="presentation" id="9Wc-mK-3JU"/>
+                                <segue destination="BYZ-38-t0r" kind="showDetail" id="QNL-ca-g7Q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1211,34 +1220,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW2-Qn-r2y">
-                                <rect key="frame" x="40" y="431" width="297" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="requestButton"/>
-                                <connections>
-                                    <action selector="requestButtonPressed:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="OsU-DG-Woj"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="addreqlines-1" translatesAutoresizingMaskIntoConstraints="NO" id="KaK-7Q-fcD">
                                 <rect key="frame" x="0.0" y="321" width="375" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hRl-th-z5h">
-                                <rect key="frame" x="0.0" y="64" width="375" height="259"/>
+                                <rect key="frame" x="0.0" y="338" width="375" height="329"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-tO-MGZ">
-                                        <rect key="frame" x="39" y="59" width="297" height="141"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rW2-Qn-r2y">
+                                        <rect key="frame" x="39" y="104" width="297" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="addButton"/>
+                                        <state key="normal" image="reqbook"/>
                                         <connections>
-                                            <action selector="addButtonPressed:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="gRy-ZN-p2P"/>
+                                            <action selector="requestButtonPressed:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="OsU-DG-Woj"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlC-tO-MGZ">
+                                <rect key="frame" x="39" y="99" width="297" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="add book"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="2UQ-7X-oU4" eventType="touchUpInside" id="gRy-ZN-p2P"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DPs-Wp-eCh"/>
                     </view>
                     <navigationItem key="navigationItem" id="nuv-jn-nMo"/>
@@ -1248,7 +1258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tqA-qB-BlX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5048.8000000000002" y="31.934032983508249"/>
+            <point key="canvasLocation" x="6885.6000000000004" y="31.934032983508249"/>
         </scene>
         <!--Custom Nav Controller-->
         <scene sceneID="6fy-lx-P1o">
@@ -1331,7 +1341,7 @@
     <resources>
         <image name="Group" width="394" height="130"/>
         <image name="Line 2" width="1128" height="3"/>
-        <image name="addButton" width="297" height="125"/>
+        <image name="add book" width="332" height="126"/>
         <image name="addreqlines-1" width="730" height="42"/>
         <image name="custom signin button" width="750" height="132"/>
         <image name="delete button" width="120" height="47"/>
@@ -1351,14 +1361,14 @@
         <image name="message-2" width="320" height="88"/>
         <image name="post button" width="240" height="94"/>
         <image name="profile lines" width="1131" height="18"/>
-        <image name="requestButton" width="297" height="125"/>
+        <image name="reqbook" width="332" height="126"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dMJ-qp-Dys"/>
-        <segue reference="9Wc-mK-3JU"/>
+        <segue reference="9OS-DA-nng"/>
         <segue reference="gUo-tM-cUu"/>
-        <segue reference="K1C-ai-erJ"/>
-        <segue reference="vS7-Sb-czk"/>
+        <segue reference="13B-jv-Hcu"/>
+        <segue reference="zty-2R-cCd"/>
         <segue reference="31S-wF-b1X"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>

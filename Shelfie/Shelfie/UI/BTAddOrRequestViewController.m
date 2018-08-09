@@ -19,17 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    SWRevealViewController *revealViewController = self.revealViewController;
-    UIImage *image = [[UIImage imageNamed:@"white-burger.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithImage:image  style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.navigationItem.leftBarButtonItem = barButton;
-    if (revealViewController)
-    {
-        [barButton setTarget: self.revealViewController];
-        [barButton setAction: @selector( revealToggle: )];
-        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-    }
 }
 
 - (void)didReceiveMemoryWarning {

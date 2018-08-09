@@ -55,7 +55,8 @@
         [self.coverImageView.layer setBorderWidth: 2.0];
         self.titleLabel.text = self.book.title;
         self.authorLabel.text = self.book.author;
-        self.dateLabel.text = self.book.date;
+        NSString *formattedDate = [self.book.date substringToIndex:4];
+        self.dateLabel.text = formattedDate;
         self.ownerNameLabel.text = owner.name;
         self.book.messengerId = owner.messenger_id;
         

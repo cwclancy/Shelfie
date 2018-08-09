@@ -39,6 +39,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *bookCover;
 @property (strong, nonatomic) IBOutlet UILabel *buySellLabel;
 @property (strong, nonatomic) IBOutlet UILabel *giftLabel;
+@property (strong, nonatomic) IBOutlet UIView *distanceView;
+@property (strong, nonatomic) IBOutlet UIButton *submitButton;
 
 //@property (strong, nonatomic) NSInteger *bookDistance;
 @property (nonatomic, assign) BOOL buySell;
@@ -59,8 +61,9 @@
         self.own = true;
         self.buySellLabel.text = @"sell?";
         self.giftLabel.text = @"gift?";
+        self.distanceView.hidden = YES;
+        self.submitButton.frame = CGRectMake(127,540,120,47);
     }
-    
 }
 
 - (void)makeBook:(NSDictionary *)book {
@@ -70,10 +73,11 @@
     self.book.imageLinks = bookDictionary[@"imageLinks"];
     self.book.authors = bookDictionary[@"authors"];
     self.book.date = bookDictionary[@"publishedDate"];
+    NSString *formattedDate = [self.book.date substringToIndex:4];
     self.coverURL = self.book.imageLinks[@"thumbnail"];
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.authors[0];
-    self.dateLabel.text = self.book.date;
+    self.dateLabel.text = formattedDate;
     NSLog(@"%@", self.book.authors[0]);
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.coverURL]];
     [self.bookCover.layer setBorderColor: [[UIColor blackColor] CGColor]];
