@@ -14,6 +14,10 @@
     UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:dimensions];
     searchBar.layer.borderWidth = 0.0;
     [searchBar setBackgroundImage:[UIImage new]];
+    [searchBar setBarTintColor:[UIColor clearColor]];
+    [searchBar setBackgroundColor:[UIColor clearColor]];
+    searchBar.translucent = YES;
+    searchBar.layer.opacity = 0.5;
     return searchBar;
 }
 
