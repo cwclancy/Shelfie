@@ -36,7 +36,7 @@
     [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
         self.currentUser = owner;
         self.favoriteBooks = [NSMutableArray new];
-        [self fetchBooksFavorite:self.currentUser.booksWant];
+        [self fetchBooksFavorite:self.currentUser.booksFavorite];
     }];
 }
 
@@ -52,7 +52,7 @@
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.favoriteBooks.count; //TODO: change to books favorite when buttons exist
+    return self.favoriteBooks.count; 
 }
 
 - (void)fetchBooksFavorite:(NSArray *)pointerArray {

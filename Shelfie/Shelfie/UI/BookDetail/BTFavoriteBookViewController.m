@@ -8,6 +8,7 @@
 
 #import "BTFavoriteBookViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "BTUserManager.h"
 
 @interface BTFavoriteBookViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
@@ -33,7 +34,8 @@
 }
 
 - (IBAction)deleteButtonPressed:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+    // [[BTUserManager shared] removeFromBooksFavorite:self.book];
 }
 
 /*
