@@ -64,6 +64,9 @@
         self.dateLabel.text = formattedDate;
         self.ownerNameLabel.text = owner.name;
         self.book.messengerId = owner.messenger_id;
+        self.ownerImageView.layer.cornerRadius = self.ownerImageView.frame.size.width / 2;
+        self.ownerImageView.clipsToBounds = YES;
+        
         
         // BookStatusView Original position x = y =
         self.bookStatusView.transform = CGAffineTransformMakeTranslation(0, 0);
