@@ -13,12 +13,13 @@
 #import "PinAnnotation.h"
 #import "BTMapBookDetailsViewController.h"
 #import "BTUIServices.h"
+#import "SWRevealViewController.h"
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
 
 
-@interface BTMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate>
+@interface BTMapViewController () <MKMapViewDelegate, CLLocationManagerDelegate, UISearchBarDelegate, UIGestureRecognizerDelegate, SWRevealViewControllerDelegate>
 @property (strong, nonatomic) MKMapView *mapView;
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) NSArray *mapBooks;
@@ -26,12 +27,35 @@
 @property (strong, nonatomic) UISearchBar *searchBar;
 @property (nonatomic) MKCoordinateRegion currentLocation;
 @property BOOL locationFlag;
+@property BOOL firstPass;
 @end
 
 @implementation BTMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.firstPass = [[BTUserDefaults shared] getStatus];
+    SWRevealViewController *revealViewController = [self revealViewController];
+    [self revealViewController].delegate = self;
+    UIImage *image = [[UIImage imageNamed:@"iconmonstr-menu.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithImage:image  style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.leftBarButtonItem = barButton;
+    if (revealViewController)
+    {
+        [barButton setTarget: self.revealViewController];
+        [barButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+    
     self.mapView = [[MKMapView alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:self.mapView];
     CLLocationCoordinate2D myLocation = [BTUserDefaults getCurrentLocation];
@@ -62,6 +86,22 @@
     self.searchBar.delegate = self;
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if (!self.firstPass) {
+        self.mapView.userInteractionEnabled = true;
+        self.mapView.scrollEnabled = true;
+        [[BTUserDefaults shared] setStatus];
+    } else {
+        self.mapView.userInteractionEnabled = false;
+        self.mapView.scrollEnabled = false;
+    }
+}
+
+
+- (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position {
+    self.mapView.userInteractionEnabled = !self.mapView.userInteractionEnabled;
+    self.mapView.scrollEnabled = !self.mapView.scrollEnabled;
+}
 
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(nonnull NSError *)error {
@@ -150,5 +190,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

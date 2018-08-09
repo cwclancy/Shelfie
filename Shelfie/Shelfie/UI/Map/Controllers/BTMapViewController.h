@@ -10,6 +10,7 @@
 #import "BTRevealHeadViewController.h"
 
 
-@interface BTMapViewController : BTRevealHeadViewController
+
+@interface BTMapViewController : UIViewController
 
 @end

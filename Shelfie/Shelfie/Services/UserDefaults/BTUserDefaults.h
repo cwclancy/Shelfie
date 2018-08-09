@@ -13,4 +13,7 @@
 @interface BTUserDefaults : NSObject
 + (void) setCurrentLocation:(MKCoordinateRegion)currentLocation;
 + (CLLocationCoordinate2D) getCurrentLocation;
++ (instancetype) shared;
+- (void) setStatus;
+- (BOOL) getStatus;
 @end
