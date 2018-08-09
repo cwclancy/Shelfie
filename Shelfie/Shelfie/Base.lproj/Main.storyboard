@@ -708,7 +708,7 @@
             </objects>
             <point key="canvasLocation" x="4463.1999999999998" y="814.54272863568224"/>
         </scene>
-        <!--my bookshelf-->
+        <!--Profile View Controller-->
         <scene sceneID="kvj-Wy-0rH">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="cgZ-8R-W6u" customClass="BTProfileViewController" sceneMemberID="viewController">
@@ -814,7 +814,7 @@
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="qvk-Vn-N4k"/>
                     </view>
-                    <navigationItem key="navigationItem" title="my bookshelf" id="Pno-if-iyD"/>
+                    <navigationItem key="navigationItem" id="Pno-if-iyD"/>
                     <connections>
                         <outlet property="booksOwnedView" destination="gzs-CP-niO" id="yP2-K8-HWS"/>
                         <outlet property="booksRequestedView" destination="iB2-mX-29S" id="dcy-9D-ymz"/>
@@ -1381,7 +1381,7 @@
         <segue reference="dMJ-qp-Dys"/>
         <segue reference="9OS-DA-nng"/>
         <segue reference="gUo-tM-cUu"/>
-        <segue reference="13B-jv-Hcu"/>
+        <segue reference="K1C-ai-erJ"/>
         <segue reference="zty-2R-cCd"/>
         <segue reference="QNL-ca-g7Q"/>
         <segue reference="vRL-Rt-ucT"/>
