@@ -156,6 +156,10 @@
     [self performSegueWithIdentifier:@"mapToBookSegue" sender:view.annotation];
 }
 
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views {
+    MKAnnotationView *currentLocation = [mapView viewForAnnotation:mapView.userLocation];
+    currentLocation.enabled = NO;
+}
 
 
 
