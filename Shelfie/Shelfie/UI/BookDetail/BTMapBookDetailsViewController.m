@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *ownerNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *postedDateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bookStatus;
+@property (weak, nonatomic) IBOutlet UIView *bookStatusView;
 
 @end
 
@@ -51,18 +52,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 -(void) createPage {
-    //TODO: GET owner of book from parse and fill out rest of field (call this funciton in completion of that)
     [BTUserManager getUserWithID: self.book.userId completion:^(BTUser *owner) {
         NSLog(@"%@", owner);
         [self.coverImageView setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
@@ -75,20 +65,29 @@
         self.ownerNameLabel.text = owner.name;
         self.book.messengerId = owner.messenger_id;
         
+        // BookStatusView Original position x = y =
+        self.bookStatusView.transform = CGAffineTransformMakeTranslation(0, 0);
+        
         if (self.book.sell && self.book.gift && self.book.trade) {
-            self.bookStatus.text = @"Selling, Trading, Gifting";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(0, 0);
         } else if (self.book.sell) {
             self.bookStatus.text = @"Selling";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
         } else if (self.book.trade) {
             self.bookStatus.text = @"Trading";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
         } else if (self.book.gift) {
             self.bookStatus.text = @"Gifting";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
         } else if (self.book.trade && self.book.gift) {
             self.bookStatus.text = @"Trading, Gifting";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(40, 0);
         } else if (self.book.trade && self.book.sell) {
             self.bookStatus.text = @"Trading, Selling";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(40, 0);
         } else if (self.book.sell && self.book.gift) {
             self.bookStatus.text = @"Selling, Gifting";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(40, 0);
         }
         
         [self.ownerImageView setImageWithURL:[NSURL URLWithString:owner.picture]];
