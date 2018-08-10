@@ -182,7 +182,6 @@
 }
 
 - (void)resetSearchBar {
-    self.searchBar.text = @"";
     [self.searchBar resignFirstResponder];
 }
 
