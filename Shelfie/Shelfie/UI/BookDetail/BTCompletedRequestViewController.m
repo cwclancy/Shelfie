@@ -10,6 +10,7 @@
 #import "BTHomeViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "BTUserDefaults.h"
+#import <FBSDKShareKit/FBSDKShareKit.h>
 
 
 @interface BTCompletedRequestViewController ()
@@ -43,6 +44,12 @@
     [self performSegueWithIdentifier:@"exploreSegue" sender:nil];
     [[BTUserDefaults shared] setStatusFalse];
 }
+
+- (IBAction)onShare:(id)sender {
+    //FBSDKShareLinkContent
+    
+}
+
 
 /*
 #pragma mark - Navigation
