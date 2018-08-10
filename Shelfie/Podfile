@@ -10,6 +10,7 @@ target 'Shelfie' do
   pod 'Parse'
   pod 'FBSDKLoginKit'
   pod 'FBSDKMessengerShareKit'
+  pod 'FBSDKShareKit'
   pod 'JSONModel'
 
   target 'ShelfieTests' do

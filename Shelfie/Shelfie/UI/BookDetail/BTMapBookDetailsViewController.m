@@ -10,6 +10,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "BTUserManager.h"
 #import "BTUserDefaults.h"
+#import <FBSDKShareKit/FBSDKShareKit.h>
 #import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
 
 @interface BTMapBookDetailsViewController ()
@@ -39,15 +40,24 @@
 
 
 - (IBAction)messengerPressed:(id)sender {
-    NSString *stringURL = [NSString stringWithFormat:@"fb-messenger://user-thread/%@", self.book.messengerId];
-    NSURL *url = [NSURL URLWithString:stringURL];
+    // Content to share
+    FBSDKShareMessengerGenericTemplateElement *element = [[FBSDKShareMessengerGenericTemplateElement alloc] init];
+    element.title = self.book.title;
+    element.subtitle = [NSString stringWithFormat:@"By %@", self.book.author];
+    element.imageURL = [NSURL URLWithString:self.book.coverURL];
     
-    // Open Messenger app
-    [[UIApplication sharedApplication] openURL:url options:[NSDictionary new] completionHandler:^(BOOL success) {
-        if (success) {
-            NSLog(@"Messenger Open");
-        }
-    }];
+    FBSDKShareMessengerGenericTemplateContent *content = [[FBSDKShareMessengerGenericTemplateContent alloc] init];
+    content.pageID = @"Shelfie";
+    content.element = element;
+    
+    FBSDKMessageDialog *messageDialog = [[FBSDKMessageDialog alloc] init];
+    messageDialog.shareContent = content;
+    
+    if ([messageDialog canShow]) {
+        [messageDialog show];
+        
+    }
+    
 }
 
 - (IBAction)saveClicked:(id)sender {
@@ -88,6 +98,15 @@
         
         if (self.book.sell && self.book.gift && self.book.trade) {
             self.bookStatusView.transform = CGAffineTransformMakeTranslation(0, 0);
+        } else if (self.book.trade && self.book.gift) {
+            self.bookStatus.text = @"Trading, Gifting";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(35, 0);
+        } else if (self.book.trade && self.book.sell) {
+            self.bookStatus.text = @"Trading, Selling";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(35, 0);
+        } else if (self.book.sell && self.book.gift) {
+            self.bookStatus.text = @"Selling, Gifting";
+            self.bookStatusView.transform = CGAffineTransformMakeTranslation(35, 0);
         } else if (self.book.sell) {
             self.bookStatus.text = @"Selling";
             self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
@@ -97,17 +116,7 @@
         } else if (self.book.gift) {
             self.bookStatus.text = @"Gifting";
             self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
-        } else if (self.book.trade && self.book.gift) {
-            self.bookStatus.text = @"Trading, Gifting";
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(40, 0);
-        } else if (self.book.trade && self.book.sell) {
-            self.bookStatus.text = @"Trading, Selling";
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(40, 0);
-        } else if (self.book.sell && self.book.gift) {
-            self.bookStatus.text = @"Selling, Gifting";
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(40, 0);
         }
-        
         [self.ownerImageView setImageWithURL:[NSURL URLWithString:owner.picture]];
     }];
 }
