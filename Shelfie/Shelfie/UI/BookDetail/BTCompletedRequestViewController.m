@@ -46,8 +46,31 @@
 }
 
 - (IBAction)onShare:(id)sender {
-    //FBSDKShareLinkContent
+    // Create an object
+    NSDictionary *properties = @{
+                                 @"og:type": @"books.book",
+                                 @"og:title": self.bookTitle,
+                                 @"og:description": self.author,
+                                 @"og:image": self.coverURL,
+                                 @"books:isbn": @"N/A",
+                                 };
+    FBSDKShareOpenGraphObject *object = [FBSDKShareOpenGraphObject objectWithProperties:properties];
+    // Create an action
+    FBSDKShareOpenGraphAction *action = [[FBSDKShareOpenGraphAction alloc] init];
+    action.actionType = @"books.reads";
+    [action setObject:object forKey:@"books:book"];
     
+    // Create the content
+    FBSDKShareOpenGraphContent *content = [[FBSDKShareOpenGraphContent alloc] init];
+    content.action = action;
+    content.previewPropertyName = @"books:book";
+    
+    FBSDKShareDialog *shareDialog = [[FBSDKShareDialog alloc] init];
+    shareDialog.fromViewController = self;
+    shareDialog.shareContent = content;
+    [shareDialog setMode:FBSDKShareDialogModeNative];
+    
+    [shareDialog show];
 }
 
 
