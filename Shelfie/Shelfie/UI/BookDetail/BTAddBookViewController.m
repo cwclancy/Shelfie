@@ -77,7 +77,6 @@
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.authors[0];
     self.dateLabel.text = formattedDate;
-    NSLog(@"%@", self.book.authors[0]);
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.coverURL]];
     self.bookCover.layer.shadowRadius = 2;
     self.bookCover.layer.shadowOpacity = 0.8;
