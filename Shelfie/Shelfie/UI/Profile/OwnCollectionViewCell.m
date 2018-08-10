@@ -13,9 +13,7 @@
 - (void)setContents: (NSString *)coverURL {
     
   [self.ownBook setImageWithURL:[NSURL URLWithString:coverURL]];
-    self.ownBook.layer.shadowRadius = 2;
-    self.ownBook.layer.shadowOpacity = 0.8;
-  //  [self.bookCover loadInBackground];
+    
     
 }
 @end

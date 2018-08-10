@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import"BTRevealHeadViewController.h"
+#import"BTRevealHeadViewController.h"
 
-@interface BTCompletedRequestViewController : UIViewController
+@interface BTCompletedRequestViewController :  BTRevealHeadViewController
 
 @property (strong, nonatomic) NSString *coverURL;
 @property (strong, nonatomic) NSString *author;

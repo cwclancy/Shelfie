@@ -77,7 +77,6 @@
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.authors[0];
     self.dateLabel.text = formattedDate;
-    NSLog(@"%@", self.book.authors[0]);
     [self.bookCover setImageWithURL:[NSURL URLWithString:self.coverURL]];
     self.bookCover.layer.shadowRadius = 2;
     self.bookCover.layer.shadowOpacity = 0.8;
@@ -86,27 +85,47 @@
 - (IBAction)sellClicked:(id)sender {
     if (!self.buySell) {
         self.buySell = true;
+        self.trade = false;
+        self.gift = false;
         [self.buySellButton setImage:[UIImage imageNamed:@"iconmonstr-circle-1-240.png"] forState:UIControlStateNormal];
+        [self.giftButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
+        [self.tradeButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
     } else if (self.buySell) {
         self.buySell = false;
+        self.trade = true;
+        self.gift = true;
         [self.buySellButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
     }
 }
+
 - (IBAction)tradeClicked:(id)sender {
     if (!self.trade) {
         self.trade = true;
+        self.buySell= false;
+        self.gift = false;
         [self.tradeButton setImage:[UIImage imageNamed:@"iconmonstr-circle-1-240.png"] forState:UIControlStateNormal];
+         [self.giftButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
+         [self.buySellButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
     } else if (self.trade) {
         self.trade = false;
+        self.gift = true;
+        self.buySell = true;
         [self.tradeButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
     }
 }
+
 - (IBAction)giftClicked:(id)sender {
-if (!self.gift) {
+    if (!self.gift) {
         self.gift = true;
+        self.trade = false;
+        self.buySell = false;
         [self.giftButton setImage:[UIImage imageNamed:@"iconmonstr-circle-1-240.png"] forState:UIControlStateNormal];
+        [self.tradeButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
+        [self.buySellButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
     } else if (self.gift) {
         self.gift = false;
+        self.trade = true;
+        self.buySell = true;
         [self.giftButton setImage:[UIImage imageNamed:@"iconmonstr-circle-thin-32.png"] forState:UIControlStateNormal];
     }
 }
