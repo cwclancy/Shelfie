@@ -737,6 +737,41 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rll-SC-gdL" customClass="NoBooksSavedView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D58-vz-Ydp">
+                                        <rect key="frame" x="-21" y="104" width="417" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="you haven't saved any books">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="AvenirNext-DemiBold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile lines" translatesAutoresizingMaskIntoConstraints="NO" id="RHA-0J-1AI">
+                                        <rect key="frame" x="0.0" y="172" width="375" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cv6-nH-4Gj">
+                                        <rect key="frame" x="127" y="310" width="120" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="explore button">
+                                            <attributedString key="attributedTitle"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="exploreButtonTapped:" destination="sdD-Qo-jq0" eventType="touchUpInside" id="qhv-1L-mhZ"/>
+                                            <action selector="keepExploring:" destination="OCU-lf-lpK" eventType="touchUpInside" id="WQH-ep-aQd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="C93-IJ-Jnn"/>
@@ -744,6 +779,8 @@
                     <navigationItem key="navigationItem" id="Ldu-cs-sQ8"/>
                     <connections>
                         <outlet property="collectionView" destination="vyx-Li-lzJ" id="3D1-Rn-NpP"/>
+                        <outlet property="noBooksSavedView" destination="Rll-SC-gdL" id="RVL-wL-ShG"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="savedBooksToHome" id="JMj-SL-hYl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9m-UD-jDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1501,6 +1538,7 @@
         <segue reference="K1C-ai-erJ"/>
         <segue reference="31S-wF-b1X"/>
         <segue reference="vS7-Sb-czk"/>
+        <segue reference="JMj-SL-hYl"/>
         <segue reference="lmB-lM-JkE"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>

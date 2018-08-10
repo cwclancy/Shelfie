@@ -11,11 +11,16 @@
 #import "BTUser.h"
 #import "BTUserManager.h"
 #import "BTFavoriteBookViewController.h"
+#import "NoBooksSavedView.h"
+#import "BTUIServices.h"
+#import "BTUserDefaults.h"
 
 @interface BTFavoritesViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) BTUser *currentUser;
 @property (strong, nonatomic) NSMutableArray *favoriteBooks;
+@property (strong, nonatomic) IBOutlet NoBooksSavedView *noBooksSavedView;
+@property (strong, nonatomic) UIView *savedView;
 @end
 
 @implementation BTFavoritesViewController
@@ -52,6 +57,10 @@
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+
+    if (self.favoriteBooks.count == 0) {
+        [self drawSavedView];
+    }
     return self.favoriteBooks.count; 
 }
 
@@ -73,12 +82,23 @@
     }
 }
 
+- (IBAction)exploreButtonTapped:(id)sender {
+    [self.noBooksSavedView removeFromSuperview];
+    [self performSegueWithIdentifier:@"savedBooksToHome" sender:nil];
+    [[BTUserDefaults shared] setStatusFalse];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    BTFavoriteBookViewController *favoriteBooksViewController = [segue destinationViewController];
-    UICollectionViewCell *tappedCell = sender;
-    NSIndexPath *indexPath = [self.collectionView indexPathForCell:tappedCell];
-    favoriteBooksViewController.book = self.favoriteBooks[indexPath.item];
+    if (![[segue identifier] isEqualToString:@"savedBooksToHome"]) {
+        BTFavoriteBookViewController *favoriteBooksViewController = [segue destinationViewController];
+        UICollectionViewCell *tappedCell = sender;
+        NSIndexPath *indexPath = [self.collectionView indexPathForCell:tappedCell];
+        favoriteBooksViewController.book = self.favoriteBooks[indexPath.item];
+    }
+}
+
+- (void)drawSavedView {
+    [self.view addSubview:self.noBooksSavedView];
 }
 
 
