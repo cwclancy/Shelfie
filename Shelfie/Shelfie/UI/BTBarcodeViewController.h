@@ -13,6 +13,6 @@
 -(void)makeBook:(NSDictionary *)book;
 @end
 
-@interface BTBarcodeViewController : BTRevealHeadViewController
+@interface BTBarcodeViewController : UIViewController
 @property (nonatomic, weak) id<BarcodeViewControllerDelegate> delegate;
 @end
