@@ -102,6 +102,11 @@
 - (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position {
     self.mapView.userInteractionEnabled = !self.mapView.userInteractionEnabled;
     self.mapView.scrollEnabled = !self.mapView.scrollEnabled;
+    [self.searchBar resignFirstResponder];
+    self.searchBar.text = nil;
+    self.filteredBooks = self.mapBooks;
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self updateBookLocations:self.filteredBooks];
 }
 
 
