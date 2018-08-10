@@ -8,6 +8,7 @@
 
 #import "BTSettingsViewController.h"
 #import "BTFbAPIManager.h"
+#import "BTUserDefaults.h"
 
 @interface BTSettingsViewController ()
 
@@ -26,6 +27,8 @@
 }
 - (IBAction)onLogout:(id)sender {
     [BTFbAPIManager logout];
+    [[BTUserDefaults shared] setStatusFalse];
+    
 }
 
 /*
