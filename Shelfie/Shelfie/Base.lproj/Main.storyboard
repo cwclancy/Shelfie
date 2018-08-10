@@ -1275,8 +1275,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="iconmonstr-arrow-64-24" id="ZQk-aa-d1Y">
                             <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="share" id="PqL-Og-fa4">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="share" id="PqL-Og-fa4" userLabel="Share">
                             <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="onShare:" destination="OCU-lf-lpK" id="7OF-UX-Idw"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1574,9 +1577,6 @@
         <segue reference="gUo-tM-cUu"/>
         <segue reference="K1C-ai-erJ"/>
         <segue reference="31S-wF-b1X"/>
-        <segue reference="vS7-Sb-czk"/>
-        <segue reference="JMj-SL-hYl"/>
-        <segue reference="lmB-lM-JkE"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>
 </document>
