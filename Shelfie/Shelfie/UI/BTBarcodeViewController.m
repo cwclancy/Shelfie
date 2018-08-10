@@ -20,6 +20,7 @@
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 @property (strong, nonatomic) NSString *isbn;
 @property (strong, nonatomic) UIAlertController *alert;
+- (void) closeView;
 @end
 
 @implementation BTBarcodeViewController
@@ -68,8 +69,15 @@
     [self.videoPreviewLayer setFrame:self.previewView.layer.bounds];
     [self.previewView.layer addSublayer:self.videoPreviewLayer];
     [self.captureSession startRunning];
-    [self drawBarcodeHeader];
-    [self drawGuideBox];
+    [self setUpNavBar];
+}
+- (void) setUpNavBar {
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"iconmonstr-arrow-64-24"] style:UIBarButtonItemStylePlain target:self action:@selector(closeView)];
+    self.navigationItem.leftBarButtonItem = barButton;
+}
+
+- (void) closeView {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
