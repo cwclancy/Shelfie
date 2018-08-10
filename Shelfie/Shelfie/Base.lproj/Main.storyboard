@@ -25,13 +25,13 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp2-id-2id">
-                                <rect key="frame" x="143" y="151" width="106" height="40"/>
+                                <rect key="frame" x="135" y="270" width="115" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="shelfie">
                                         <attributes>
                                             <color key="NSColor" red="0.78431372549019607" green="0.0039215686274509803" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="34" name="Baskerville-Bold"/>
+                                            <font key="NSFont" size="37" name="Baskerville-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -39,23 +39,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="8sR-6I-kWg">
-                                <rect key="frame" x="143" y="87" width="99" height="56"/>
+                                <rect key="frame" x="138" y="206" width="99" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fb-2" translatesAutoresizingMaskIntoConstraints="NO" id="0FL-Sn-DMW">
-                                <rect key="frame" x="62" y="242" width="250" height="42"/>
+                                <rect key="frame" x="62" y="404" width="250" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-go-8aj">
-                                <rect key="frame" x="62" y="292" width="250" height="42"/>
+                                <rect key="frame" x="62" y="454" width="250" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="custom signin button"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXn-h3-IAN">
-                                <rect key="frame" x="62" y="357" width="72" height="23"/>
+                                <rect key="frame" x="62" y="513" width="72" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Sign Up">
@@ -451,7 +451,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSf-oL-Oyo">
-                                <rect key="frame" x="94" y="74" width="187" height="240"/>
+                                <rect key="frame" x="94" y="64" width="187" height="250"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -602,7 +602,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xtg-3n-O37">
-                                        <rect key="frame" x="28" y="565" width="56" height="56"/>
+                                        <rect key="frame" x="43" y="566" width="56" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gH-5f-6Ra" userLabel="user view">
@@ -650,26 +650,26 @@
                                             </button>
                                         </subviews>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-rX-huP">
-                                        <rect key="frame" x="116" y="582" width="92" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8B-Uq-qkq">
+                                        <rect key="frame" x="216" y="582" width="111" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Owned by">
+                                            <fragment content="Name">
                                                 <attributes>
-                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
+                                                    <font key="NSFont" size="17" name="AvenirNext-Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8B-Uq-qkq">
-                                        <rect key="frame" x="203" y="582" width="111" height="25"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfr-rX-huP">
+                                        <rect key="frame" x="129" y="582" width="92" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Name">
+                                            <fragment content="Owned by">
                                                 <attributes>
-                                                    <font key="NSFont" size="17" name="AvenirNext-Medium"/>
+                                                    <font key="NSFont" size="17" name="AvenirNext-Regular"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -864,7 +864,7 @@
             </objects>
             <point key="canvasLocation" x="5485" y="1683"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Claudia's Shelfie-->
         <scene sceneID="kvj-Wy-0rH">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="cgZ-8R-W6u" customClass="BTProfileViewController" sceneMemberID="viewController">
@@ -872,26 +872,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gzs-CP-niO">
-                                <rect key="frame" x="0.0" y="118" width="375" height="215"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gzs-CP-niO">
+                                <rect key="frame" x="0.0" y="165" width="375" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dnC-sQ-hJS">
-                                    <size key="itemSize" width="145" height="215"/>
+                                    <size key="itemSize" width="145" height="220"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ownedCell" id="Zvi-is-y63" customClass="OwnCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="145" height="215"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="145" height="215"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frB-0K-U2k">
-                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="224"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frB-0K-U2k">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.078431372550000003" green="0.46274509800000002" blue="0.62352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
@@ -906,25 +906,25 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iB2-mX-29S">
-                                <rect key="frame" x="0.0" y="427" width="375" height="215"/>
+                                <rect key="frame" x="0.0" y="437" width="375" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ddp-i3-J23">
-                                    <size key="itemSize" width="145" height="215"/>
+                                    <size key="itemSize" width="145" height="220"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="requestCell" id="uGm-E1-BHD" customClass="RequestCollectionViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="145" height="215"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="145" height="215"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIx-ha-2mq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="215"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FIx-ha-2mq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="145" height="220"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -937,40 +937,70 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNq-9j-a4u">
-                                <rect key="frame" x="145" y="392" width="93" height="25"/>
+                                <rect key="frame" x="149" y="404" width="91" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="REQUESTS">
                                         <attributes>
-                                            <font key="NSFont" size="18" name="AvenirNext-DemiBold"/>
+                                            <font key="NSFont" size="18" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line 2" translatesAutoresizingMaskIntoConstraints="NO" id="reV-ew-nrh">
-                                <rect key="frame" x="0.0" y="366" width="375" height="3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I27-tN-WJ1">
+                                <rect key="frame" x="126" y="82" width="203" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="12">
+                                        <attributes>
+                                            <font key="NSFont" size="15" name="AvenirNext-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <font key="NSFont" size="15" name="AvenirNext-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="books in this bookshelf">
+                                        <attributes>
+                                            <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shelf" translatesAutoresizingMaskIntoConstraints="NO" id="yoN-DP-mzq">
+                                <rect key="frame" x="93" y="78" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR0-Wg-oMS">
-                                <rect key="frame" x="148" y="85" width="78" height="25"/>
+                                <rect key="frame" x="149" y="132" width="77" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="LISTINGS">
                                         <attributes>
-                                            <font key="NSFont" size="18" name="AvenirNext-DemiBold"/>
+                                            <font key="NSFont" size="18" name="AvenirNext-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 4" translatesAutoresizingMaskIntoConstraints="NO" id="s8c-Lu-J9m">
+                                <rect key="frame" x="0.0" y="153" width="375" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 4" translatesAutoresizingMaskIntoConstraints="NO" id="5Yl-Pz-ORo">
+                                <rect key="frame" x="0.0" y="425" width="375" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="qvk-Vn-N4k"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pno-if-iyD"/>
+                    <navigationItem key="navigationItem" title="Claudia's Shelfie" id="Pno-if-iyD"/>
                     <connections>
                         <outlet property="booksOwnedView" destination="gzs-CP-niO" id="yP2-K8-HWS"/>
                         <outlet property="booksRequestedView" destination="iB2-mX-29S" id="dcy-9D-ymz"/>
@@ -1512,6 +1542,7 @@
     </scenes>
     <resources>
         <image name="Group" width="394" height="130"/>
+        <image name="Group 4" width="546" height="18"/>
         <image name="Line 2" width="1128" height="3"/>
         <image name="add book" width="332" height="126"/>
         <image name="addreqlines-1" width="730" height="42"/>
@@ -1537,14 +1568,15 @@
         <image name="reqbook" width="332" height="126"/>
         <image name="saveforlater" width="480" height="132"/>
         <image name="share" width="30" height="30"/>
+        <image name="shelf" width="129" height="87"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dMJ-qp-Dys"/>
         <segue reference="9OS-DA-nng"/>
         <segue reference="gUo-tM-cUu"/>
-        <segue reference="K1C-ai-erJ"/>
+        <segue reference="13B-jv-Hcu"/>
         <segue reference="vS7-Sb-czk"/>
-        <segue reference="31S-wF-b1X"/>
+        <segue reference="lmB-lM-JkE"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>
 </document>
