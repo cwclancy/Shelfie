@@ -102,6 +102,11 @@
 - (void)revealController:(SWRevealViewController *)revealController didMoveToPosition:(FrontViewPosition)position {
     self.mapView.userInteractionEnabled = !self.mapView.userInteractionEnabled;
     self.mapView.scrollEnabled = !self.mapView.scrollEnabled;
+    [self.searchBar resignFirstResponder];
+    self.searchBar.text = nil;
+    self.filteredBooks = self.mapBooks;
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    [self updateBookLocations:self.filteredBooks];
 }
 
 
@@ -140,7 +145,11 @@
     PinAnnotation *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
     PinAnnotation *pin = annotation;
     annotationView.canShowCallout = YES;
-    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    UIImage *image = [UIImage imageNamed:@"iconmonstr-arrow-64-24"];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setFrame:CGRectMake(0, 0, 30, 30)];
+    [button setImage:image forState:UIControlStateNormal];
+    annotationView.rightCalloutAccessoryView = button;
     if (pin.book.gift) {
         annotationView.image = [UIImage imageNamed:@"yellowbook.png"];
     } else if (pin.book.trade) {
@@ -155,6 +164,7 @@
 {
     [self performSegueWithIdentifier:@"mapToBookSegue" sender:view.annotation];
 }
+
 
 - (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views {
     MKAnnotationView *currentLocation = [mapView viewForAnnotation:mapView.userLocation];
