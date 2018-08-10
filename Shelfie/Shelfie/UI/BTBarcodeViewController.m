@@ -19,12 +19,36 @@
 @property (strong, nonatomic) AVCaptureSession *captureSession;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 @property (strong, nonatomic) NSString *isbn;
+@property (strong, nonatomic) UIAlertController *alert;
 @end
 
 @implementation BTBarcodeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self startCapturing];
+    [self createAlertController];
+    
+}
+
+- (void) createAlertController {
+    self.alert = [UIAlertController alertControllerWithTitle:@"Scan Failed" message:@"Not a Valid Book" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Go Back"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             [self.navigationController popViewControllerAnimated:YES];
+                                                         }];
+    [self.alert addAction:cancelAction];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Retry"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * _Nonnull action) {
+                                                         [self startCapturing];
+                                                     }];
+    [self.alert addAction:okAction];
+}
+
+- (void) startCapturing {
     NSError *error;
     self.captureSession = nil;
     self.previewView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -65,10 +89,16 @@
         if (error) {
             NSLog(@"%@", error);
         } else {
-            [self.delegate makeBook:book];
-            [self.previewView removeFromSuperview];
-            [self.barcodeHeaderView removeFromSuperview];
-            [self.guideBorderView removeFromSuperview];
+            NSDictionary *bookDictionary = book[@"items"][0][@"volumeInfo"];
+            if (bookDictionary[@"title"]) {
+                [self.delegate makeBook:book];
+                [self.previewView removeFromSuperview];
+                [self.barcodeHeaderView removeFromSuperview];
+                [self.guideBorderView removeFromSuperview];
+            } else {
+                [self presentViewController:self.alert animated:YES completion:^{
+                }];
+            }
         }
     }];
 }
