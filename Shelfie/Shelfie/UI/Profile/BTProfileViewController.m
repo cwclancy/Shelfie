@@ -27,6 +27,7 @@
 @property (strong, nonatomic) NSMutableArray *booksHave;
 @property (strong, nonatomic) NSMutableArray *booksWant;
 @property (strong, nonatomic) IBOutlet UILabel *numBooksLabel;
+@property (nonatomic) NSUInteger *numBooks;
 
 @end
 
@@ -34,16 +35,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.numBooksLabel.text = 0;
     [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
         self.currentUser = owner;
         self.booksHave = [NSMutableArray new];
         self.booksWant = [NSMutableArray new];
         [self fetchBooksHave:self.currentUser.booksHave];
         [self fetchBooksWant:self.currentUser.booksWant];
-    //    NSUInteger *numBooks = self.booksHave.count;
-        //self.booksWant.count;
-     //   self.numBooksLabel.text = [NSString stringWithFormat:@"%d", numBooks];
-        NSLog(@"%@", self.currentUser.booksHave);
     }];
     self.currentUser = [[BTUserManager shared] getCurrentUser];
     self.booksOwnedView.delegate = self;
@@ -118,6 +116,9 @@
                 if (self.booksHave.count == pointerArray.count) {
                     NSLog(@"here");
                     [self.booksOwnedView reloadData];
+                    NSInteger currBooks = [self.numBooksLabel.text integerValue];
+                    NSInteger totalBooks = currBooks + self.booksHave.count;
+                    self.numBooksLabel.text = [NSString stringWithFormat:@"%ld", (long)totalBooks];
                 }
             }
         }];
@@ -136,6 +137,9 @@
                 if (self.booksWant.count == pointerArray.count) {
                     NSLog(@"here");
                     [self.booksRequestedView reloadData];
+                    NSInteger currBooks = [self.numBooksLabel.text integerValue];
+                    NSInteger totalBooks = currBooks + self.booksWant.count;
+                    self.numBooksLabel.text = [NSString stringWithFormat:@"%ld", (long)totalBooks];
                 }
             }
         }];
