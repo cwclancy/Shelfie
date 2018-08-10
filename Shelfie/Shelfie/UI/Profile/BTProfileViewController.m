@@ -26,6 +26,7 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *booksRequestedView;
 @property (strong, nonatomic) NSMutableArray *booksHave;
 @property (strong, nonatomic) NSMutableArray *booksWant;
+@property (strong, nonatomic) IBOutlet UILabel *numBooksLabel;
 
 @end
 
@@ -39,6 +40,9 @@
         self.booksWant = [NSMutableArray new];
         [self fetchBooksHave:self.currentUser.booksHave];
         [self fetchBooksWant:self.currentUser.booksWant];
+    //    NSUInteger *numBooks = self.booksHave.count;
+        //self.booksWant.count;
+     //   self.numBooksLabel.text = [NSString stringWithFormat:@"%d", numBooks];
         NSLog(@"%@", self.currentUser.booksHave);
     }];
     self.currentUser = [[BTUserManager shared] getCurrentUser];
@@ -50,6 +54,15 @@
     self.booksRequestedView.dataSource = self;
     self.booksRequestedView.alwaysBounceHorizontal = YES;
     [self.booksRequestedView reloadData];
+    
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *) self.booksOwnedView.collectionViewLayout;
+    UICollectionViewFlowLayout *layoutb = (UICollectionViewFlowLayout *) self.booksRequestedView.collectionViewLayout;
+    
+    layout.minimumInteritemSpacing = 0.1;
+    layout.minimumLineSpacing = 0.1;
+    layoutb.minimumInteritemSpacing = 0.1;
+    layoutb.minimumLineSpacing = 0.1;
+
 }
 
 
