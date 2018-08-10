@@ -35,7 +35,7 @@
 
 - (IBAction)deleteButtonPressed:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
-    // [[BTUserManager shared] removeFromBooksFavorite:self.book];
+    [[BTUserManager shared] removeFromBooksFavorite:self.book];
 }
 
 /*
