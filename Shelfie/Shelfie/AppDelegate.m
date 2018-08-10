@@ -39,7 +39,6 @@
     
     [Parse initializeWithConfiguration:config];
     
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:200/255 green:1/255 blue:43/255 alpha:1]];
     
     return YES;
     

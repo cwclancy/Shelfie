@@ -1270,7 +1270,6 @@
                         <viewLayoutGuide key="safeArea" id="933-up-HvY"/>
                     </view>
                     <navigationItem key="navigationItem" id="crt-2Q-znV">
-
                         <barButtonItem key="leftBarButtonItem" title="Item" image="iconmonstr-arrow-64-24" id="ZQk-aa-d1Y">
                             <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
@@ -1301,6 +1300,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wYu-kc-oi3">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1485,6 +1485,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="iconmonstr-arrow-64-24" id="Rhb-HH-6Z4">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                             <color key="textColor" red="0.7843137255" green="0.0039215686269999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1492,7 +1493,6 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <outlet property="navBar" destination="Rhb-HH-6Z4" id="g0t-I4-eak"/>
                         <segue destination="cgZ-8R-W6u" kind="relationship" relationship="rootViewController" id="13B-jv-Hcu"/>
                     </connections>
                 </navigationController>
@@ -1577,7 +1577,7 @@
         <segue reference="dMJ-qp-Dys"/>
         <segue reference="9OS-DA-nng"/>
         <segue reference="gUo-tM-cUu"/>
-        <segue reference="K1C-ai-erJ"/>
+        <segue reference="13B-jv-Hcu"/>
         <segue reference="31S-wF-b1X"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>
