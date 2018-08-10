@@ -24,7 +24,6 @@ NSArray *menuItems;
     [super viewDidLoad];
      menuItems = @[@"profile", @"home", @"addbook", @"favorites", @"logout", @"blank"];
     self.revealViewController.rearViewRevealWidth = 170;
-    //self.view.frame.size.width-100;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

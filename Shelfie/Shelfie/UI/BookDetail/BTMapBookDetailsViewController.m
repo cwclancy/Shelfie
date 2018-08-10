@@ -24,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *bookStatus;
 @property (weak, nonatomic) IBOutlet UIView *bookStatusView;
 
+@property (nonatomic, assign) BOOL save;
+@property (strong, nonatomic) IBOutlet UIButton *saveButton;
+
+
 @end
 
 @implementation BTMapBookDetailsViewController
@@ -55,6 +59,19 @@
     }
     
 }
+
+- (IBAction)saveClicked:(id)sender {
+    if (!self.save) {
+        [self.saveButton setImage:[UIImage imageNamed:@"saved.png"] forState:UIControlStateNormal];
+        [[BTUserManager shared] addToBooksFavorite:self.book];
+        self.save = true;
+    }
+    else if (self.save) {
+ [self.saveButton setImage:[UIImage imageNamed:@"saveforlater.png"] forState:UIControlStateNormal];     [[BTUserManager shared] removeFromBooksFavorite:self.book];
+        self.save = false;
+}
+}
+
 - (IBAction)closeButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     [[BTUserDefaults shared] setStatusFalse];
@@ -64,8 +81,6 @@
     [BTUserManager getUserWithID: self.book.userId completion:^(BTUser *owner) {
         NSLog(@"%@", owner);
         [self.coverImageView setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
-       // self.coverImageView.layer.cornerRadius = 3;
-      //  self.coverImageView.layer.shadowOffset = CGSize(width: 0, height: 1.75);
         self.coverImageView.layer.shadowRadius = 2;
         self.coverImageView.layer.shadowOpacity = 0.8;
         self.titleLabel.text = self.book.title;
