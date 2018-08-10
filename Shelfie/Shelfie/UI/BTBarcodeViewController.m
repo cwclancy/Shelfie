@@ -98,7 +98,7 @@
             NSLog(@"%@", error);
         } else {
             NSDictionary *bookDictionary = book[@"items"][0][@"volumeInfo"];
-            if (bookDictionary[@"title"]) {
+            if (bookDictionary[@"authors"]) {
                 [self.delegate makeBook:book];
                 [self.previewView removeFromSuperview];
                 [self.barcodeHeaderView removeFromSuperview];
