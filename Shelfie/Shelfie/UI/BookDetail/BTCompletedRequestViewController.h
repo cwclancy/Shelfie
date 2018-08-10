@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import"BTRevealHeadViewController.h"
+//#import"BTRevealHeadViewController.h"
 
-@interface BTCompletedRequestViewController : BTRevealHeadViewController
+@interface BTCompletedRequestViewController : UIViewController
+
 @property (strong, nonatomic) NSString *coverURL;
 @property (strong, nonatomic) NSString *author;
 @property (strong, nonatomic) NSString *bookTitle;
