@@ -65,6 +65,7 @@
     UITapGestureRecognizer *screenTapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resetSearchBar)];
     [self.mapView addGestureRecognizer:screenTapped];
     self.mapView.showsUserLocation = YES;
+    self.mapView.showsCompass = NO;
     
     self.locationFlag = true;
     self.locationManager = [CLLocationManager new];
