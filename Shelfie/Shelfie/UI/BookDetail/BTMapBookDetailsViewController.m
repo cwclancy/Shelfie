@@ -92,30 +92,12 @@
         self.ownerImageView.layer.cornerRadius = self.ownerImageView.frame.size.width / 2;
         self.ownerImageView.clipsToBounds = YES;
         
-        
-        // BookStatusView Original position x = y =
-        self.bookStatusView.transform = CGAffineTransformMakeTranslation(0, 0);
-        
-        if (self.book.sell && self.book.gift && self.book.trade) {
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(0, 0);
-        } else if (self.book.trade && self.book.gift) {
-            self.bookStatus.text = @"Trading, Gifting";
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(35, 0);
-        } else if (self.book.trade && self.book.sell) {
-            self.bookStatus.text = @"Trading, Selling";
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(35, 0);
-        } else if (self.book.sell && self.book.gift) {
-            self.bookStatus.text = @"Selling, Gifting";
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(35, 0);
-        } else if (self.book.sell) {
+        if (self.book.sell) {
             self.bookStatus.text = @"Selling";
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
         } else if (self.book.trade) {
             self.bookStatus.text = @"Trading";
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
         } else if (self.book.gift) {
             self.bookStatus.text = @"Gifting";
-            self.bookStatusView.transform = CGAffineTransformMakeTranslation(55, 0);
         }
         [self.ownerImageView setImageWithURL:[NSURL URLWithString:owner.picture]];
     }];
