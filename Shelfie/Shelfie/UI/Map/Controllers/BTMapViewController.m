@@ -172,13 +172,6 @@
 }
 
 - (void)resetSearchBar {
-    NSString *firstChar = @"a";
-    if (self.searchBar.text.length > 0) {
-        firstChar = [self.searchBar.text substringToIndex:1];
-    }
-    if (![firstChar isEqualToString:@"#"]) {
-        self.searchBar.text = @"";
-    }
     [self.searchBar resignFirstResponder];
 }
 
