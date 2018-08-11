@@ -14,7 +14,7 @@
     // Map Keys respectively
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary: @{
               @"userId": @"id",
-              @"name": @"name",
+              @"name": @"first_name",
               @"picture": @"picture.data.url"
         }];
 }
