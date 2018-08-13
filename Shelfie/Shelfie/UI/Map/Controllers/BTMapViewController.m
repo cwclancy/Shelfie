@@ -25,6 +25,7 @@
 @property (strong, nonatomic) NSArray *mapBooks;
 @property (strong, nonatomic) NSArray *filteredBooks;
 @property (strong, nonatomic) UISearchBar *searchBar;
+@property (strong, nonatomic) UIImageView *mapKeyImageView;
 @property (nonatomic) MKCoordinateRegion currentLocation;
 @property BOOL locationFlag;
 @property BOOL firstPass;
@@ -85,6 +86,7 @@
     
     self.searchBar = [BTUIServices createSearchBarWithDimensions:CGRectMake(30, 70, 320, 44)];
     self.searchBar.delegate = self;
+    [self drawMapKey];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -130,7 +132,7 @@
 - (void)updateBookLocations:(NSArray *)books {
     for (int i = 0; i < books.count; i++) {
         BTBook *book = books[i];
-        if (book.latitude && book.longitude) {
+        if (book.latitude && book.longitude && book.own) {
             CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake([book.latitude doubleValue], [book.longitude doubleValue]);
             PinAnnotation *annotation = [[PinAnnotation alloc] initWithBook:book coordinate:centerCoordinate title:book.title];
             [self.mapView addAnnotation:annotation];
@@ -146,7 +148,7 @@
     PinAnnotation *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
     PinAnnotation *pin = annotation;
     annotationView.canShowCallout = YES;
-    UIImage *image = [UIImage imageNamed:@"iconmonstr-arrow-64-24"];
+    UIImage *image = [UIImage imageNamed:@"bigbookup"];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 0, 30, 30)];
     [button setImage:image forState:UIControlStateNormal];
@@ -250,6 +252,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) drawMapKey {
+    self.mapKeyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(250, 500, 87, 95)];
+    self.mapKeyImageView.image = [UIImage imageNamed:@"mapkey"];
+    [self.mapView addSubview:self.mapKeyImageView];
 }
 
 

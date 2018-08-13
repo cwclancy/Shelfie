@@ -34,6 +34,7 @@
     CGFloat itemWidth = self.collectionView.frame.size.width/postersPerLine;
     CGFloat itemHeight = 1.5 * itemWidth;
     layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+    [self.noBooksSavedView removeFromSuperview];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -57,14 +58,13 @@
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
-    if (self.favoriteBooks.count == 0) {
-        [self drawSavedView];
-    }
     return self.favoriteBooks.count; 
 }
 
 - (void)fetchBooksFavorite:(NSArray *)pointerArray {
+    if (pointerArray.count == 0) {
+        [self drawSavedView];
+    }
     for (int i = 0; i < pointerArray.count; i++) {
         BTBook *currentBook = pointerArray[i];
         NSString *bookId = currentBook.objectId;
@@ -73,9 +73,12 @@
                 NSLog(@"%@", error);
             } else {
                 [self.favoriteBooks addObject:object];
-                if (self.favoriteBooks.count == pointerArray.count) {
-                    NSLog(@"here");
+                if (self.favoriteBooks.count != 0) {
+                    [self.noBooksSavedView removeFromSuperview];
                     [self.collectionView reloadData];
+                }
+                else {
+                    [self drawSavedView];
                 }
             }
         }];
