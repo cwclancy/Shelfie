@@ -19,12 +19,6 @@
     return sharedManager;
 }
 
-//@property (nonatomic, assign) BOOL sell;
-//@property (nonatomic, assign) BOOL trade;
-//@property (nonatomic, assign) BOOL gift;
-//@property (nonatomic, assign) BOOL location;
-//@property (nonatomic, assign) BOOL own;
-
 + (void) addBookToDatabaseWithUserId:(NSString *)userId title:(NSString *)title author:(NSString *)author
                                 isbn:(NSString *)isbn date:(NSString *)date coverURL:(NSString *)coverURL
                             latitude:(NSNumber *)latitude longitude:(NSNumber *)longitude
