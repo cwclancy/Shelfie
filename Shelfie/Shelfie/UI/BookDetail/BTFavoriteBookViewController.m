@@ -23,9 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.coverImageView setImageWithURL:[NSURL URLWithString:self.book.coverURL]];
+    self.coverImageView.layer.shadowRadius = 2;
+    self.coverImageView.layer.shadowOpacity = 0.8;
     self.titleLabel.text = self.book.title;
     self.authorLabel.text = self.book.author;
-    self.dateLabel.text = self.book.date;
+    NSString *formattedDate = [self.book.date substringToIndex:4];
+    self.dateLabel.text = formattedDate;
 }
 
 - (void)didReceiveMemoryWarning {
