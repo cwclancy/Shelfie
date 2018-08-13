@@ -25,6 +25,7 @@
 @property (strong, nonatomic) NSArray *mapBooks;
 @property (strong, nonatomic) NSArray *filteredBooks;
 @property (strong, nonatomic) UISearchBar *searchBar;
+@property (strong, nonatomic) UIImageView *mapKeyImageView;
 @property (nonatomic) MKCoordinateRegion currentLocation;
 @property BOOL locationFlag;
 @property BOOL firstPass;
@@ -85,6 +86,8 @@
     
     self.searchBar = [BTUIServices createSearchBarWithDimensions:CGRectMake(30, 70, 320, 44)];
     self.searchBar.delegate = self;
+    
+    [self drawMapKey];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -245,6 +248,12 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [self.searchBar resignFirstResponder];
+}
+
+- (void) drawMapKey {
+    self.mapKeyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(250, 500, 87, 95)];
+    self.mapKeyImageView.image = [UIImage imageNamed:@"mapkey"];
+    [self.mapView addSubview:self.mapKeyImageView];
 }
 
 - (void)didReceiveMemoryWarning {
