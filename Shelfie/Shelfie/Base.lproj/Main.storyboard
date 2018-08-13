@@ -140,9 +140,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-map-8-240 (1)" highlightedImage="iconmonstr-map-8-240 (2)" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-FC-J7L">
+                                        <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-map-8-240 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-FC-J7L">
                                             <rect key="frame" x="68" y="36" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" image="YES" selected="YES"/>
+                                            </accessibility>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EXPLORE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oE-fn-qa0">
                                             <rect key="frame" x="46" y="74" width="79" height="25"/>
@@ -153,7 +156,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <gestureRecognizers/>
                                 <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Yrt-LF-nnB" appends="YES" id="vQY-QM-nfS"/>
                                     <segue destination="i0O-eH-rXS" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9OS-DA-nng"/>
                                 </connections>
                             </tableViewCell>
@@ -259,6 +264,11 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xd9-YL-JCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Yrt-LF-nnB">
+                    <connections>
+                        <action selector="exploreClicked:" destination="stT-ag-rNN" id="qyO-p2-cok"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2184.8000000000002" y="31.934032983508249"/>
         </scene>
@@ -711,7 +721,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vyx-Li-lzJ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Y3z-uv-quL">
@@ -772,6 +782,23 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 4" translatesAutoresizingMaskIntoConstraints="NO" id="WOx-Mq-ygg">
+                                <rect key="frame" x="0.0" y="99" width="375" height="7"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biE-Mj-QCe">
+                                <rect key="frame" x="127" y="79" width="133" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="SAVED BOOKS">
+                                        <attributes>
+                                            <font key="NSFont" size="19" name="AvenirNext-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="C93-IJ-Jnn"/>
@@ -838,10 +865,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line 2" translatesAutoresizingMaskIntoConstraints="NO" id="xc6-Cg-0O0">
-                                <rect key="frame" x="0.0" y="480" width="375" height="3"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBU-3s-UjT">
                                 <rect key="frame" x="99" y="563" width="176" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1119,10 +1142,6 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line 2" translatesAutoresizingMaskIntoConstraints="NO" id="7H5-Mu-7pY">
-                                        <rect key="frame" x="0.0" y="440" width="375" height="3"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NlN-rz-gGU">
                                         <rect key="frame" x="90" y="90" width="194" height="257"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1544,7 +1563,6 @@
     <resources>
         <image name="Group" width="394" height="130"/>
         <image name="Group 4" width="546" height="18"/>
-        <image name="Line 2" width="1128" height="3"/>
         <image name="add book" width="332" height="126"/>
         <image name="addreqlines-1" width="730" height="42"/>
         <image name="close" width="24" height="24"/>
@@ -1563,7 +1581,6 @@
         <image name="iconmonstr-location-2-32" width="32" height="32"/>
         <image name="iconmonstr-log-out-18-32" width="32" height="32"/>
         <image name="iconmonstr-map-8-240 (1)" width="240" height="240"/>
-        <image name="iconmonstr-map-8-240 (2)" width="240" height="240"/>
         <image name="iconmonstr-user-20-32" width="32" height="32"/>
         <image name="messageowner" width="480" height="132"/>
         <image name="post button" width="240" height="94"/>
@@ -1577,8 +1594,8 @@
         <segue reference="dMJ-qp-Dys"/>
         <segue reference="9OS-DA-nng"/>
         <segue reference="gUo-tM-cUu"/>
-        <segue reference="13B-jv-Hcu"/>
-        <segue reference="31S-wF-b1X"/>
+        <segue reference="K1C-ai-erJ"/>
+        <segue reference="lmB-lM-JkE"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>
 </document>

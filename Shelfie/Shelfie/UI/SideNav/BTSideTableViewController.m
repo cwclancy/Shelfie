@@ -13,7 +13,6 @@
 
 @interface BTSideTableViewController ()
 
-
 @end
 
 @implementation BTSideTableViewController
@@ -26,10 +25,8 @@ NSArray *menuItems;
     self.revealViewController.rearViewRevealWidth = 170;
 
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+     self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
