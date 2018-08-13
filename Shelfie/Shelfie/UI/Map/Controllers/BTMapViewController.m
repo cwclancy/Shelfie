@@ -146,7 +146,7 @@
     PinAnnotation *annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
     PinAnnotation *pin = annotation;
     annotationView.canShowCallout = YES;
-    UIImage *image = [UIImage imageNamed:@"iconmonstr-arrow-64-24"];
+    UIImage *image = [UIImage imageNamed:@"bigbookup"];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 0, 30, 30)];
     [button setImage:image forState:UIControlStateNormal];
