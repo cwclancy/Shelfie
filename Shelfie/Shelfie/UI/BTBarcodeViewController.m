@@ -69,6 +69,7 @@
     [self.videoPreviewLayer setFrame:self.previewView.layer.bounds];
     [self.previewView.layer addSublayer:self.videoPreviewLayer];
     [self.captureSession startRunning];
+    [self drawGuideBox];
     [self setUpNavBar];
 }
 - (void) setUpNavBar {
