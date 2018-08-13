@@ -34,6 +34,7 @@
     CGFloat itemWidth = self.collectionView.frame.size.width/postersPerLine;
     CGFloat itemHeight = 1.5 * itemWidth;
     layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+    [self.noBooksSavedView removeFromSuperview];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -57,10 +58,6 @@
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
-    if (self.favoriteBooks.count == 0) {
-        [self drawSavedView];
-    }
     return self.favoriteBooks.count; 
 }
 
@@ -76,6 +73,9 @@
                 if (self.favoriteBooks.count == pointerArray.count) {
                     NSLog(@"here");
                     [self.collectionView reloadData];
+                }
+                if (self.favoriteBooks.count == 0) {
+                    [self drawSavedView];
                 }
             }
         }];
