@@ -9,12 +9,8 @@
 #import "BTSideTableViewController.h"
 #import "BTFbAPIManager.h"
 #import "SWRevealViewController.h"
-
-
-@interface BTSideTableViewController ()
-
-
-@end
+#import "ExploreCell.h"
+#import "ScanCell.h"
 
 @implementation BTSideTableViewController
 
@@ -26,7 +22,7 @@ NSArray *menuItems;
     self.revealViewController.rearViewRevealWidth = 170;
 
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+     self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -50,6 +46,7 @@ NSArray *menuItems;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     return cell;
 }
 
