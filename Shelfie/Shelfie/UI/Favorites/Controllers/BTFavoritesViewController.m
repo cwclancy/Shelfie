@@ -73,12 +73,11 @@
                 NSLog(@"%@", error);
             } else {
                 [self.favoriteBooks addObject:object];
-                if (self.favoriteBooks.count == pointerArray.count) {
-                    NSLog(@"here");
+                if (self.favoriteBooks.count != 0) {
                     [self.noBooksSavedView removeFromSuperview];
                     [self.collectionView reloadData];
                 }
-                if (self.favoriteBooks.count == 0) {
+                else {
                     [self drawSavedView];
                 }
             }
