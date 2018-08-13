@@ -62,6 +62,9 @@
 }
 
 - (void)fetchBooksFavorite:(NSArray *)pointerArray {
+    if (pointerArray.count == 0) {
+        [self drawSavedView];
+    }
     for (int i = 0; i < pointerArray.count; i++) {
         BTBook *currentBook = pointerArray[i];
         NSString *bookId = currentBook.objectId;
@@ -72,6 +75,7 @@
                 [self.favoriteBooks addObject:object];
                 if (self.favoriteBooks.count == pointerArray.count) {
                     NSLog(@"here");
+                    [self.noBooksSavedView removeFromSuperview];
                     [self.collectionView reloadData];
                 }
                 if (self.favoriteBooks.count == 0) {
