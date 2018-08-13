@@ -158,7 +158,6 @@
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Yrt-LF-nnB" appends="YES" id="vQY-QM-nfS"/>
                                     <segue destination="i0O-eH-rXS" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9OS-DA-nng"/>
                                 </connections>
                             </tableViewCell>
@@ -1595,7 +1594,7 @@
         <segue reference="9OS-DA-nng"/>
         <segue reference="gUo-tM-cUu"/>
         <segue reference="K1C-ai-erJ"/>
-        <segue reference="lmB-lM-JkE"/>
+        <segue reference="JMj-SL-hYl"/>
         <segue reference="vRL-Rt-ucT"/>
     </inferredMetricsTieBreakers>
 </document>

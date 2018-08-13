@@ -130,7 +130,7 @@
 - (void)updateBookLocations:(NSArray *)books {
     for (int i = 0; i < books.count; i++) {
         BTBook *book = books[i];
-        if (book.latitude && book.longitude) {
+        if (book.latitude && book.longitude && book.own) {
             CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake([book.latitude doubleValue], [book.longitude doubleValue]);
             PinAnnotation *annotation = [[PinAnnotation alloc] initWithBook:book coordinate:centerCoordinate title:book.title];
             [self.mapView addAnnotation:annotation];
