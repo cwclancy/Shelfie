@@ -22,7 +22,7 @@
 
 - (void) setSelected:(BOOL)highlighted animated:(BOOL)animated {
     if (highlighted) {
-        [self.exploreIcon setImage: [UIImage imageNamed:@"iconmonstr-map-8-240 (2)"]];
+        [self.exploreIcon setImage: [UIImage imageNamed:@"maphighlight"]];
     } else {
         [self.exploreIcon setImage: [UIImage imageNamed:@"iconmonstr-map-8-240 (1)"]];
     }
