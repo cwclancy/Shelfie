@@ -24,8 +24,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *bookStatus;
 @property (weak, nonatomic) IBOutlet UIView *bookStatusView;
 
-@property (nonatomic, assign) BOOL save;
 @property (strong, nonatomic) IBOutlet UIButton *saveButton;
+@property (nonatomic, assign) BOOL save;
 
 
 @end
@@ -45,7 +45,6 @@
     element.title = self.book.title;
     element.subtitle = [NSString stringWithFormat:@"By %@", self.book.author];
     element.imageURL = [NSURL URLWithString:self.book.coverURL];
-    
     FBSDKShareMessengerGenericTemplateContent *content = [[FBSDKShareMessengerGenericTemplateContent alloc] init];
     content.pageID = @"Shelfie";
     content.element = element;
