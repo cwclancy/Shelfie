@@ -255,7 +255,7 @@
 }
 
 - (void) drawMapKey {
-    self.mapKeyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(250, 500, 87, 95)];
+    self.mapKeyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(255, 545, 87, 95)];
     self.mapKeyImageView.image = [UIImage imageNamed:@"mapkey"];
     [self.mapView addSubview:self.mapKeyImageView];
 }
