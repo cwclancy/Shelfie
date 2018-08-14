@@ -34,6 +34,8 @@
     CGFloat itemWidth = self.collectionView.frame.size.width/postersPerLine;
     CGFloat itemHeight = 1.5 * itemWidth;
     layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+    layout.minimumInteritemSpacing = 0;
+    layout.minimumLineSpacing = 0;
     [self.noBooksSavedView removeFromSuperview];
 }
 

@@ -58,10 +58,13 @@
    
     if (self.have) {
         self.own = true;
-        self.buySellLabel.text = @"sell?";
-        self.giftLabel.text = @"gift?";
         self.distanceView.hidden = YES;
         self.submitButton.frame = CGRectMake(127,540,120,47);
+
+    } else {
+        self.buySellLabel.text = @"buy?";
+        self.giftLabel.text = @"be gifted?";
+        self.submitButton.frame = CGRectMake(127,600,120,47);
     }
 }
 
