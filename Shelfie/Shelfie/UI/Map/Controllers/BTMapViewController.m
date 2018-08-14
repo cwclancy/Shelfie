@@ -61,7 +61,7 @@
     [self.view addSubview:self.mapView];
     CLLocationCoordinate2D myLocation = [BTUserDefaults getCurrentLocation];
     self.mapView.delegate = self;
-    self.currentLocation = MKCoordinateRegionMake(myLocation, MKCoordinateSpanMake(0.1, 0.1));
+    self.currentLocation = MKCoordinateRegionMake(myLocation, MKCoordinateSpanMake(0.5, 0.5));
     [self.mapView setRegion:self.currentLocation animated:false];
     UITapGestureRecognizer *screenTapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(resetSearchBar)];
     [self.mapView addGestureRecognizer:screenTapped];
@@ -121,7 +121,7 @@
 {
     if (self.locationFlag) {
         CLLocation *location = [locations lastObject];
-        MKCoordinateRegion currentLocation = MKCoordinateRegionMake(CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude), MKCoordinateSpanMake(0.1, 0.1));
+        MKCoordinateRegion currentLocation = MKCoordinateRegionMake(CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude), MKCoordinateSpanMake(0.5, 0.5));
         self.currentLocation = currentLocation;
         [self.mapView setRegion:currentLocation animated:true];
         self.locationFlag = false;
