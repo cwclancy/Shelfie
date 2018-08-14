@@ -35,7 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.numBooksLabel.text = 0;
+    self.numBooksLabel.text = @"0";
     [BTUserManager getUserWithID:[FBSDKAccessToken currentAccessToken].userID completion:^(BTUser *owner) {
         NSString *title = [NSString stringWithFormat:@"%@'s Shelfie", owner.name];
         self.title = title;
