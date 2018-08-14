@@ -9,16 +9,6 @@
 #import "BTSideTableViewController.h"
 #import "BTFbAPIManager.h"
 #import "SWRevealViewController.h"
-<<<<<<< HEAD
-#import "ExploreCell.h"
-#import "ScanCell.h"
-=======
-
-
-@interface BTSideTableViewController ()
-
-@end
->>>>>>> master
 
 @implementation BTSideTableViewController
 
