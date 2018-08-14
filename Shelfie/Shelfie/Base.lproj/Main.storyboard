@@ -133,14 +133,14 @@
                                     <segue destination="uzK-hH-5XC" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="t1k-Sb-au2"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="home" id="vww-Ls-9Ys">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="home" id="vww-Ls-9Ys" customClass="ExploreCell">
                                 <rect key="frame" x="0.0" y="126" width="375" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vww-Ls-9Ys" id="EEC-sG-eik">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-map-8-240 (1)" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-FC-J7L">
+                                        <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-map-8-240 (1)" highlightedImage="maphighlight" translatesAutoresizingMaskIntoConstraints="NO" id="9WH-FC-J7L">
                                             <rect key="frame" x="68" y="36" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <accessibility key="accessibilityConfiguration">
@@ -158,10 +158,11 @@
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
                                 <connections>
+                                    <outlet property="exploreIcon" destination="9WH-FC-J7L" id="ln5-7L-E95"/>
                                     <segue destination="i0O-eH-rXS" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="9OS-DA-nng"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="addbook" id="oQD-xy-nry">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="addbook" id="oQD-xy-nry" customClass="ScanCell">
                                 <rect key="frame" x="0.0" y="251" width="375" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oQD-xy-nry" id="X7D-8F-wZi">
@@ -182,17 +183,18 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="scanIcon" destination="6yK-e4-6gK" id="VGe-SH-OLz"/>
                                     <segue destination="d6V-Ku-Tv6" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="dws-Do-KEg"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="favorites" id="3nG-oK-ljB" userLabel="favorites">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="favorites" id="3nG-oK-ljB" userLabel="favorites" customClass="SavedCell">
                                 <rect key="frame" x="0.0" y="376" width="375" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3nG-oK-ljB" id="GSs-RT-ib2">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-favorite-4-240" translatesAutoresizingMaskIntoConstraints="NO" id="mlY-Al-RmS">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-favorite-4-240" highlightedImage="iconmonstr-favorite-3-240 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="mlY-Al-RmS">
                                             <rect key="frame" x="68" y="36" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -212,17 +214,18 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="savedCell" destination="mlY-Al-RmS" id="kNv-or-KdP"/>
                                     <segue destination="9nI-H5-2hL" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="knP-hE-yPx"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="logout" id="kYG-sq-QP3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="logout" id="kYG-sq-QP3" customClass="SettingsCell">
                                 <rect key="frame" x="0.0" y="501" width="375" height="125"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kYG-sq-QP3" id="YZm-lZ-SzV">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="125"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-gear-2-240 (2)" translatesAutoresizingMaskIntoConstraints="NO" id="3ym-qi-ciS">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iconmonstr-gear-2-240 (2)" highlightedImage="iconmonstr-gear-2-32" translatesAutoresizingMaskIntoConstraints="NO" id="3ym-qi-ciS">
                                             <rect key="frame" x="68" y="36" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -242,6 +245,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="settingIcon" destination="3ym-qi-ciS" id="5Ed-v7-g7k"/>
                                     <segue destination="p45-fo-eGE" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="XaS-Zm-y7g"/>
                                 </connections>
                             </tableViewCell>
@@ -1590,12 +1594,15 @@
         <image name="iconmonstr-bell-2-32" width="32" height="32"/>
         <image name="iconmonstr-check-mark-1-240" width="240" height="240"/>
         <image name="iconmonstr-circle-thin-32" width="32" height="32"/>
+        <image name="iconmonstr-favorite-3-240 (1)" width="240" height="240"/>
         <image name="iconmonstr-favorite-4-240" width="240" height="240"/>
         <image name="iconmonstr-gear-2-240 (2)" width="240" height="240"/>
+        <image name="iconmonstr-gear-2-32" width="32" height="32"/>
         <image name="iconmonstr-location-2-32" width="32" height="32"/>
         <image name="iconmonstr-log-out-18-32" width="32" height="32"/>
         <image name="iconmonstr-map-8-240 (1)" width="240" height="240"/>
         <image name="iconmonstr-user-20-32" width="32" height="32"/>
+        <image name="maphighlight" width="240" height="240"/>
         <image name="messageowner" width="480" height="132"/>
         <image name="post button" width="240" height="94"/>
         <image name="profile lines" width="1131" height="18"/>
