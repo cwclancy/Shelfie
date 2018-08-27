@@ -1,51 +1,36 @@
 # Shelfie
 
-**Required:**
+**Shelfie** is a mobile application aimed to provide everyone, everywhere, an equal opportunity to read a great book.
 
-1.) MapKit --DONE
+## User Stories
 
-2.) CV Barcode Scan w/ API database --DONE 
+- User sees books on map where they are located
+- User can click on books to get a detailed description
+- User can easily message the owner of a book
+- User can easily upload a book using the book's barcode
+- User can log in with Facebook to make profile set up a breeze
+- User can save books to message owner later
+- User can view all of his/her books owned and requested in a profile view
+- User can search for books by title on map
+- User can filter books with a hashtag search
+- User information is stored between sessions with Parse and Cached Memory
 
-3.) Facebook Login + Messenger/Text message access  
+## Video Walkthrough
 
-4.) Parse Backend to store Users and Books associated with User --DONE
+## License
 
-5.) User Profile with Books -- DONE 
+    Copyright [2018] [Connor Clancy]
 
-6.) Search by name, genre, author --DONE
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
+        http://www.apache.org/licenses/LICENSE-2.0
 
-**Optional:**
-
-1.) Alert when someone posts a book you're looking for
-
-2.) Messenger in App rather than outsourced
-
-3.) Location Services --DONE
-
-4.) Recognizing translation
-
-5.) Augmenteed Reality
-
-6.) Share Book to Facebook
-
-**API Endpoints:**
-
-Facebook API
-Google Books API
-Barcode Scanner
-
-**Model Classes:**
-
-Book
-User
-
-**UI**
-
-Side Bar with Profile, Notifications, Messages, Post Book (link to Camera)
-Button: Bookshelf
-
-
-
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
 
 
