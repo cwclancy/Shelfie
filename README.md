@@ -17,6 +17,16 @@
 
 ## Video Walkthrough
 
+Here's a walkthrough of a few of the user stories.
+
+<img src='launch_screen.gif' title='Start View' width='' alt='Video Walkthrough' />
+<img src='launch_and_home.gif' title='Start View' width='' alt='Video Walkthrough' />
+<img src='book_detail.gif' title='Start View' width='' alt='Video Walkthrough' />
+<img src='search_bar.gif' title='Start View' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/)
+
+
 ## License
 
     Copyright [2018] [Connor Clancy]
